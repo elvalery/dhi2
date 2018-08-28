@@ -54,3 +54,8 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+require('./../libs/fancybox/dist/jquery.fancybox.min');
+require('./../libs/required_fields/jquery.maskedinput.min');
+require('./../libs/required_fields/required_fields');
+require('./../libs/slick-carousel/slick/slick.min');
+require('./common');
