@@ -6176,6 +6176,7 @@ button:focus {
   width: 100%;
   height: auto;
   margin: 0 auto 40px;
+  text-align: center;
 }
 
 .contacts__ttl {
@@ -6688,5 +6689,9 @@ button:focus {
   .detail-slider__slide {
     min-height: 300px;
   }
+}
+
+.container-fluid {
+  padding-right: 30px;
 }
 
