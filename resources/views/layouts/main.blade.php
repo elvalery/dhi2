@@ -56,7 +56,7 @@
       <li><a href="{{ route('technologies') }}">Technologies</a></li>
       <li><a href="#">History</a></li>
     </ul>
-    <li class="nav-list__item"><a href="#">Services</a></li>
+    <li class="nav-list__item"><a href="{{ route('services') }}">Services</a></li>
     <li class="nav-list__item"><a href="portfolio.html">Portfolio</a></li>
     <li class="nav-list__item"><a href="#">News</a></li>
     <li class="nav-list__item"><a href="vacancies.html">Career</a></li>
