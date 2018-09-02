@@ -11,23 +11,15 @@
       <div class="col">
         <form action="" method="POST" class="contacts-form">
           <input class="contacts-form__input" type="text" name="name" placeholder="Name" required>
-          <input class="contacts-form__input" type="email" name="email" placeholder="Email" required>
-          <label class="contacts-form__label">
+          <input class="contacts-form__input" type="email" name="email" placeholder="Email / Phone" required>
+          {{--<label class="contacts-form__label">
             <select class="contacts-form__select" name="contact">
               <option value="Write me">Write me</option>
               <option value="Call me">Call me</option>
             </select>
-          </label>
-          {{--<div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Write me
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Call me
-            </label>
-          </div>--}}
-          
-          <button class="contacts-form__btn" type="submit">Send</button>
+          </label>--}}
+          <button class="contacts-form__btn" type="submit" name="write">Write me</button>
+          <button class="contacts-form__btn" type="submit" name="call">Call me</button>
         </form>
       </div>
     </div>
