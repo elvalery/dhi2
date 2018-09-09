@@ -57,7 +57,7 @@
       <li><a href="#">History</a></li>
     </ul>
     <li class="nav-list__item"><a href="{{ route('services') }}">Services</a></li>
-    <li class="nav-list__item"><a href="{{ route('portfolio') }}">Portfolio</a></li>
+    <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
     <li class="nav-list__item"><a href="{{ route('news') }}">News</a></li>
     <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
     <li class="nav-list__item"><a href="{{ route('contacts') }}">Contacts</a></li>
