@@ -19,5 +19,7 @@ return [
     'results' => 'Results',
     'details' => 'Details',
 
+    'empty-category' => 'No projects have been added yet'
+
   ]
 ];
