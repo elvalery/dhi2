@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
-        <h3 class="detail__ttl">GREENFINITY PARK</h3>
+        <h3 class="detail__ttl">{{ $portfolio->name }}</h3>
       </div>
     </div>
   </div>
