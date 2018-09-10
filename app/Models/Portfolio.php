@@ -11,6 +11,13 @@ class Portfolio extends Model {
     return 'link';
   }
 
+  protected $dates = [
+    'completion_date',
+    'created_at',
+    'updated_at',
+    'deleted_at'
+  ];
+
   const CATEGORY_CONSULTING = 'consulting';
   const CATEGORY_ARCHITECTURE = 'architecture';
   const CATEGORY_INTERIOR = 'interior';
