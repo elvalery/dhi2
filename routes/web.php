@@ -23,6 +23,7 @@ Route::view('/news', 'news')->name('news');
 Route::view('/career', 'career')->name('career');
 
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio.index');
+Route::get('/portfolio/detail/{portfolio}', 'PortfolioController@show')->name('portfolio.detail');
 
 
 

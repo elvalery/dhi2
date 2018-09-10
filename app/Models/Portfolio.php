@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Portfolio extends Model {
   use SoftDeletes, ArrayFieldTrait;
 
+  public function getRouteKeyName() {
+    return 'link';
+  }
+
   const CATEGORY_CONSULTING = 'consulting';
   const CATEGORY_ARCHITECTURE = 'architecture';
   const CATEGORY_INTERIOR = 'interior';

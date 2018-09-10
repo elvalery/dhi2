@@ -14,8 +14,8 @@
   <meta property="og:url" content="">
   <meta property="og:image" content=""/>
   -->
-  <link rel="icon" href="img/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" href="/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
   <meta name="theme-color" content="#000">
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,7 +44,7 @@
   </div>
   
   @if(Route::currentRouteName() != 'main')
-  <a href="/"><img src="img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
+  <a href="/"><img src="/img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
   @endif
   
   <ul class="nav-list">
@@ -64,11 +64,11 @@
   </ul>
   <a href="#" class="nav-enter">enter</a>
   <div class="nav-soc">
-    <a href="https://www.facebook.com/Design-Hub-International-941115632665039/" target="_blank" class="nav-soc__link"><img src="img/fb.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://www.instagram.com/dhi_architecture/" target="_blank" class="nav-soc__link"><img src="img/in.svg" width="16" height="16" alt="DHI"></a>
-    <a href="#" target="_blank" class="nav-soc__link"><img src="img/li.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://www.behance.net/dhi-architecture" target="_blank" class="nav-soc__link"><img src="img/be.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://www.youtube.com/channel/UCeDErzD8cwVhCSSLNZIKoSA?view_as=subscriber" target="_blank" class="nav-soc__link"><img src="img/yo.svg" width="16" height="16" alt="DHI"></a>
+    <a href="https://www.facebook.com/Design-Hub-International-941115632665039/" target="_blank" class="nav-soc__link"><img src="/img/fb.svg" width="16" height="16" alt="DHI"></a>
+    <a href="https://www.instagram.com/dhi_architecture/" target="_blank" class="nav-soc__link"><img src="/img/in.svg" width="16" height="16" alt="DHI"></a>
+    <a href="#" target="_blank" class="nav-soc__link"><img src="/img/li.svg" width="16" height="16" alt="DHI"></a>
+    <a href="https://www.behance.net/dhi-architecture" target="_blank" class="nav-soc__link"><img src="/img/be.svg" width="16" height="16" alt="DHI"></a>
+    <a href="https://www.youtube.com/channel/UCeDErzD8cwVhCSSLNZIKoSA?view_as=subscriber" target="_blank" class="nav-soc__link"><img src="/img/yo.svg" width="16" height="16" alt="DHI"></a>
   </div>
 </nav>
 
@@ -78,7 +78,7 @@
   <div class="foot container-fluid">
     <div class="row">
       <div class="col">
-        <img src="img/logo-big.png" alt="DHI" class="foot__logo img-r">
+        <img src="/img/logo-big.png" alt="DHI" class="foot__logo img-r">
         <p class="foot__txt">© Copyright 2018 dhi-architecture.com - All Rights Reserved</p>
       </div>
     </div>

@@ -149,6 +149,10 @@ class PortfolioController extends Controller
       ->text('link', trans('admin.portfolio.link'))
       ->rules('required|min:2|alpha_dash|unique:portfolio,link');
 
+    $form
+      ->date('completion_date', trans('admin.portfolio.completion_date'))
+      ->rules('required');
+
     $categories = $this->categoryBuilder();
     $form
       ->select('category', trans('admin.portfolio.category'))
@@ -163,6 +167,10 @@ class PortfolioController extends Controller
       ->help(trans('admin.json-fields-help'));
 
     $form->editor('details', trans('admin.portfolio.details'));
+
+    $form
+      ->image('cover', trans('admin.portfolio.cover'))
+      ->uniqueName();
 
     $form
       ->multipleImage('images', trans('admin.portfolio.images'))
