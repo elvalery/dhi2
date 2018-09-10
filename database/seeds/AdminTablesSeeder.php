@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Encore\Admin\Auth\Database\Administrator;
+use Encore\Admin\Auth\Database\Role;
+use Encore\Admin\Auth\Database\Menu;
+use Encore\Admin\Auth\Database\Permission;
 
 class AdminTablesSeeder extends Seeder
 {
