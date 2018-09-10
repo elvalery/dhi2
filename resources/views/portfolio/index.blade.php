@@ -19,17 +19,17 @@
     <div class="tab-content active">
       <div class="row">
       @foreach($list as $portfolio)
-          <div class="col-md-4">
-            <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
-              <div class="portfolio-item__img" style="background-image:url({{ $portfolio->cover }})"></div>
-              <h4 class="portfolio-item__ttl">{{ $portfolio->name }}</h4>
-              <p class="portfolio-item__date">{{ $portfolio->completion_date }}</p>
+        @if($loop->iteration % 3 == 0)</div><div class="row">@endif
+        
+        <div class="col-md-4">
+          <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
+            <div class="portfolio-item__img" style="background-image:url({{ asset('storage/' . $portfolio->cover) }})"></div>
+            <h4 class="portfolio-item__ttl">{{ $portfolio->name }}</h4>
+            <p class="portfolio-item__date">{{ $portfolio->completion_date }}</p>
           </a>
         </div>
       @endforeach
       </div>
-      
-      
     </div>
     
     <div class="tab-content">
@@ -81,7 +81,7 @@
       </div>
     </div>
     
-    <div class="tab-content active">
+    <div class="tab-content">
       <div class="row">
         <div class="col-md-4">
           <a href="portfolio-detail.html" class="portfolio-item">
