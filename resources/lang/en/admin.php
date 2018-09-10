@@ -104,8 +104,8 @@ return [
 
   'portfolio' => [
     'index' => [
-      'header' => 'Порфтолио',
-      'description' => 'Список проектов',
+      'header' => 'Portfolio',
+      'description' => 'Project list',
     ]
   ]
 ];

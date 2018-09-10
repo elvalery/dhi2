@@ -9362,6 +9362,7 @@ button:focus {
   font-size: 30px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .detail__txt {
@@ -9382,6 +9383,7 @@ button:focus {
   font-size: 18px;
   letter-spacing: .02em;
   margin-bottom: 20px;
+  padding-left: 10px;
 }
 
 .detail__other:last-child {
@@ -9409,6 +9411,40 @@ button:focus {
   min-height: 600px;
   background-size: cover;
   background-position: center center;
+}
+
+.detail__facts {
+  border-right: 1px solid #F4F4F4;
+}
+
+.detail__facts:last-child {
+  border-right: none;
+}
+
+.detail__facts-ttl {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+.detail__facts-txt {
+  font-size: 20px;
+}
+
+.detail__lst {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.detail__lst li {
+  position: relative;
+}
+
+.detail__lst li:before {
+  content: '// ';
+  left: -0.9em;
+  position: absolute;
 }
 
 .related__ttl {

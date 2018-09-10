@@ -1,32 +1,82 @@
 @extends('layouts.main')
 
 @section('content')
-  <div class="detail-slider">
-    <div class="detail-slider__slide" style="background-image: url(img/detail-img.jpg)"></div>
-    <div class="detail-slider__slide" style="background-image: url(img/detail-img.jpg)"></div>
-    <div class="detail-slider__slide" style="background-image: url(img/detail-img.jpg)"></div>
-    <div class="detail-slider__slide" style="background-image: url(img/detail-img.jpg)"></div>
-  </div>
-  
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
         <h3 class="detail__ttl">GREENFINITY PARK</h3>
-        <p class="detail__txt"><span>Location:</span> Kyiv</p>
-        <p class="detail__txt"><span>Client:</span> The JBG Companies</p>
-        <p class="detail__txt"><span>Size:</span> 454000 SFNomination: Unbuilt commercial building</p>
-        <p class="detail__txt"><span>Lead architect:</span> Andrey Yatsentuk</p>
-        <p class="detail__txt last"><span>List of team members:</span> Andrey Yatsentuk, Maryna Savko, Natalia Lukasiuk, Yurii Molev, Iryna Mironchuk</p>
-        <p class="detail__other">When the services and needs of a neighborhood evolve, the architecture that defines it must progress in tandem. As the world becomes more connected and cities more dynamic, a global approach to development, design, and construction must be employed to tether buildings and residents to local life. For ODA and the West Half Street site in Washington, DC, this meant an opportunity to create a cohesive architectural vision that links people, places, and events.</p>
-        <p class="detail__other">The façades at West Half Street are tapestries of activity, reflections of the life surrounding them. The building’s topographical approach allows it to unite with, rather than compete against, nearby Nationals Park, a cultural landmark that, like most, was designed to stand independently. By peeling back the face of West Half Street as it approaches the stadium, the threshold between inside and outside, public and private, is blurred, allowing people and the building to participate with the world beyond their front doors. The lifting of the façade also echoes the gradient of the stadium and fosters a gentle transition between street, residence, and stadium. Youthful, airy, and energetic, the interiors at West Half Street are pockets of excitement themselves, defined by curved elements, minimalistic details, and a few tectonic finishes.</p>
-      </div>
-      <div class="col-md-4">
-        <div class="detail-img" style="background-image:url(img/detail-img_other.jpg)"></div>
-        <div class="detail-img" style="background-image:url(img/detail-img_other.jpg)"></div>
-        <div class="detail-note"><span>INTEGRATED SERVICES</span>architecture, landscape architecture</div>
       </div>
     </div>
-    <div class="row">
+  </div>
+  @if($portfolio->images)
+  <div class="detail-slider">
+    @foreach($portfolio->images as $image)
+      <div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image) }})"></div>
+    @endforeach
+  </div>
+  @endif
+  
+  <div class="container-fluid">
+    @if($portfolio->factsList)
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.facts-ttl')</h3>
+        </div>
+        @foreach($portfolio->factsList as $name => $value)
+          <div class="col-md-4 detail__facts">
+            <div class="detail__facts-ttl">{{ $name }}</div>
+            <div class="detail__facts-txt">{{ $value }}</div>
+          </div>
+        @endforeach
+      </div>
+    @endif
+    
+    @if($portfolio->details)
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.details-ttl')</h3>
+          <div class="detail__other">
+            {!! $portfolio->details !!}
+          </div>
+        </div>
+      </div>
+    @endif
+  
+    @if($portfolio->briefList || $portfolio->resultsList)
+      <div class="row">
+        @if($portfolio->briefList)
+        <div class="col-md-6">
+          <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.brief-ttl')</h3>
+          <ul class="detail__lst">
+          @foreach($portfolio->briefList as $item)
+            <li>{{ $item }}</li>
+          @endforeach
+          </ul>
+        </div>
+        @endif
+        @if($portfolio->resultsList)
+          <div class="col-md-6">
+            <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.results-ttl')</h3>
+            <ul class="detail__lst">
+              @foreach($portfolio->resultsList as $item)
+                <li>{{ $item }}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif
+      </div>
+    @endif
+  
+    @if($portfolio->services)
+    <div class="row mt-4 mb-5">
+      <div class="col-md-12">
+        <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.services-ttl')</h3>
+        <div>{{ $portfolio->services }}</div>
+      </div>
+    </div>
+    @endif
+  
+    {{--<div class="row">
       <div class="col">
         <h3 class="related__ttl">RELATED PROJECTS</h3>
       </div>
@@ -53,6 +103,6 @@
           <p class="related-item__date">21 March 2017</p>
         </a>
       </div>
-    </div>
+    </div>--}}
   </div>
 @endsection

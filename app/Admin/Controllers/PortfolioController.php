@@ -159,6 +159,9 @@ class PortfolioController extends Controller
       ->options($categories)
       ->rules('required');
 
+    $form
+      ->text('services', trans('admin.portfolio.services'));
+
     $form->textarea('facts', trans('admin.portfolio.facts'))
       ->help(trans('admin.json-complex-fields-help'));
     $form->textarea('brief', trans('admin.portfolio.brief'))

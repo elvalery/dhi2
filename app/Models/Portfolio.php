@@ -36,16 +36,16 @@ class Portfolio extends Model {
     ];
   }
 
-  public function getFactsListAttribute($value) {
-    return $this->getArrayKeyField($value);
+  public function getFactsListAttribute() {
+    return $this->getArrayKeyField($this->facts);
   }
 
-  public function getBriefListAttribute($value) {
-    return $this->getArrayField($value);
+  public function getBriefListAttribute() {
+    return $this->getArrayField($this->brief);
   }
 
-  public function getResultsFieldAttribute($value) {
-    return $this->getArrayField($value);
+  public function getResultsListAttribute() {
+    return $this->getArrayField($this->results);
   }
 
   public function setImagesAttribute($images) {

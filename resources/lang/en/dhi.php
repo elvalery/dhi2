@@ -18,8 +18,14 @@ return [
     'brief' => 'Brief',
     'results' => 'Results',
     'details' => 'Details',
+    'services' => 'Integrated Services',
 
-    'empty-category' => 'No projects have been added yet'
+    'empty-category' => 'No projects have been added yet',
 
+    'facts-ttl' => 'FACTS',
+    'details-ttl' => 'PROJECT DETAILS',
+    'brief-ttl' => 'BRIEF',
+    'results-ttl' => 'RESULTS',
+    'services-ttl' => 'INTEGRATED SERVICES',
   ]
 ];
