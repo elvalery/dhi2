@@ -13,10 +13,10 @@ class HomeController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Dashboard')
-            ->description('Description...')
-            ->row(Dashboard::title())
-            ->row(function (Row $row) {
+            ->header('DHI Admin Dashboard')
+            ->description('Description...');
+            //->row(Dashboard::title());
+/*            ->row(function (Row $row) {
 
                 $row->column(4, function (Column $column) {
                     $column->append(Dashboard::environment());
@@ -30,5 +30,6 @@ class HomeController extends Controller
                     $column->append(Dashboard::dependencies());
                 });
             });
+*/
     }
 }

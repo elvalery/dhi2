@@ -91,7 +91,8 @@ class AdminTablesSeeder extends Seeder
       [
         Permission::find(6),
         Permission::find(3),
-        Permission::find(4)
+        Permission::find(4),
+        Permission::find(2),
       ]);
 
     // add default menus.
