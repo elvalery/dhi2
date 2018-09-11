@@ -36,6 +36,10 @@ class Portfolio extends Model {
     ];
   }
 
+  public function getCategoryNameAttribute() {
+    return trans('dhi.portfolio.categories.' . $this->category);
+  }
+
   public function getFactsListAttribute() {
     return $this->getArrayKeyField($this->facts);
   }

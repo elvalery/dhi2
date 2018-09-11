@@ -9,10 +9,27 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use Illuminate\Support\Facades\Storage;
 
 class PortfolioController extends Controller
 {
   use HasResourceActions;
+
+  public function formatShowList($list, $show_key = false) {
+    if (empty($list)) return '';
+
+    $retVal = '<ul style="list-style-type: circle;margin-bottom: -20px; padding-left: 20px">';
+    foreach ($list as $key => $value) {
+      if (empty($value)) continue;
+
+      $retVal .= '<li>';
+      if ($show_key) $retVal .= '<b>' . $key . '</b>: ';
+      $retVal .= $value . '</li>';
+    }
+
+    $retVal .= '</ul>';
+    return $retVal;
+  }
 
   private function categoryBuilder() {
     $categories = array_fill_keys(Portfolio::allCategories(), null);
@@ -124,8 +141,40 @@ class PortfolioController extends Controller
   protected function detail($id)
   {
     $show = new Show(Portfolio::findOrFail($id));
+    $obj = $this;
 
+    $show->id('ID');
+    $show->name( trans('admin.portfolio.name'));
+    $show->link();
+    $show->categoryName();
+    $show->services();
+    $show->completion_date()->as(function ($date) {
+      return $date->format('d F Y');
+    });
+    $show->factsList()->as(function($list) use ($obj) {
+      return $obj->formatShowList($list, true);
+    });
+    $show->briefList()->as(function ($list) use ($obj) {
+      return $obj->formatShowList($list);
+    });
+    $show->resultsList()->as(function ($list) use ($obj) {
+      return $obj->formatShowList($list);
+    });;
+    $show->details();
+    $show->cover()->image();
+    $show->images()->as(function ($images) {
+      $retVal = '';
+      foreach ($images as $image) {
+        if (url()->isValidUrl($image)) {
+          $src = $image;
+        } else {
+          $src = Storage::disk(config('admin.upload.disk'))->url($image);
+        }
 
+        $retVal .= "<img src='$src' style='max-width:200px;max-height:200px;margin-right:10px ' class='img' />";
+      }
+      return $retVal;
+    });
 
     return $show;
   }
