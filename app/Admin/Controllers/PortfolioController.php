@@ -196,7 +196,7 @@ class PortfolioController extends Controller
 
     $form
       ->text('link', trans('admin.portfolio.link'))
-      ->rules('required|min:2|alpha_dash|unique:portfolio,link');
+      ->rules('required|min:2|alpha_dash|unique:portfolios,link');
 
     $form
       ->date('completion_date', trans('admin.portfolio.completion_date'))
