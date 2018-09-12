@@ -102,10 +102,41 @@ return [
     'portfolio' => 'Portfolio',
   ],
 
+  'json-fields-help' => 'Write down a list using a semicolon as separator',
+  'json-complex-fields-help' => 'Write down a list using a semicolon as a separator. Use a colon to separate the fact name. Example>> Location: Kiev; Client: Tonbridge School',
+
   'portfolio' => [
     'index' => [
       'header' => 'Portfolio',
       'description' => 'Project list',
-    ]
+    ],
+
+    'create' => [
+      'header' => 'Portfolio',
+      'description' => 'Add new project',
+    ],
+
+    'show' => [
+      'header' => 'Portfolio',
+      'description' => 'View',
+    ],
+
+    'edit' => [
+      'header' => 'Portfolio',
+      'description' => 'Edit',
+    ],
+
+    'íd' => 'ID',
+    'name' => 'Name',
+    'link' => 'Link',
+    'category' => 'Category',
+    'completion_date' => 'Completion date',
+    'facts' => 'Short facts',
+    'brief' => 'Brief',
+    'results' => 'Results',
+    'details' => 'Description',
+    'images' => 'Images',
+    'cover' => 'Cover image',
+    'services' => 'Integrated services'
   ]
 ];

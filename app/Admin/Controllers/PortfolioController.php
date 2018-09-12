@@ -196,7 +196,17 @@ class PortfolioController extends Controller
 
     $form
       ->text('link', trans('admin.portfolio.link'))
-      ->rules('required|min:2|alpha_dash|unique:portfolios,link');
+      ->rules(function ($form) {
+        $rules = 'required|min:2|alpha_dash';
+
+        // If it is not an edit state, add field unique verification
+        if (!$id = $form->model()->id) {
+          $rules .= '|unique:portfolios,link';
+        }
+
+        return $rules;
+      });
+
 
     $form
       ->date('completion_date', trans('admin.portfolio.completion_date'))
@@ -222,6 +232,7 @@ class PortfolioController extends Controller
 
     $form
       ->image('cover', trans('admin.portfolio.cover'))
+      ->rules('required')
       ->uniqueName();
 
     $form
