@@ -138,5 +138,31 @@ return [
     'images' => 'Images',
     'cover' => 'Cover image',
     'services' => 'Integrated services'
-  ]
+  ],
+
+  'service' => [
+    'index' => [
+      'header' => 'Services',
+      'description' => 'List',
+    ],
+
+    'create' => [
+      'header' => 'Services',
+      'description' => 'Add new service',
+    ],
+
+    'show' => [
+      'header' => 'Services',
+      'description' => 'View',
+    ],
+
+    'edit' => [
+      'header' => 'Services',
+      'description' => 'Edit',
+    ],
+
+    'íd' => 'ID',
+    'name' => 'Name',
+    'link' => 'Link',
+  ],
 ];
