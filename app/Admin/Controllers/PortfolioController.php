@@ -207,7 +207,6 @@ class PortfolioController extends Controller
         return $rules;
       });
 
-
     $form
       ->date('completion_date', trans('admin.portfolio.completion_date'))
       ->rules('required');
@@ -239,6 +238,9 @@ class PortfolioController extends Controller
       ->multipleImage('images', trans('admin.portfolio.images'))
       ->uniqueName()
       ->removable();
+
+    $form->display('created_at', 'Created time');
+    $form->display('updated_at', 'Updated time');
 
     return $form;
   }

@@ -98,6 +98,9 @@ return [
     'filter_placeholder' => 'Filter',
   ],
 
+  'created_time' => 'Created time',
+  'updated_time' => 'Updated time',
+
   'menu_titles' => [
     'portfolio' => 'Portfolio',
   ],
@@ -164,5 +167,6 @@ return [
     'íd' => 'ID',
     'name' => 'Name',
     'link' => 'Link',
+    'details' => 'Details',
   ],
 ];

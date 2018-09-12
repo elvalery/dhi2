@@ -82,7 +82,8 @@ class ServiceController extends Controller
     $grid = new Grid(new Service);
 
     $grid->id('ID')->sortable();
-    $grid->column('name', trans('admin.portfolio.name'))->sortable();
+    $grid->column('name', trans('admin.service.name'))->sortable();
+    $grid->column('link', trans('admin.service.link'))->sortable();
 
     $grid->paginate(20);
 
@@ -112,6 +113,7 @@ class ServiceController extends Controller
     $show->id('ID');
     $show->name( trans('admin.services.name'));
     $show->link();
+    $show->details();
 
     return $show;
   }
@@ -128,10 +130,26 @@ class ServiceController extends Controller
     $form->display('id', 'ID');
 
     $form
-      ->text('name', trans('admin.portfolio.name'))
+      ->text('name', trans('admin.service.name'))
       ->rules('required|max:250');
 
-    $form->editor('details', trans('admin.portfolio.details'));
+    $form
+      ->text('link', trans('admin.service.link'))
+      ->rules(function ($form) {
+        $rules = 'required|min:2|alpha_dash';
+
+        // If it is not an edit state, add field unique verification
+        if (!$id = $form->model()->id) {
+          $rules .= '|unique:services,link';
+        }
+
+        return $rules;
+      });
+
+    $form->editor('details', trans('admin.service.details'));
+
+    $form->display('created_at', trans('admin.created_time'));
+    $form->display('updated_at', trans('admin.updated_time'));
 
     return $form;
   }
