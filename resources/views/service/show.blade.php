@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-  {{--<div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $service->image) }})"></div>--}}
   <div class="container-fluid service__cover" style="background-image: url({{ asset('storage/' . $service->image) }})">
     <div class="row">
       <div class="col-md-8">
@@ -17,7 +16,7 @@
   @if($service->portfolio)
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8"><h3 class="detail__ttl">Related projects</h3></div>
+      <div class="col-md-8"><h3 class="detail__ttl">@lang('dhi.service.projects-ttl')</h3></div>
     </div>
     <div class="row">
       @foreach($service->portfolio as $item)

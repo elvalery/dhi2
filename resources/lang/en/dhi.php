@@ -27,5 +27,9 @@ return [
     'brief-ttl' => 'BRIEF',
     'results-ttl' => 'RESULTS',
     'services-ttl' => 'INTEGRATED SERVICES',
-  ]
+  ],
+
+  'service' => [
+    'projects-ttl' => 'Related projects',
+  ],
 ];
