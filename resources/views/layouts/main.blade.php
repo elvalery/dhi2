@@ -58,7 +58,7 @@
       <li><a href="#">History</a></li>
     </ul>
     <li class="nav-list__item"><a href="{{ route('service.index') }}">Services</a></li>
-    @if($service_menu)
+    @if($service_menu->isNotEmpty())
     <ul class="nav-list-sublist">
       @foreach($service_menu as $item)
       <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
