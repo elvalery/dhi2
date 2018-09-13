@@ -3,26 +3,27 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
+  /**
+   * Bootstrap any application services.
+   *
+   * @return void
+   */
+  public function boot()
+  {
+    View::share('service_menu', \App\Models\Service::all());
+  }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
+  /**
+   * Register any application services.
+   *
+   * @return void
+   */
+  public function register()
+  {
+    //
+  }
 }

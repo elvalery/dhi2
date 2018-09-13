@@ -9493,6 +9493,37 @@ button:focus {
   color: #4F4F4F;
 }
 
+.service__cover {
+  min-height: 600px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.service__ttl {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: #fff;
+  display: inline-block;
+}
+
+.service__txt {
+  font-size: 18px;
+  letter-spacing: .02em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service__txt span {
+  font-family: "OpenSans-Bold", sans-serif;
+}
+
+.service__txt.last {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1439.98px) {
   .vacancies-item__img {
     min-height: 200px;

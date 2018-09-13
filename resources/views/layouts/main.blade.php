@@ -16,6 +16,7 @@
   -->
   <link rel="icon" href="/img/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="stylesheet" href="{{  mix('css/main.css') }}">
   <meta name="theme-color" content="#000">
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -56,7 +57,14 @@
       <li><a href="{{ route('technologies') }}">Technologies</a></li>
       <li><a href="#">History</a></li>
     </ul>
-    <li class="nav-list__item"><a href="{{ route('services') }}">Services</a></li>
+    <li class="nav-list__item"><a href="{{ route('service.index') }}">Services</a></li>
+    @if($service_menu)
+    <ul class="nav-list-sublist">
+      @foreach($service_menu as $item)
+      <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
+      @endforeach
+    </ul>
+    @endif
     <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
     <li class="nav-list__item"><a href="{{ route('news') }}">News</a></li>
     <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
@@ -86,7 +94,6 @@
   @show
 </div>
 
-<link rel="stylesheet" href="{{  mix('css/main.css') }}">
 <script src="{{ mix('js/app.js') }}"></script>
 
 @yield('js')

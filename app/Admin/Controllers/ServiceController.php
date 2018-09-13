@@ -148,6 +148,8 @@ class ServiceController extends Controller
 
     $form->editor('details', trans('admin.service.details'));
 
+    $form->multipleSelect('portfolio')->options(\App\Models\Portfolio::all()->pluck('name', 'id'));
+
     $form->display('created_at', trans('admin.created_time'));
     $form->display('updated_at', trans('admin.updated_time'));
 

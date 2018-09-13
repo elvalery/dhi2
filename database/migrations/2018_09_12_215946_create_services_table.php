@@ -21,6 +21,17 @@ class CreateServicesTable extends Migration
 
       $table->timestamps();
       $table->softDeletes();
+
+      $table->index(['link']);
+    });
+
+    Schema::create('portfolio_service', function (Blueprint $table) {
+      $table->integer('portfolio_id');
+      $table->integer('service_id');
+
+      $table->timestamps();
+
+      $table->index(['portfolio_id', 'service_id']);
     });
   }
 
@@ -31,6 +42,7 @@ class CreateServicesTable extends Migration
    */
   public function down()
   {
+    Schema::dropIfExists('portfolio_service');
     Schema::dropIfExists('services');
   }
 }

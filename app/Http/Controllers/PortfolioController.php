@@ -5,15 +5,6 @@ use App\Models\Portfolio;
 
 class PortfolioController extends Controller {
 
-  /**
-   * Instantiate a new controller instance.
-   *
-   * @return void
-   */
-  public function __construct() {
-
-  }
-
   public function index() {
     $list = Portfolio::all();
     $categories = array_fill_keys(Portfolio::allCategories(), null);
