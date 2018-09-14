@@ -169,4 +169,32 @@ return [
     'link' => 'Link',
     'details' => 'Details',
   ],
+
+  'job' => [
+    'index' => [
+      'header' => 'Jobs',
+      'description' => 'List',
+    ],
+
+    'create' => [
+      'header' => 'Jobs',
+      'description' => 'Add new job',
+    ],
+
+    'show' => [
+      'header' => 'Jobs',
+      'description' => 'View',
+    ],
+
+    'edit' => [
+      'header' => 'Jobs',
+      'description' => 'Edit',
+    ],
+
+    'íd' => 'ID',
+    'name' => 'Name',
+    'details' => 'Details',
+    'cover' => 'Cover image',
+    'pdf' => 'PDF file',
+  ]
 ];

@@ -12,4 +12,5 @@ Route::group([
   $router->get('/', 'HomeController@index');
   $router->resource('content/portfolio', PortfolioController::class);
   $router->resource('content/service', ServiceController::class);
+  $router->resource('content/job', JobController::class);
 });
