@@ -67,11 +67,11 @@
       </div>
     @endif
   
-    @if($portfolio->services)
+    @if($portfolio->service)
     <div class="row mt-4 mb-5">
       <div class="col-md-12">
         <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.services-ttl')</h3>
-        <div>{{ $portfolio->services }}</div>
+        <div>{{ $portfolio->serviceArray }}</div>
       </div>
     </div>
     @endif

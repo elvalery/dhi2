@@ -147,7 +147,10 @@ class PortfolioController extends Controller
     $show->name( trans('admin.portfolio.name'));
     $show->link();
     $show->categoryName();
-    $show->services();
+    $show->service()
+      ->as(function($services) {
+        return $services->map(function ($item) { return $item->name;})->implode(', ');
+      });
     $show->completion_date()->as(function ($date) {
       return $date->format('d F Y');
     });
@@ -217,8 +220,9 @@ class PortfolioController extends Controller
       ->options($categories)
       ->rules('required');
 
-    $form
-      ->text('services', trans('admin.portfolio.services'));
+    /*$form
+      ->text('services', trans('admin.portfolio.services'));*/
+    $form->multipleSelect('service')->options(\App\Models\Service::all()->pluck('name', 'id'));
 
     $form->textarea('facts', trans('admin.portfolio.facts'))
       ->help(trans('admin.json-complex-fields-help'));

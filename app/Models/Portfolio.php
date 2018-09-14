@@ -61,5 +61,15 @@ class Portfolio extends Model {
     return json_decode($images, true);
   }
 
+  public function service() {
+    return $this->belongsToMany(Service::class);
+  }
+
+  public function getServiceArrayAttribute() {
+    if (empty($this->service)) return [];
+
+    return $this->service->map(function ($item) { return $item->name;})->implode(', ');
+  }
+
 }
 

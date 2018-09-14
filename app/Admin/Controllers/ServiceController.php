@@ -113,6 +113,9 @@ class ServiceController extends Controller
     $show->id('ID');
     $show->name( trans('admin.services.name'));
     $show->link();
+    $show->portfolio()->as(function ($portfolio) {
+      return $portfolio->map(function ($item) { return $item->name;})->implode(', ');
+    });
     $show->details();
 
     return $show;
