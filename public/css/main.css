@@ -9162,8 +9162,10 @@ button:focus {
   width: 100%;
   height: 100%;
   text-align: center;
-  background: rgba(10, 10, 10, 0.7);
-  display: none;
+  background: rgba(50, 50, 50, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -9175,6 +9177,16 @@ button:focus {
 .contacts-form__success span {
   padding: 15px 20px;
   background: rgba(255, 255, 255, 0.9);
+}
+
+.contacts-form__spinner {
+  background-image: url(/images/Spinner-1s-200px.svg?107a63d0f40efcd000b48de1c69e3b41);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contacts-form__spinner span {
+  display: none;
 }
 
 .contacts-form__input {

@@ -11,7 +11,9 @@
       <div class="col">
         <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">
           {{ csrf_field() }}
-          <div class="contacts-form__success"><span>@lang('dhi.contacts.success')</span></div>
+          <div class="contacts-form__success contacts-form__spinner">
+            <span>@lang('dhi.contacts.success')</span>
+          </div>
           <input class="contacts-form__input" type="text" name="name" placeholder="Name" required>
           <input class="contacts-form__input" type="text" name="contacts" placeholder="Email / Phone" required>
           <button class="contacts-form__btn" type="submit" name="type" value="email">Write me</button>
@@ -82,13 +84,15 @@
       var type = $("#contact-form [type=submit][clicked=true]").val(),
         contacts = $("#contact-form input[name=contacts]").val(),
         name = $("#contact-form input[name=name]").val();
-        
+  
+      $("#contact-form div").css({"display":"flex"});
+      $("#contact-form .contacts-form__success").addClass('contacts-form__spinner');
       $.ajax({
         type: 'POST',
         url: '{{ request('contacts.store') }}',
         data: {name: name, type: type, contacts: contacts},
         success: function(result){
-          $("#contact-form div").css({"display":"flex"}).delay(5000).hide('slow');
+          $("#contact-form div").removeClass('contacts-form__spinner').delay(5000).hide('slow');
         },
       });
     });
