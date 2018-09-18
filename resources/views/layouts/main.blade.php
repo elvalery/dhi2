@@ -18,6 +18,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
   <link rel="stylesheet" href="{{  mix('css/main.css') }}">
   <meta name="theme-color" content="#000">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120201735-1"></script>

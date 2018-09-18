@@ -13,4 +13,5 @@ Route::group([
   $router->resource('content/portfolio', PortfolioController::class);
   $router->resource('content/service', ServiceController::class);
   $router->resource('content/job', JobController::class);
+  $router->resource('content/contacts', ContactsController::class);
 });

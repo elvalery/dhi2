@@ -196,5 +196,21 @@ return [
     'details' => 'Details',
     'cover' => 'Cover image',
     'pdf' => 'PDF file',
+  ],
+
+  'contacts' => [
+    'index' => [
+      'header' => 'Contacts Form Requests',
+      'description' => 'List',
+    ],
+    'show' => [
+      'header' => 'Contacts Form Requests',
+      'description' => 'View',
+    ],
+
+    'íd' => 'ID',
+    'name' => 'Name',
+    'contacts' => 'Contacts',
+    'type' => 'Expected Action',
   ]
 ];

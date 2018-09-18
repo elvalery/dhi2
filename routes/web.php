@@ -17,7 +17,6 @@ Route::view('/', 'welcome')->name('main');
 Route::view('/about', 'about')->name('about');
 Route::view('/technologies', 'technologies')->name('technologies');
 Route::view('/people', 'people')->name('people');
-Route::view('/contacts', 'contacts')->name('contacts');
 Route::view('/news', 'news')->name('news');
 
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio.index');
@@ -28,4 +27,6 @@ Route::get('/service/{service}', 'ServicesController@show')->name('service.detai
 
 Route::get('/career', 'JobController@index')->name('career');
 
+Route::get('/contacts', 'ContactsController@show')->name('contacts');
+Route::post('/contacts', 'ContactsController@store')->name('contacts.store');
 

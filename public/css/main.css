@@ -9154,6 +9154,27 @@ button:focus {
 .contacts-form {
   max-width: 440px;
   margin: 0 auto 40px;
+  position: relative;
+}
+
+.contacts-form__success {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(10, 10, 10, 0.7);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contacts-form__success span {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .contacts-form__input {

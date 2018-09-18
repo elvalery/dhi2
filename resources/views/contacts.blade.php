@@ -9,17 +9,13 @@
     </div>
     <div class="row">
       <div class="col">
-        <form action="" method="POST" class="contacts-form">
+        <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">
+          {{ csrf_field() }}
+          <div class="contacts-form__success"><span>@lang('dhi.contacts.success')</span></div>
           <input class="contacts-form__input" type="text" name="name" placeholder="Name" required>
-          <input class="contacts-form__input" type="email" name="email" placeholder="Email / Phone" required>
-          {{--<label class="contacts-form__label">
-            <select class="contacts-form__select" name="contact">
-              <option value="Write me">Write me</option>
-              <option value="Call me">Call me</option>
-            </select>
-          </label>--}}
-          <button class="contacts-form__btn" type="submit" name="write">Write me</button>
-          <button class="contacts-form__btn" type="submit" name="call">Call me</button>
+          <input class="contacts-form__input" type="text" name="contacts" placeholder="Email / Phone" required>
+          <button class="contacts-form__btn" type="submit" name="type" value="email">Write me</button>
+          <button class="contacts-form__btn" type="submit" name="type" value="phone">Call me</button>
         </form>
       </div>
     </div>
@@ -74,5 +70,27 @@
         icon: 'img/placeholder.svg'
       });
     }
+
+    $("#contact-form [type=submit]").click(function() {
+      $("[type=submit]", $(this).parents("form")).removeAttr("clicked");
+      $(this).attr("clicked", "true");
+    });
+    
+    $('#contact-form').on('submit', function(e){
+      e.preventDefault();
+  
+      var type = $("#contact-form [type=submit][clicked=true]").val(),
+        contacts = $("#contact-form input[name=contacts]").val(),
+        name = $("#contact-form input[name=name]").val();
+        
+      $.ajax({
+        type: 'POST',
+        url: '{{ request('contacts.store') }}',
+        data: {name: name, type: type, contacts: contacts},
+        success: function(result){
+          $("#contact-form div").css({"display":"flex"}).delay(5000).hide('slow');
+        },
+      });
+    });
   </script>
 @endsection
