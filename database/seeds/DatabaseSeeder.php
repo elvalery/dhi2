@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     $this->call(AdminServiceSeeder::class);
     $this->call(AdminJobFixSeeder::class);
     $this->call(AdminContactsSeeder::class);
+    $this->call(AdminNewsSeeder::class);
   }
 }

@@ -67,7 +67,7 @@
     </ul>
     @endif
     <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
-    <li class="nav-list__item"><a href="{{ route('news') }}">News</a></li>
+    <li class="nav-list__item"><a href="{{ route('news.index') }}">News</a></li>
     <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
     <li class="nav-list__item"><a href="{{ route('contacts') }}">Contacts</a></li>
   </ul>

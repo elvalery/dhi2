@@ -212,5 +212,33 @@ return [
     'name' => 'Name',
     'contacts' => 'Contacts',
     'type' => 'Expected Action',
-  ]
+  ],
+
+  'news' => [
+    'index' => [
+      'header' => 'News',
+      'description' => 'List',
+    ],
+
+    'create' => [
+      'header' => 'News',
+      'description' => 'Add news',
+    ],
+
+    'show' => [
+      'header' => 'News',
+      'description' => 'View',
+    ],
+
+    'edit' => [
+      'header' => 'News',
+      'description' => 'Edit',
+    ],
+
+    'íd' => 'ID',
+    'title' => 'Title',
+    'description' => 'Description',
+    'content' => 'Content',
+    'cover' => 'Cover image',
+  ],
 ];
