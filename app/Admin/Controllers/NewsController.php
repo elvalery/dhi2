@@ -125,7 +125,7 @@ class NewsController extends Controller
       ->rules('required|max:250');
 
     $form
-      ->text('description', trans('admin.news.description'))
+      ->textarea('description', trans('admin.news.description'))
       ->rules('required|max:250');
 
     $form
@@ -133,7 +133,7 @@ class NewsController extends Controller
       ->rules('required')
       ->uniqueName();
 
-    $form->textarea('content', trans('admin.news.content'));
+    $form->editor('content', trans('admin.news.content'));
 
     $form->display('created_at', __('admin.created_at'));
     $form->display('updated_at', __('admin.updated_at'));

@@ -44,4 +44,9 @@ return [
     'success' => 'Thank you! Your message has been sent'
   ],
 
+  'news' => [
+    'title' => 'News',
+    'description' => ''
+  ],
+
 ];

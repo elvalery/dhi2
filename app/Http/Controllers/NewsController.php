@@ -7,7 +7,9 @@ use App\Models\News;
 
 class NewsController extends Controller {
   public function index() {
-    return view('news.index');
+    $list = News::all();
+
+    return view('news.index', compact('list'));
   }
 
   public function show(News $news) {

@@ -9555,6 +9555,10 @@ button:focus {
   margin-bottom: 20px;
 }
 
+.news__content p {
+  padding-bottom: 10px;
+}
+
 @media (max-width: 1439.98px) {
   .vacancies-item__img {
     min-height: 200px;
