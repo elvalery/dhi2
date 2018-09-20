@@ -6,7 +6,7 @@
       <div class="col">
         <h3 class="about__ttl">About DHI</h3>
         <div class="about__video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/qBokdoVr_58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/qBokdoVr_58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <p class="about__txt">Design Hub International is an integrated design practice with its HQ office based in Kiev and representative office in Rotterdam, which provides architectural, engineering, building consultancy, design & planning services in CIS region and beyond, offering a broad range of professional architectural services for our international partners.</p>
         <p class="about__txt">The DHI Architecture’s professional ethos extends equally to the documentation and delivery of our design as to the design itself. Our professional team includes highly experienced specialists in all aspects of project delivery. Highly developed documentation quality assurance systems are a fundamental part of our culture. Our offices are equipped with state-of-the-art computer design, visualization and documentation systems, with access to common databases and libraries. These systems enable us to provide a coordinated output of consistently high quality.</p>
