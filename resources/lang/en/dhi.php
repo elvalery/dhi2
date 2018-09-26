@@ -49,4 +49,8 @@ return [
     'description' => ''
   ],
 
+  'services' => [
+    'title' => 'Services',
+    'description' => ''
+  ],
 ];
