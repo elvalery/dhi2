@@ -75,7 +75,7 @@
   <div class="nav-soc">
     <a href="https://www.facebook.com/Design-Hub-International-941115632665039/" target="_blank" class="nav-soc__link"><img src="/img/fb.svg" width="16" height="16" alt="DHI"></a>
     <a href="https://www.instagram.com/dhi_architecture/" target="_blank" class="nav-soc__link"><img src="/img/in.svg" width="16" height="16" alt="DHI"></a>
-    <a href="#" target="_blank" class="nav-soc__link"><img src="/img/li.svg" width="16" height="16" alt="DHI"></a>
+    <a href="https://ua.linkedin.com/in/andrey-yatsentuk-4624aa4b" target="_blank" class="nav-soc__link"><img src="/img/li.svg" width="16" height="16" alt="DHI"></a>
     <a href="https://www.behance.net/dhi-architecture" target="_blank" class="nav-soc__link"><img src="/img/be.svg" width="16" height="16" alt="DHI"></a>
     <a href="https://www.youtube.com/channel/UCeDErzD8cwVhCSSLNZIKoSA?view_as=subscriber" target="_blank" class="nav-soc__link"><img src="/img/yo.svg" width="16" height="16" alt="DHI"></a>
   </div>
