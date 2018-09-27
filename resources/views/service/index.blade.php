@@ -14,7 +14,7 @@
             <div class="vacancies-item clearfix">
               <a href="{{ route('service.detail', $service) }}"><div class="vacancies-item__img" style="background-image:url({{ asset('storage/' . $service->cover) }})"></div></a>
               <a href="{{ route('service.detail', $service) }}"><h4 class="vacancies-item__name">{{ $service->name }}</h4></a>
-              <p class="vacancies-item__txt">{!!  $service->description !!}</p>
+              <p class="vacancies-item__txt">{{ $service->description }}</p>
             </div>
           </div>
         @endforeach

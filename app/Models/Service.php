@@ -12,32 +12,6 @@ class Service extends Model {
     return 'link';
   }
 
-  public function getImageAttribute() {
-    if (empty($this->portfolio)) return null;
-
-    $list = $this->portfolio()->inRandomOrder()->get();
-    foreach ($list as $portfolio) {
-      if ($portfolio->images) return collect($portfolio->images)->random();
-    }
-
-    return null;
-  }
-
-  public function getCoverAttribute() {
-    if (empty($this->portfolio)) return null;
-
-    $list = $this->portfolio()->inRandomOrder()->get();
-    foreach ($list as $portfolio) {
-      if ($portfolio->cover) return $portfolio->cover;
-    }
-
-    return null;
-  }
-
-  public function getDescriptionAttribute() {
-    return $this->details;
-  }
-
   public function portfolio() {
     return $this->belongsToMany(Portfolio::class);
   }

@@ -168,6 +168,9 @@ return [
     'name' => 'Name',
     'link' => 'Link',
     'details' => 'Details',
+    'description' => 'Short Description',
+    'image' => 'Big Image',
+    'cover' => 'Small Image'
   ],
 
   'job' => [

@@ -113,10 +113,13 @@ class ServiceController extends Controller
     $show->id('ID');
     $show->name( trans('admin.services.name'));
     $show->link();
+    $show->description();
     $show->portfolio()->as(function ($portfolio) {
       return $portfolio->map(function ($item) { return $item->name;})->implode(', ');
     });
     $show->details();
+    $show->cover()->image();
+    $show->image()->image();
 
     return $show;
   }
@@ -149,9 +152,20 @@ class ServiceController extends Controller
         return $rules;
       });
 
+    $form->multipleSelect('portfolio')->options(\App\Models\Portfolio::all()->pluck('name', 'id'));
+
+    $form->textarea('description', trans('admin.service.description'))->rules('required');
     $form->editor('details', trans('admin.service.details'));
 
-    $form->multipleSelect('portfolio')->options(\App\Models\Portfolio::all()->pluck('name', 'id'));
+    $form
+      ->image('cover', trans('admin.service.cover'))
+      ->rules('required')
+      ->uniqueName();
+
+    $form
+      ->image('image', trans('admin.service.image'))
+      ->rules('required')
+      ->uniqueName();
 
     $form->display('created_at', trans('admin.created_time'));
     $form->display('updated_at', trans('admin.updated_time'));
