@@ -82,6 +82,7 @@ class ServiceController extends Controller
     $grid = new Grid(new Service);
 
     $grid->id('ID')->sortable();
+    $grid->column('order_id', trans('admin.service.order-id'))->sortable();
     $grid->column('name', trans('admin.service.name'))->sortable();
     $grid->column('link', trans('admin.service.link'))->sortable();
 
@@ -111,15 +112,16 @@ class ServiceController extends Controller
     $show = new Show(Service::findOrFail($id));
 
     $show->id('ID');
-    $show->name( trans('admin.services.name'));
-    $show->link();
-    $show->description();
+    $show->order_id();
+    $show->name( trans('admin.service.name'));
+    $show->link(trans('admin.service.link'));
+    $show->description(trans('admin.service.description'));
     $show->portfolio()->as(function ($portfolio) {
       return $portfolio->map(function ($item) { return $item->name;})->implode(', ');
     });
-    $show->details();
-    $show->cover()->image();
-    $show->image()->image();
+    $show->details(trans('admin.service.details'));
+    $show->cover(trans('admin.service.cover'))->image();
+    $show->image(trans('admin.service.image'))->image();
 
     return $show;
   }
@@ -134,6 +136,8 @@ class ServiceController extends Controller
     $form = new Form(new Service);
 
     $form->display('id', 'ID');
+
+    $form->number('order_id', trans('admin.service.order-id'))->rules('required|integer|max:32767');
 
     $form
       ->text('name', trans('admin.service.name'))

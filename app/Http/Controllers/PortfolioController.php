@@ -6,7 +6,7 @@ use App\Models\Portfolio;
 class PortfolioController extends Controller {
 
   public function index() {
-    $list = Portfolio::all();
+    $list = Portfolio::orderBy('order_id')->get();
     $categories = array_fill_keys(Portfolio::allCategories(), null);
 
     array_walk($categories, function (&$item, $key) {

@@ -109,6 +109,7 @@ class PortfolioController extends Controller
     $grid = new Grid(new Portfolio);
 
     $grid->id('ID')->sortable();
+    $grid->column('order_id', trans('admin.portfolio.order-id'))->sortable();
     $grid->column('name', trans('admin.portfolio.name'))->sortable();
     $grid->column('link', trans('admin.portfolio.link'))->sortable();
     $grid->column('category', trans('admin.portfolio.category'))
@@ -144,28 +145,29 @@ class PortfolioController extends Controller
     $obj = $this;
 
     $show->id('ID');
+    $show->order_id( trans('admin.portfolio.order-id'));
     $show->name( trans('admin.portfolio.name'));
-    $show->link();
-    $show->categoryName();
-    $show->service()
+    $show->link( trans('admin.portfolio.link'));
+    $show->categoryName(trans('admin.portfolio.category'));
+    $show->service(trans('admin.portfolio.services'))
       ->as(function($services) {
         return $services->map(function ($item) { return $item->name;})->implode(', ');
       });
-    $show->completion_date()->as(function ($date) {
+    $show->completion_date(trans('admin.portfolio.completion_date'))->as(function ($date) {
       return $date->format('d F Y');
     });
-    $show->factsList()->as(function($list) use ($obj) {
+    $show->factsList(trans('admin.portfolio.facts'))->as(function($list) use ($obj) {
       return $obj->formatShowList($list, true);
     });
-    $show->briefList()->as(function ($list) use ($obj) {
+    $show->briefList(trans('admin.portfolio.brief'))->as(function ($list) use ($obj) {
       return $obj->formatShowList($list);
     });
-    $show->resultsList()->as(function ($list) use ($obj) {
+    $show->resultsList(trans('admin.portfolio.results'))->as(function ($list) use ($obj) {
       return $obj->formatShowList($list);
     });;
-    $show->details();
-    $show->cover()->image();
-    $show->images()->as(function ($images) {
+    $show->details(trans('admin.portfolio.details'));
+    $show->cover(trans('admin.portfolio.cover'))->image();
+    $show->images(trans('admin.portfolio.image'))->as(function ($images) {
       $retVal = '';
       foreach ($images as $image) {
         if (url()->isValidUrl($image)) {
@@ -192,6 +194,8 @@ class PortfolioController extends Controller
     $form = (new Form(new Portfolio));
 
     $form->display('id', 'ID');
+
+    $form->number('order_id', trans('admin.portfolio.order-id'))->rules('required|integer|max:32767');
 
     $form
       ->text('name', trans('admin.portfolio.name'))

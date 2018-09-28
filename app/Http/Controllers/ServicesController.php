@@ -8,7 +8,7 @@ use App\Models\Service;
 class ServicesController extends Controller  {
 
   public function index() {
-    $list = Service::all();
+    $list = Service::orderBy('order_id')->get();
 
     return view('service.index', compact('list'));
   }

@@ -130,6 +130,7 @@ return [
     ],
 
     'íd' => 'ID',
+    'order-id' => 'Order ID',
     'name' => 'Name',
     'link' => 'Link',
     'category' => 'Category',
@@ -170,7 +171,8 @@ return [
     'details' => 'Details',
     'description' => 'Short Description',
     'image' => 'Big Image',
-    'cover' => 'Small Image'
+    'cover' => 'Small Image',
+    'order-id' => 'Order ID',
   ],
 
   'job' => [
@@ -195,6 +197,7 @@ return [
     ],
 
     'íd' => 'ID',
+    'order-id' => 'Order ID',
     'name' => 'Name',
     'details' => 'Details',
     'cover' => 'Cover image',
@@ -239,6 +242,7 @@ return [
     ],
 
     'íd' => 'ID',
+    'date' => 'Date',
     'title' => 'Title',
     'description' => 'Description',
     'content' => 'Content',

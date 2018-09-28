@@ -38,8 +38,8 @@ class JobController extends Controller
   public function show($id, Content $content)
   {
     return $content
-      ->header(__('admin.job.detail.header'))
-      ->description(__('admin.job.detail.description'))
+      ->header(__('admin.job.show.header'))
+      ->description(__('admin.job.show.description'))
       ->body($this->detail($id));
   }
 
@@ -81,11 +81,21 @@ class JobController extends Controller
   {
     $grid = new Grid(new Job);
 
-    $grid->id('ID');
-    $grid->name(__('admin.job.name'));
+    $grid->id('ID')->sortable();
+    $grid->order_id(__('admin.job.order-id'))->sortable();
+    $grid->name(__('admin.job.name'))->sortable();
     $grid->details(__('admin.job.details'));
     $grid->created_at(__('admin.created_at'));
     $grid->updated_at(__('admin.updated_at'));
+
+    $grid->filter(function($filter){
+
+      // Remove the default id filter
+      $filter->disableIdFilter();
+
+      // Add a column filter
+      $filter->like('name', trans('admin.job.name'));
+    });
 
     return $grid;
   }
@@ -101,6 +111,7 @@ class JobController extends Controller
     $show = new Show(Job::findOrFail($id));
 
     $show->id('ID');
+    $show->order_id(__('admin.job.order-id'));
     $show->name(__('admin.job.name'));
     $show->cover(__('admin.job.cover'))->image();
     $show->pdf(__('admin.job.pdf'))->file();
@@ -119,6 +130,8 @@ class JobController extends Controller
   protected function form()
   {
     $form = new Form(new Job);
+
+    $form->number('order_id', trans('admin.job.order-id'))->rules('required|integer|max:32767');
 
     $form->text('name', __('admin.job.name'))->rules('required');
     $form->image('cover', __('admin.job.cover'))

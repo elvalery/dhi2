@@ -81,6 +81,9 @@ class NewsController extends Controller
   {
     $grid = new Grid(new News);
 
+    $grid->column('date', trans('admin.news.date'))->display(function ($date) {
+      return ($date) ? (new \DateTime($date))->format('d F Y') : 'none';
+    })->sortable();
     $grid->column('title', trans('admin.news.title'))->sortable();
     $grid->column('description', trans('admin.news.description'));
 
@@ -102,6 +105,9 @@ class NewsController extends Controller
   {
     $show = new Show(News::findOrFail($id));
     $show->id('ID');
+    $show->date(trans('admin.news.date'))->as(function ($date) {
+      return $date->format('d F Y');
+    });
     $show->title( trans('admin.news.title'));
     $show->description( trans('admin.news.description'));
     $show->cover()->image();
@@ -123,6 +129,10 @@ class NewsController extends Controller
     $form
       ->text('title', trans('admin.news.title'))
       ->rules('required|max:250');
+
+    $form
+      ->date('date', trans('admin.news.date'))
+      ->rules('required');
 
     $form
       ->textarea('description', trans('admin.news.description'))
