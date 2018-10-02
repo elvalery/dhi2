@@ -143,7 +143,7 @@ class NewsController extends Controller
       ->rules('required')
       ->uniqueName();
 
-    $form->editor('content', trans('admin.news.content'));
+    $form->ckeditor('content', trans('admin.news.content'));
 
     $form->display('created_at', __('admin.created_at'));
     $form->display('updated_at', __('admin.updated_at'));

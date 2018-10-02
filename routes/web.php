@@ -31,4 +31,7 @@ Route::post('/contacts', 'ContactsController@store')->name('contacts.store');
 
 Route::get('/news', 'NewsController@index')->name('news.index');
 Route::get('/news/{news}', 'NewsController@show')->name('news.detail');
-
+/*
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+  //\UniSharp\LaravelFilemanager\Lfm::routes();
+});*/

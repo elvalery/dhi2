@@ -159,7 +159,7 @@ class ServiceController extends Controller
     $form->multipleSelect('portfolio')->options(\App\Models\Portfolio::all()->pluck('name', 'id'));
 
     $form->textarea('description', trans('admin.service.description'))->rules('required');
-    $form->editor('details', trans('admin.service.details'));
+    $form->ckeditor('details', trans('admin.service.details'));
 
     $form
       ->image('cover', trans('admin.service.cover'))

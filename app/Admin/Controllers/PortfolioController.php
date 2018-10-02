@@ -235,7 +235,7 @@ class PortfolioController extends Controller
     $form->textarea('results', trans('admin.portfolio.results'))
       ->help(trans('admin.json-fields-help'));
 
-    $form->editor('details', trans('admin.portfolio.details'));
+    $form->ckeditor('details', trans('admin.portfolio.details'));
 
     $form
       ->image('cover', trans('admin.portfolio.cover'))
