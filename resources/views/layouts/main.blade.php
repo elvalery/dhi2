@@ -56,7 +56,7 @@
       <li><a href="{{ route('people') }}">People</a></li>
       {{--<li><a href="#">Publications</a></li>--}}
       <li><a href="{{ route('technologies') }}">Technologies</a></li>
-      <li><a href="#">History</a></li>
+      {{--<li><a href="#">History</a></li>--}}
     </ul>
     <li class="nav-list__item"><a href="{{ route('service.index') }}">Services</a></li>
     @if($service_menu->isNotEmpty())
