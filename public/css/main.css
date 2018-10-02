@@ -9570,6 +9570,12 @@ button:focus {
   margin-bottom: 20px;
 }
 
+.news__content {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .news__content p {
   padding-bottom: 10px;
 }
