@@ -18,28 +18,6 @@ class Portfolio extends Model {
     'deleted_at'
   ];
 
-  const CATEGORY_CONSULTING = 'consulting';
-  const CATEGORY_ARCHITECTURE = 'architecture';
-  const CATEGORY_INTERIOR = 'interior';
-  const CATEGORY_GRAPHIC = 'graphic';
-  const CATEGORY_NAVIGATION = 'navigation';
-  const CATEGORY_URBAN = 'urban';
-
-  static public function allCategories() {
-    return [
-      Portfolio::CATEGORY_ARCHITECTURE,
-      Portfolio::CATEGORY_CONSULTING,
-      Portfolio::CATEGORY_GRAPHIC,
-      Portfolio::CATEGORY_INTERIOR,
-      Portfolio::CATEGORY_NAVIGATION,
-      Portfolio::CATEGORY_URBAN
-    ];
-  }
-
-  public function getCategoryNameAttribute() {
-    return trans('dhi.portfolio.categories.' . $this->category);
-  }
-
   public function getFactsListAttribute() {
     return $this->getArrayKeyField($this->facts);
   }
@@ -70,6 +48,12 @@ class Portfolio extends Model {
 
     return $this->service->map(function ($item) { return $item->name;})->implode(', ');
   }
+
+  public function categories() {
+    return $this->belongsToMany(
+      Category::class, 'portfolio_category');
+  }
+
 
 }
 

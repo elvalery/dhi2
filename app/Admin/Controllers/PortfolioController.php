@@ -31,16 +31,6 @@ class PortfolioController extends Controller
     return $retVal;
   }
 
-  private function categoryBuilder() {
-    $categories = array_fill_keys(Portfolio::allCategories(), null);
-
-    array_walk($categories, function (&$item, $key) {
-      $item = trans('dhi.portfolio.categories.' . $key);
-    });
-
-    return $categories;
-  }
-
   /**
    * Index interface.
    *
@@ -112,9 +102,6 @@ class PortfolioController extends Controller
     $grid->column('order_id', trans('admin.portfolio.order-id'))->sortable();
     $grid->column('name', trans('admin.portfolio.name'))->sortable();
     $grid->column('link', trans('admin.portfolio.link'))->sortable();
-    $grid->column('category', trans('admin.portfolio.category'))
-      ->display(function ($name) { return trans('dhi.portfolio.categories.' . $name);})
-      ->sortable();
 
     $grid->paginate(20);
 
@@ -126,7 +113,7 @@ class PortfolioController extends Controller
       // Add a column filter
       $filter->like('name', trans('admin.portfolio.name'));
 
-      $filter->equal('category')->select($this->categoryBuilder());
+//      $filter->equal('category')->select($this->categoryBuilder());
 
     });
 
@@ -148,7 +135,10 @@ class PortfolioController extends Controller
     $show->order_id( trans('admin.portfolio.order-id'));
     $show->name( trans('admin.portfolio.name'));
     $show->link( trans('admin.portfolio.link'));
-    $show->categoryName(trans('admin.portfolio.category'));
+    $show->categories(trans('admin.portfolio.category'))
+      ->as(function ($categories) {
+        return $categories->pluck('name');
+      })->label();
     $show->service(trans('admin.portfolio.services'))
       ->as(function($services) {
         return $services->map(function ($item) { return $item->name;})->implode(', ');
@@ -218,10 +208,9 @@ class PortfolioController extends Controller
       ->date('completion_date', trans('admin.portfolio.completion_date'))
       ->rules('required');
 
-    $categories = $this->categoryBuilder();
     $form
-      ->select('category', trans('admin.portfolio.category'))
-      ->options($categories)
+      ->multipleSelect('categories', trans('admin.portfolio.category'))
+      ->options(\App\Models\Category::all()->pluck('name', 'id'))
       ->rules('required');
 
     /*$form

@@ -1,15 +1,6 @@
 <?php
 return [
   'portfolio' => [
-    'categories' => [
-      'consulting' => 'Consulting',
-      'architecture' => 'Architecture',
-      'interior' => 'Interior Design',
-      'graphic'=> 'Graphic Design',
-      'navigation'=> 'Navigation',
-      'urban'=> 'Urban Planning',
-    ],
-
     'íd' => 'ID',
     'name' => 'Name',
     'link' => 'URL',

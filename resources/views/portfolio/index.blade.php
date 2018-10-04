@@ -10,7 +10,7 @@
     <ul class="tab-mnu">
       <li class="tab-mnu__link active">All</li>
       @foreach($categories as $category)
-        <li class="tab-mnu__link">{{ $category }}</li>
+        <li class="tab-mnu__link">{{ $category->name }}</li>
       @endforeach
     </ul>
   
@@ -30,10 +30,10 @@
       </div>
     </div>
     
-    @foreach($categories as $category_key => $category)
+    @foreach($categories as $category)
       <div class="tab-content">
         <div class="row">
-          @forelse($list->filter(function($v, $k) use ($category_key) { return $v->category == $category_key; }) as $portfolio)
+          @forelse($category->portfolios as $portfolio)
             @if($loop->iteration % 3 == 0)</div><div class="row">@endif
         
           <div class="col-md-4">
