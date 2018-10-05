@@ -140,6 +140,7 @@ return [
     'results' => 'Results',
     'details' => 'Description',
     'image' => 'Images',
+    'photos' => 'Images',
     'cover' => 'Cover image',
     'services' => 'Integrated services'
   ],
