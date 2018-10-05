@@ -54,6 +54,10 @@ class Portfolio extends Model {
       Category::class, 'portfolio_category');
   }
 
+  public function photos() {
+    return $this->hasMany(PortfolioPhoto::class)->orderBy('order_id');
+
+  }
 
 }
 

@@ -157,13 +157,14 @@ class PortfolioController extends Controller
     });;
     $show->details(trans('admin.portfolio.details'));
     $show->cover(trans('admin.portfolio.cover'))->image();
-    $show->images(trans('admin.portfolio.image'))->as(function ($images) {
+
+    $show->photos(trans('admin.portfolio.image'))->as(function ($photos) {
       $retVal = '';
-      foreach ($images as $image) {
-        if (url()->isValidUrl($image)) {
-          $src = $image;
+      foreach ($photos as $image) {
+        if (url()->isValidUrl($image->link)) {
+          $src = $image->link;
         } else {
-          $src = Storage::disk(config('admin.upload.disk'))->url($image);
+          $src = Storage::disk(config('admin.upload.disk'))->url($image->link);
         }
 
         $retVal .= "<img src='$src' style='max-width:200px;max-height:200px;margin-right:10px ' class='img' />";
@@ -231,10 +232,12 @@ class PortfolioController extends Controller
       ->rules('required')
       ->uniqueName();
 
-    $form
-      ->multipleImage('images', trans('admin.portfolio.images'))
-      ->uniqueName()
-      ->removable();
+    $form->hasMany('photos', function (Form\NestedForm $form) {
+      $form->number('order_id');
+      $form->image('link')
+        ->uniqueName()
+        ->removable();
+    });
 
     $form->display('created_at', 'Created time');
     $form->display('updated_at', 'Updated time');

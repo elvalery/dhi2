@@ -10,8 +10,8 @@
   </div>
   @if($portfolio->images)
   <div class="detail-slider">
-    @foreach($portfolio->images as $image)
-      <div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image) }})"></div>
+    @foreach($portfolio->photos as $image)
+      <div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image->link) }})"></div>
     @endforeach
   </div>
   @endif

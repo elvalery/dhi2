@@ -139,7 +139,7 @@ return [
     'brief' => 'Brief',
     'results' => 'Results',
     'details' => 'Description',
-    'images' => 'Images',
+    'image' => 'Images',
     'cover' => 'Cover image',
     'services' => 'Integrated services'
   ],
