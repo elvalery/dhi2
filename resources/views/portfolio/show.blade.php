@@ -8,14 +8,13 @@
       </div>
     </div>
   </div>
-  @if($portfolio->images)
+  @if($portfolio->photos)
   <div class="detail-slider">
     @foreach($portfolio->photos as $image)
       <div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image->link) }})"></div>
     @endforeach
   </div>
   @endif
-  
   <div class="container-fluid">
     @if($portfolio->factsList)
       <div class="row mb-4">
