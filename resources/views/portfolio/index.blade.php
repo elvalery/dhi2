@@ -17,7 +17,7 @@
     <div class="tab-content active">
       <div class="row">
       @foreach($list as $portfolio)
-        @if($loop->iteration % 3 == 0)</div><div class="row">@endif
+        @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
         
         <div class="col-md-4">
           <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
@@ -34,7 +34,7 @@
       <div class="tab-content">
         <div class="row">
           @forelse($category->portfolios as $portfolio)
-            @if($loop->iteration % 3 == 0)</div><div class="row">@endif
+            @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
         
           <div class="col-md-4">
             <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
