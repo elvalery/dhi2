@@ -52,7 +52,7 @@
   <ul class="nav-list">
     <li class="nav-list__item"><a href="{{ route('about') }}">About</a></li>
     <ul class="nav-list-sublist">
-      <li><a href="{{ route('about') }}">Company</a></li>
+      {{--<li><a href="{{ route('about') }}">Company</a></li>--}}
       <li><a href="{{ route('people') }}">People</a></li>
       {{--<li><a href="#">Publications</a></li>--}}
       <li><a href="{{ route('technologies') }}">Technologies</a></li>
