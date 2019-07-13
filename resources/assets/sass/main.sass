@@ -46,11 +46,20 @@ button
 		outline: none
 
 .mh100vh
-	min-height: calc(100vh - 108px)
+	min-height: calc(100vh - 110px)
 
 .p0
 	padding-left: 0
 	padding-right: 0
+
+.page-ttl
+	margin: 40px 0
+	font-family: $title-s
+	font-size: 25px
+	text-transform: uppercase
+	letter-spacing: .05em
+	color: #333333
+	text-align: center
 
 .lang
 	width: 50px
@@ -164,20 +173,13 @@ button
 			background-size: cover
 			background-repeat: no-repeat
 			&:before
+				position: absolute
 				content: ''
 				width: 100%
 				height: 100%
-				background-color: rgba(#020202, .2)
-				position: absolute
 				top: 0
 				left: 0
-			&:after
-				content: ''
-				width: 100%
-				height: 115px
-				background-color: rgba(#303030, .2)
-				position: absolute
-				bottom: 0
+				background-color: rgba(2,2,2,.2)
 			&.project1
 				background-image: url(../img/project1.jpg)
 			&.project2
@@ -190,13 +192,24 @@ button
 				background-image: url(../img/project5.jpg)
 			&.project6
 				background-image: url(../img/project6.jpg)
-		&__ttl
-			z-index: 1
-			font-size: 25px
+		&__bottom
 			position: absolute
-			bottom: 60px
-			right: 60px
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			width: 100%
+			height: 115px
+			bottom: 0
+			background-color: rgba(48,48,48,.7)
+		&__ttl
+			max-width: 35%
+			padding-right: 30px
+			font-size: 25px
 			color: #fff
+			text-align: right
+			z-index: 1
+		.slick-dots
+			bottom: 80px
 
 .slick-arrow
 	z-index: 1
@@ -266,7 +279,7 @@ button
 	animation: fadeEffect 1s
 	&.active
 		display: block
-    
+
 @keyframes fadeEffect
     from
     	opacity: 0
@@ -274,14 +287,6 @@ button
     	opacity: 1
 
 .portfolio
-	&__ttl
-		margin: 40px 0 20px
-		font-family: $title-s
-		font-size: 25px
-		text-transform: uppercase
-		letter-spacing: .05em
-		color: #333333
-		text-align: center
 	&-item
 		display: block
 		margin-bottom: 40px
@@ -312,14 +317,8 @@ button
 			color: #4F4F4F
 
 .vacancies
-	&__ttl
-		margin: 40px 0 20px
-		font-family: $title-s
-		font-size: 25px
-		text-transform: uppercase
-		letter-spacing: .05em
-		color: #333333
-		text-align: center
+	&__page-ttl
+		margin-bottom: 20px
 	&__txt
 		margin-bottom: 20px
 		font-size: 20px
@@ -359,49 +358,42 @@ button
 
 
 .about
-	&__ttl
-		margin: 40px 0
-		font-family: $title-s
-		font-size: 25px
-		text-transform: uppercase
-		letter-spacing: .05em
-		color: #333333
-		text-align: center
 	&__txt
+		margin-bottom: 30px
 		font-size: 17px
 		color: #333333
-		margin-bottom: 30px
 		&:last-child
 			margin-bottom: 40px
 	&__video
-		display: block
-		width: calc(100% + 40px)
-		height: auto
-		margin: 0 auto 40px
-		text-align: center
 		position: relative
-		overflow: hidden
-		padding-top: 56.25%
+		width: calc(100% + 40px)
+		margin: 0 auto 40px -10px
 		background: #303030
-		margin-left: -10px
+		overflow: hidden
 		iframe
+			position: relative
+			display: block
+			width: 1280px
+			height: 720px
+			left: 50%
 			background: #303030
-			position: absolute
-			top: 0
-			left: 7.5%
-			width: 85%
-			height: 100%
 			border: 0
+			transform: translateX(-50%)
+			@media (max-width: 1490px)
+				width: 854px
+				height: 480px
+			@media (min-width: 992px) and (max-width: 1060px)
+				width: 640px
+				height: 360px
+			@media (max-width: 870px)
+				width: 640px
+				height: 360px
+			@media (max-width: 640px)
+				width: 100%
+				max-width: 426px
+				height: 240px
 
 .contacts
-	&__ttl
-		margin: 40px 0 20px
-		font-family: $title-s
-		font-size: 25px
-		text-transform: uppercase
-		letter-spacing: .05em
-		color: #333333
-		text-align: center
 	&-form
 		max-width: 440px
 		margin: 0 auto 40px
@@ -513,8 +505,9 @@ button
 .technologies
 	&__ttl
 		margin: 40px 0
-		font-family: $bold
+		font-family: $title-s
 		font-size: 25px
+		text-transform: uppercase
 		letter-spacing: .05em
 		color: #333333
 		text-align: center
@@ -541,14 +534,6 @@ button
 	margin-top: 40px
 
 .people
-	&__ttl
-		margin: 40px 0 20px
-		font-family: $title-s
-		font-size: 25px
-		text-transform: uppercase
-		letter-spacing: .05em
-		color: #333333
-		text-align: center
 	&-item
 		margin-bottom: 40px
 		&__img

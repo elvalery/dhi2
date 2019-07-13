@@ -4,7 +4,7 @@
   <div class="container-fluid tabs" >
     <div class="row">
       <div class="col">
-        <h3 class="portfolio__ttl">Portfolio</h3>
+        <h1 class="page-ttl">Portfolio</h1>
       </div>
     </div>
     <ul class="tab-mnu">

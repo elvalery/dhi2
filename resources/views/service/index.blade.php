@@ -4,7 +4,7 @@
   <div class="container-fluid mh100vh">
     <div class="row">
       <div class="col">
-        <h3 class="vacancies__ttl">@lang('dhi.services.title')</h3>
+        <h1 class="page-ttl">@lang('dhi.services.title')</h1>
       </div>
     </div>
     @if($list->isNotEmpty())
