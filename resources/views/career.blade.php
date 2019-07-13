@@ -4,7 +4,7 @@
   <div class="container-fluid mh100vh">
     <div class="row">
       <div class="col">
-        <h3 class="vacancies__ttl">@lang('dhi.job.title')</h3>
+        <h1 class="page-ttl vacancies__page-ttl">@lang('dhi.job.title')</h1>
         <h3 class="vacancies__txt">@lang('dhi.job.description')</h3>
         <img src="img/vacancies_img.jpg" alt="DHI" class="vacancies__img img-r">
       </div>

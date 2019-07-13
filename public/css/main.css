@@ -8661,12 +8661,22 @@ button:focus {
 }
 
 .mh100vh {
-  min-height: calc(100vh - 108px);
+  min-height: calc(100vh - 110px);
 }
 
 .p0 {
   padding-left: 0;
   padding-right: 0;
+}
+
+.page-ttl {
+  margin: 40px 0;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #333333;
+  text-align: center;
 }
 
 .lang {
@@ -8830,22 +8840,13 @@ button:focus {
 }
 
 .main-slider__slide:before {
+  position: absolute;
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(2, 2, 2, 0.2);
-  position: absolute;
   top: 0;
   left: 0;
-}
-
-.main-slider__slide:after {
-  content: '';
-  width: 100%;
-  height: 115px;
-  background-color: rgba(48, 48, 48, 0.2);
-  position: absolute;
-  bottom: 0;
+  background-color: rgba(2, 2, 2, 0.2);
 }
 
 .main-slider__slide.project1 {
@@ -8872,13 +8873,34 @@ button:focus {
   background-image: url(/images/project6.jpg?684d7148db222a92b0aae698160437b7);
 }
 
-.main-slider__ttl {
-  z-index: 1;
-  font-size: 25px;
+.main-slider__bottom {
   position: absolute;
-  bottom: 60px;
-  right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 115px;
+  bottom: 0;
+  background-color: rgba(48, 48, 48, 0.7);
+}
+
+.main-slider__ttl {
+  max-width: 35%;
+  padding-right: 30px;
+  font-size: 25px;
   color: #fff;
+  text-align: right;
+  z-index: 1;
+}
+
+.main-slider .slick-dots {
+  bottom: 80px;
 }
 
 .slick-arrow {
@@ -9003,16 +9025,6 @@ button:focus {
   }
 }
 
-.portfolio__ttl {
-  margin: 40px 0 20px;
-  font-family: "Montserrat-SemiBold", sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: #333333;
-  text-align: center;
-}
-
 .portfolio-item {
   display: block;
   margin-bottom: 40px;
@@ -9051,14 +9063,8 @@ button:focus {
   color: #4F4F4F;
 }
 
-.vacancies__ttl {
-  margin: 40px 0 20px;
-  font-family: "Montserrat-SemiBold", sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: #333333;
-  text-align: center;
+.vacancies__page-ttl {
+  margin-bottom: 20px;
 }
 
 .vacancies__txt {
@@ -9113,20 +9119,10 @@ button:focus {
   color: #5E5B5B;
 }
 
-.about__ttl {
-  margin: 40px 0;
-  font-family: "Montserrat-SemiBold", sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: #333333;
-  text-align: center;
-}
-
 .about__txt {
+  margin-bottom: 30px;
   font-size: 17px;
   color: #333333;
-  margin-bottom: 30px;
 }
 
 .about__txt:last-child {
@@ -9134,36 +9130,52 @@ button:focus {
 }
 
 .about__video {
-  display: block;
-  width: calc(100% + 40px);
-  height: auto;
-  margin: 0 auto 40px;
-  text-align: center;
   position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
+  width: calc(100% + 40px);
+  margin: 0 auto 40px -10px;
   background: #303030;
-  margin-left: -10px;
+  overflow: hidden;
 }
 
 .about__video iframe {
+  position: relative;
+  display: block;
+  width: 1280px;
+  height: 720px;
+  left: 50%;
   background: #303030;
-  position: absolute;
-  top: 0;
-  left: 7.5%;
-  width: 85%;
-  height: 100%;
   border: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.contacts__ttl {
-  margin: 40px 0 20px;
-  font-family: "Montserrat-SemiBold", sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: #333333;
-  text-align: center;
+@media (max-width: 1490px) {
+  .about__video iframe {
+    width: 854px;
+    height: 480px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1060px) {
+  .about__video iframe {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 870px) {
+  .about__video iframe {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__video iframe {
+    width: 100%;
+    max-width: 426px;
+    height: 240px;
+  }
 }
 
 .contacts-form {
@@ -9317,8 +9329,9 @@ button:focus {
 
 .technologies__ttl {
   margin: 40px 0;
-  font-family: "OpenSans-Bold", sans-serif;
+  font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 25px;
+  text-transform: uppercase;
   letter-spacing: .05em;
   color: #333333;
   text-align: center;
@@ -9353,16 +9366,6 @@ button:focus {
   position: relative;
   min-height: 390px;
   margin-top: 40px;
-}
-
-.people__ttl {
-  margin: 40px 0 20px;
-  font-family: "Montserrat-SemiBold", sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: #333333;
-  text-align: center;
 }
 
 .people-item {

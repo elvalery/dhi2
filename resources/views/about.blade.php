@@ -4,7 +4,7 @@
   <div class="container-fluid mh100vh">
     <div class="row">
       <div class="col">
-        <h3 class="about__ttl">About DHI</h3>
+        <h1 class="page-ttl">About DHI</h1>
         <div class="about__video">
           <iframe src="https://www.youtube.com/embed/qBokdoVr_58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
