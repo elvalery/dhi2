@@ -19,7 +19,7 @@
       @foreach($list as $portfolio)
         @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
         
-        <div class="col-md-4">
+        <div class="col-sm-6 col-md-4">
           <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
             <div class="portfolio-item__img" style="background-image:url({{ asset('storage/' . $portfolio->cover) }})"></div>
             <h4 class="portfolio-item__ttl">{{ $portfolio->name }}</h4>

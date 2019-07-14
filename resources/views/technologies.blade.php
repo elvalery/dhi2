@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-  <div class="container-fluid mh100vh">
+  <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h3 class="technologies__ttl">Technologies</h3>
+        <h1 class="page-ttl">Technologies</h1>
       </div>
     </div>
     <div class="row technologies__wrap">

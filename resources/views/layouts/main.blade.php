@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body class="{{ !empty($body_class) ? $body_class : '' }}">
 
 <div class="hamburger hamburger--collapse d-block d-md-none">
   <div class="hamburger-box">
@@ -87,7 +87,7 @@
   <div class="foot container-fluid">
     <div class="row">
       <div class="col">
-        <img src="/img/logo-big.png" alt="DHI" class="foot__logo img-r">
+        <img src="/img/logo-small.png" alt="DHI" class="foot__logo img-r">
         <p class="foot__txt">© Copyright 2018 dhi-architecture.com - All Rights Reserved</p>
       </div>
     </div>

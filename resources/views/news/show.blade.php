@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container-fluid mh100vh">
+<div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h3 class="vacancies__ttl">{{ $news->title }}</h3>
+      <h1 class="page-ttl page-ttl_align_left">{{ $news->title }}</h1>
     </div>
   </div>
   <div class="row">
