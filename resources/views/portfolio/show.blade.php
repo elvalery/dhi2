@@ -3,15 +3,17 @@
 @section('content')
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
-        <h3 class="detail__ttl">{{ $portfolio->name }}</h3>
+      <div class="col-md-12">
+        <h1 class="page-ttl page-ttl_align_left">{{ $portfolio->name }}</h1>
       </div>
     </div>
   </div>
   @if($portfolio->photos)
   <div class="detail-slider">
     @foreach($portfolio->photos as $image)
-      <div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image->link) }})"></div>
+      <a href="{{ asset('storage/' . $image->link) }}" data-fancybox="gallery">
+        <span class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image->link) }})"></span>
+      </a>
     @endforeach
   </div>
   @endif
@@ -19,7 +21,7 @@
     @if($portfolio->factsList)
       <div class="row mb-4">
         <div class="col-md-12">
-          <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.facts-ttl')</h3>
+          <h3 class="block-ttl mt-0 mb-0">@lang('dhi.portfolio.facts-ttl')</h3>
         </div>
         @foreach($portfolio->factsList as $name => $value)
           <div class="col-md-4 detail__facts">
@@ -33,7 +35,7 @@
     @if($portfolio->details)
       <div class="row">
         <div class="col-md-12">
-          <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.details-ttl')</h3>
+          <h3 class="block-ttl mt-0 mb-1">@lang('dhi.portfolio.details-ttl')</h3>
           <div class="detail__other">
             {!! $portfolio->details !!}
           </div>
@@ -45,7 +47,7 @@
       <div class="row">
         @if($portfolio->briefList)
         <div class="col-md-6">
-          <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.brief-ttl')</h3>
+          <h3 class="block-ttl mt-0 mb-1">@lang('dhi.portfolio.brief-ttl')</h3>
           <ul class="detail__lst">
           @foreach($portfolio->briefList as $item)
             <li>{{ $item }}</li>
@@ -55,7 +57,7 @@
         @endif
         @if($portfolio->resultsList)
           <div class="col-md-6">
-            <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.results-ttl')</h3>
+            <h3 class="block-ttl mt-0 mb-1">@lang('dhi.portfolio.results-ttl')</h3>
             <ul class="detail__lst">
               @foreach($portfolio->resultsList as $item)
                 <li>{{ $item }}</li>
@@ -69,7 +71,7 @@
     @if($portfolio->service)
     <div class="row mt-4 mb-5">
       <div class="col-md-12">
-        <h3 class="detail__ttl mt-0 mb-0">@lang('dhi.portfolio.services-ttl')</h3>
+        <h3 class="block-ttl mt-0 mb-1">@lang('dhi.portfolio.services-ttl')</h3>
         <div>{{ $portfolio->serviceArray }}</div>
       </div>
     </div>

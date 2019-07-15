@@ -1,17 +1,19 @@
 @extends('layouts.main')
 
 @section('content')
-  <div class="container-fluid mh100vh">
+  <div class="container-fluid">
     <div class="row">
       <div class="col">
         <h1 class="page-ttl vacancies__page-ttl">@lang('dhi.job.title')</h1>
-        <h3 class="vacancies__txt">@lang('dhi.job.description')</h3>
-        <img src="img/vacancies_img.jpg" alt="DHI" class="vacancies__img img-r">
+        <h2 class="vacancies__txt">@lang('dhi.job.description')</h2>
       </div>
+    </div>
+    <div class="vacancies__img">
+      <img src="img/career-animation.gif" alt="DHI">
     </div>
     <div class="row">
       <div class="col">
-        <div class="vacancies__subttl">@lang('dhi.job.subtitle')</div>
+        <h3 class="block-ttl">@lang('dhi.job.subtitle')</h3>
       </div>
     </div>
     @if($list->isNotEmpty())

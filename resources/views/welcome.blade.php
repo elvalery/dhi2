@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['body_class' => 'homepage'])
 
 @section('content')
   <img src="img/logo_white.svg" alt="DHI" class="main__logo">

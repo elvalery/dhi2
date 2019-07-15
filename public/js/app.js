@@ -37323,6 +37323,16 @@ $(function () {
 		$('.hamburger').removeClass('is-active');
 	});
 
+	$(document).on('click', function (event) {
+		if (!$(event.target).closest('nav.nav').length && !$(event.target).closest('.hamburger').length) {
+			$('.hamburger').removeClass('is-active');
+			$('.nav').removeClass('show');
+			$('body').removeClass('nav-show');
+		}
+
+		event.stopPropagation();
+	});
+
 	$('.fancybox').fancybox({
 		margin: 0,
 		padding: 0
