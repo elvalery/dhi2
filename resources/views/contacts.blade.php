@@ -8,21 +8,78 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col-md-6">
+{{--        <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">--}}
+{{--          {{ csrf_field() }}--}}
+{{--          <div class="contacts-form__success contacts-form__spinner">--}}
+{{--            <span>@lang('dhi.contacts.success')</span>--}}
+{{--          </div>--}}
+{{--          <input class="contacts-form__input" type="text" name="name" placeholder="Name" required>--}}
+{{--          <input class="contacts-form__input" type="text" name="contacts" placeholder="Email / Phone" required>--}}
+{{--          <button class="contacts-form__btn" type="submit" name="type" value="email">Write me</button>--}}
+{{--          <button class="contacts-form__btn" type="submit" name="type" value="phone">Call me</button>--}}
+{{--        </form>--}}
+
         <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">
           {{ csrf_field() }}
           <div class="contacts-form__success contacts-form__spinner">
             <span>@lang('dhi.contacts.success')</span>
           </div>
-          <input class="contacts-form__input" type="text" name="name" placeholder="Name" required>
-          <input class="contacts-form__input" type="text" name="contacts" placeholder="Email / Phone" required>
-          <button class="contacts-form__btn" type="submit" name="type" value="email">Write me</button>
-          <button class="contacts-form__btn" type="submit" name="type" value="phone">Call me</button>
+
+          <div class="text-center my-0">
+            <div class="service-choice__button px-3 py-1">
+              Choose a service <span>&gt;</span>
+            </div>
+          </div>
+
+          <div class="text-center my-0 service-choice-wrapper">
+            <div class="service-choice">
+              <input type="checkbox" name="action[]" value="1" id="callback_user_service_bim-model">
+              <label for="callback_user_service_bim-model" class="open__light">request a BIM model</label>
+            </div>
+            <div class="service-choice">
+              <input type="checkbox" name="action[]" value="4" id="callback_user_service_portfolio">
+              <label for="callback_user_service_portfolio" class="open__light">request a drawing sample</label>
+            </div>
+            <div class="service-choice">
+              <input type="checkbox" name="action[]" value="2" id="callback_user_service_email">
+              <label for="callback_user_service_email" class="open__light">write me</label>
+            </div>
+            <div class="service-choice">
+              <input type="checkbox" name="action[]" value="5" id="callback_user_service_call">
+              <label for="callback_user_service_call" class="open__light">call me</label>
+            </div>
+            <div class="service-choice">
+              <input type="checkbox" name="action[]" value="3" id="callback_user_service_quot">
+              <label for="callback_user_service_quot" class="open__light">get a quote</label>
+            </div>
+          </div>
+
+          <div class="my-0">
+            <input type="file" id="callback_user_file" name="file" onchange="uploadFile(this)">
+            <label for="callback_user_file" class="form_input px-3 py-1 mt-2 text-left">Upload a test assignment</label>
+          </div>
+          <div class="row input-wrap mt-0 mb-3">
+            <div class="col-sm-12 col-lg-6">
+              <label for="callback_user_phone" class="form_label mt-2 mb-0">Contact phone number<br>
+                <input type="phone" id="callback_user_phone" class="contacts-form__input" name="phone" placeholder="+__ (___) ___ __ __" maxlength="19" autocomplete="off">
+              </label>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <label for="callback_user_email" class="form_label mt-2 mb-0">* E-mail<br>
+                <input type="email" name="email" required="" id="callback_user_email" class="contacts-form__input" placeholder="Enter your e-mail">
+              </label>
+            </div>
+          </div>
+          <div class="text-center my-2">
+            <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="Description"></textarea>
+          </div>
+          <div class="text-right d-flex justify-content-center my-3">
+            <button type="submit" class="contacts-form__btn">Get an offer</button>
+          </div>
         </form>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
+      <div class="col-md-6">
         <div class="contacts-item">
           <h3 class="contacts-item__ttl">Ukraine</h3>
           <p class="contacts-item__txt">A: Kiev | 01001 | 18V Mykhailvska St. | Office 106</p>

@@ -429,7 +429,7 @@ h1
 
 .contacts
 	&-form
-		max-width: 440px
+		max-width: 550px
 		margin: 0 auto 40px
 		position: relative
 		&__success
@@ -513,6 +513,58 @@ h1
 			cursor: pointer
 		&__btn:last-child
 			margin-right: 0
+		.service-choice
+			display: flex
+			align-items: center
+			min-height: 30px
+			margin: 8px 15px 0 0
+			.open__light
+				margin: 0 0 0 8px
+			&-wrapper
+				display: flex
+				flex-wrap: wrap
+				justify-content: flex-start
+			&__button
+				cursor: pointer
+				border-radius: 5px
+				border: 1px solid #4e5362
+				font-weight: 700
+				&:hover
+					background: #000
+					color: #fff
+					transition: .5s
+		input[type=file]
+			position: absolute
+			width: .1px
+			height: .1px
+			opacity: 0
+			overflow: hidden
+			z-index: -1
+			& + label
+				width: 100%
+				border: 1px solid #4e5362
+				border-radius: 5px
+				cursor: pointer
+				&:hover
+					background: rgba(0,0,0,.4)
+					color: #fff
+					transition: .5s
+				&::after
+					float: right
+					width: 13px
+					height: 15px
+					top: 50%
+					margin-top: 7px
+					content: url(../img/icon_download.png)
+					transform: rotate(180deg)
+		.input-wrap
+			label
+				width: 100%
+		textarea
+			width: 100%
+			border: 1px solid #4e5362
+			border-radius: 5px
+			resize: none
 	&-item
 		max-width: 330px
 		margin: 0 auto 30px
@@ -723,5 +775,8 @@ h1
 	margin: 0 auto 50px
 	p
 		padding-bottom: 10px
+
+.text-center
+	text-align: center
 
 @import "media" // Always at the end

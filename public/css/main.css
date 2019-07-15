@@ -9210,7 +9210,7 @@ h1 {
 }
 
 .contacts-form {
-  max-width: 440px;
+  max-width: 550px;
   margin: 0 auto 40px;
   position: relative;
 }
@@ -9322,6 +9322,91 @@ h1 {
 
 .contacts-form__btn:last-child {
   margin-right: 0;
+}
+
+.contacts-form .service-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 30px;
+  margin: 8px 15px 0 0;
+}
+
+.contacts-form .service-choice .open__light {
+  margin: 0 0 0 8px;
+}
+
+.contacts-form .service-choice-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contacts-form .service-choice__button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #4e5362;
+  font-weight: 700;
+}
+
+.contacts-form .service-choice__button:hover {
+  background: #000;
+  color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.contacts-form input[type=file] {
+  position: absolute;
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.contacts-form input[type=file] + label {
+  width: 100%;
+  border: 1px solid #4e5362;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacts-form input[type=file] + label:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.contacts-form input[type=file] + label::after {
+  float: right;
+  width: 13px;
+  height: 15px;
+  top: 50%;
+  margin-top: 7px;
+  content: url(/images/icon_download.png?b7aa87159a46a1b39689e7a03ecc1327);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.contacts-form .input-wrap label {
+  width: 100%;
+}
+
+.contacts-form textarea {
+  width: 100%;
+  border: 1px solid #4e5362;
+  border-radius: 5px;
+  resize: none;
 }
 
 .contacts-item {
@@ -9616,6 +9701,10 @@ h1 {
 
 .news__content p {
   padding-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (max-width: 1439.98px) {
