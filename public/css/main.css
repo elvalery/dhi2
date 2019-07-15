@@ -9362,6 +9362,14 @@ h1 {
   margin-bottom: 40px;
 }
 
+.technologies__img {
+  display: block;
+  width: 100%;
+  max-width: 465px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .technologies__subttl {
   font-family: "OpenSans-Bold", sans-serif;
   margin-bottom: 20px;
@@ -9476,6 +9484,7 @@ h1 {
 }
 
 .detail-slider__slide {
+  display: block;
   min-height: 600px;
   background-color: #303030;
   background-size: contain;
@@ -9732,6 +9741,7 @@ h1 {
   }
 
   .technologies__img {
+    max-width: 520px;
     margin-bottom: 20px;
   }
 

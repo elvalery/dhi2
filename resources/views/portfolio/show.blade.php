@@ -11,7 +11,9 @@
   @if($portfolio->photos)
   <div class="detail-slider">
     @foreach($portfolio->photos as $image)
-      <div class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image->link) }})"></div>
+      <a href="{{ asset('storage/' . $image->link) }}" data-fancybox="gallery">
+        <span class="detail-slider__slide" style="background-image: url({{ asset('storage/' . $image->link) }})"></span>
+      </a>
     @endforeach
   </div>
   @endif
