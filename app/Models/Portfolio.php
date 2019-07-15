@@ -7,10 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Portfolio extends Model {
   use SoftDeletes, ArrayFieldTrait;
 
-  public function getRouteKeyName() {
-    return 'link';
-  }
-
   protected $dates = [
     'completion_date',
     'created_at',
