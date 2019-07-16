@@ -192,7 +192,7 @@ class PortfolioController extends Controller
       ->text('name', trans('admin.portfolio.name'))
       ->rules('required|max:250');
 
-    $form
+/*    $form
       ->text('link', trans('admin.portfolio.link'))
       ->rules(function ($form) {
         $rules = 'required|min:2|alpha_dash';
@@ -203,7 +203,7 @@ class PortfolioController extends Controller
         }
 
         return $rules;
-      });
+      });*/
 
     $form
       ->date('completion_date', trans('admin.portfolio.completion_date'))
