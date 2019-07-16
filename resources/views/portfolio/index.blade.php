@@ -21,7 +21,9 @@
         
         <div class="col-sm-6 col-md-4">
           <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
-            <div class="portfolio-item__img" style="background-image:url({{ asset('storage/' . $portfolio->cover) }})"></div>
+            <div class="portfolio-item__img">
+              <img src="{{ asset('storage/' . $portfolio->cover) }}" alt="">
+            </div>
             <h4 class="portfolio-item__ttl">{{ $portfolio->name }}</h4>
             <p class="portfolio-item__date">{{ $portfolio->completion_date->format('Y') }}</p>
           </a>

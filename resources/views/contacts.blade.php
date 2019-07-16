@@ -62,7 +62,7 @@
           <div class="row input-wrap mt-0 mb-3">
             <div class="col-sm-12 col-lg-6">
               <label for="callback_user_phone" class="form_label mt-2 mb-0">Contact phone number<br>
-                <input type="phone" id="callback_user_phone" class="contacts-form__input" name="phone" placeholder="+__ (___) ___ __ __" maxlength="19" autocomplete="off">
+                <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __" maxlength="19" autocomplete="off">
               </label>
             </div>
             <div class="col-sm-12 col-lg-6">
@@ -100,6 +100,12 @@
 @endsection
 
 @section('js')
+  <script>
+      function uploadFile(target) {
+          $(target).siblings('label').html(target.files[0].name);
+      }
+  </script>
+
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcKXBKsIMkew7SppGI1p-MKSBteq60bBY"></script>
   <script type="text/javascript">
     $().button('toggle');

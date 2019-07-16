@@ -1,4 +1,5 @@
 $(function() {
+	$('input.phone-mask').mask('+99 (999) 999 99 99');
 
 	$('.hamburger').click(function() {
 		$(this).toggleClass('is-active');
@@ -49,6 +50,13 @@ $(function() {
 	$(this)
 		.addClass('active').siblings().removeClass('active')
 		.closest('.tabs').find('.tab-content').removeClass('active').eq($(this).index()).addClass('active');
+	});
+
+	$(".service-choice__button").on('click', function(){
+		$(".service-choice-wrapper").slideToggle('medium', function() {
+			if ($(this).is(':visible'))
+				$(this).css('display','flex');
+		});
 	});
 
 });
