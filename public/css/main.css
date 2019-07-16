@@ -9056,15 +9056,13 @@ h1 {
 
 .portfolio-item {
   display: block;
-  margin-bottom: 40px;
+  max-width: 541px;
+  margin: 0 auto 40px;
 }
 
 .portfolio-item__img {
-  height: 400px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .portfolio-item__ttl {

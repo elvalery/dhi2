@@ -64,4 +64,5 @@ require('./../libs/fancybox/dist/jquery.fancybox.min');
 require('./../libs/required_fields/jquery.maskedinput.min');
 require('./../libs/required_fields/required_fields');
 require('./../libs/slick-carousel/slick/slick.min');
+require('./../libs/maskedinput/maskedinput.min.js');
 require('./common');
