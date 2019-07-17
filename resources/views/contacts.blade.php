@@ -144,17 +144,17 @@
     $('#contact-form').on('submit', function(e){
       e.preventDefault();
   
-      var type = $("#contact-form [type=submit][clicked=true]").val(),
-        contacts = $("#contact-form input[name=contacts]").val(),
-        name = $("#contact-form input[name=name]").val();
-  
+      const formdata = new FormData($(this)[0]);
       $("#contact-form div").css({"display":"flex"});
       $("#contact-form .contacts-form__success").addClass('contacts-form__spinner');
       $.ajax({
         type: 'POST',
         url: '{{ request('contacts.store') }}',
-        data: {name: name, type: type, contacts: contacts},
-        success: function(result){
+        data: formdata,
+        cache: false,
+        processData: false,
+        contentType: false,
+        complete: function(result){
           $("#contact-form div").removeClass('contacts-form__spinner').delay(5000).hide('slow');
         },
       });

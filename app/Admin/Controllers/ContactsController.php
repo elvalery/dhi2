@@ -51,19 +51,19 @@ class ContactsController extends Controller
   protected function grid()
   {
     $grid = new Grid(new Contact);
-
+  
     $grid->disableCreateButton();
     $grid->actions(function ($actions) {
       $actions->disableEdit();
     });
-
-    $grid->id('ID');
-    $grid->name(__('admin.contacts.name'));
-    $grid->contacts(__('admin.contacts.contacts'));
-    $grid->type(__('admin.contacts.type'));
-    $grid->created_at(__('admin.created_at'));
-    $grid->updated_at(__('admin.updated_at'));
-
+  
+    $grid->id('Id');
+    $grid->email('Email');
+    $grid->phone('Phone');
+    $grid->description('Description');
+    $grid->created_at('Created at');
+    $grid->updated_at('Updated at');
+  
     return $grid;
   }
 
@@ -78,12 +78,14 @@ class ContactsController extends Controller
     $show = new Show(Contact::findOrFail($id));
 
     $show->id('Id');
-    $show->name(__('admin.contacts.name'));
-    $show->contacts(__('admin.contacts.contacts'));
-    $show->type(__('admin.contacts.type'));
-    $show->created_at(__('admin.created_at'));
-    $show->updated_at(__('admin.updated_at'));
-
+    $show->email('Email');
+    $show->phone('Phone');
+    $show->file('File')->file();
+    $show->description('Description');
+    $show->created_at('Created at');
+    $show->updated_at('Updated at');
+  
+  
     return $show;
   }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Action;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Models\Contact;
 use Illuminate\Validation\Rule;
@@ -23,12 +24,15 @@ class StoreContacts extends FormRequest {
    */
   public function rules() {
     return [
-      'name' => 'required',
-      'contacts' => 'required',
-      'type' => [
-        'required',
-        Rule::in(Contact::TYPE_PHONE, Contact::TYPE_MAIL),
+      'phone' => 'sometimes|nullable',
+      'email' => 'required|email',
+      'description' => 'sometimes|nullable|string',
+      'action[]' => [
+        'sometimes',
+        'nullable',
+        Rule::in(Action::all('id')),
       ],
+      'file' => 'sometimes|nullable|max:20480'
     ];
   }
 }
