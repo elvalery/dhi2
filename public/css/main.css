@@ -9065,6 +9065,10 @@ h1 {
   text-align: center;
 }
 
+.portfolio-item__img img {
+  max-width: 100%;
+}
+
 .portfolio-item__ttl {
   position: relative;
   font-family: "Montserrat-SemiBold", sans-serif;
@@ -9718,10 +9722,6 @@ h1 {
     height: 200px;
   }
 
-  .portfolio-item__img {
-    height: 300px;
-  }
-
   .detail-img {
     height: 300px;
   }
@@ -9750,10 +9750,6 @@ h1 {
   }
 
   .people-item__img {
-    height: 150px;
-  }
-
-  .portfolio-item__img {
     height: 150px;
   }
 
@@ -9850,7 +9846,7 @@ h1 {
     width: calc(100% + 60px);
   }
 
-  about__video,
+  .about__video,
   .vacancies__img {
     margin-left: -30px;
   }
@@ -9864,10 +9860,6 @@ h1 {
     width: 400px;
     height: 300px;
     margin: 0 auto;
-  }
-
-  .portfolio-item__img {
-    height: 400px;
   }
 
   .detail-img {
@@ -9949,10 +9941,6 @@ h1 {
 
   .people-item__img {
     width: 100%;
-  }
-
-  .portfolio-item__img {
-    height: 150px;
   }
 
   .detail__ttl {
