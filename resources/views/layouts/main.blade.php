@@ -90,7 +90,7 @@
     <div class="row">
       <div class="col">
         <img src="/img/logo-small.png" alt="DHI" class="foot__logo img-r">
-        <p class="foot__txt">© Copyright 2018 dhi-architecture.com - All Rights Reserved</p>
+        <p class="foot__txt">© Copyright 2019 dhi-architecture.com - All Rights Reserved</p>
       </div>
     </div>
   </div>
