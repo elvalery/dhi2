@@ -9230,6 +9230,7 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 99;
 }
 
 .contacts-form__success span {
@@ -9353,6 +9354,7 @@ h1 {
 }
 
 .contacts-form .service-choice__button {
+  width: 100%;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #4e5362;

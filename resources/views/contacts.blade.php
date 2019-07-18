@@ -62,12 +62,12 @@
           <div class="row input-wrap mt-0 mb-3">
             <div class="col-sm-12 col-lg-6">
               <label for="callback_user_phone" class="form_label mt-2 mb-0">Contact phone number<br>
-                <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __" maxlength="19" autocomplete="off">
+                <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __" required>
               </label>
             </div>
             <div class="col-sm-12 col-lg-6">
               <label for="callback_user_email" class="form_label mt-2 mb-0">* E-mail<br>
-                <input type="email" name="email" required="" id="callback_user_email" class="contacts-form__input" placeholder="Enter your e-mail">
+                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="Enter your e-mail" required>
               </label>
             </div>
           </div>
@@ -75,7 +75,7 @@
             <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="Description"></textarea>
           </div>
           <div class="text-right d-flex justify-content-center my-3">
-            <button type="submit" class="contacts-form__btn">Get an offer</button>
+            <button type="submit" class="contacts-form__btn" name="type">Get an offer</button>
           </div>
         </form>
       </div>
@@ -145,7 +145,8 @@
       e.preventDefault();
   
       const formdata = new FormData($(this)[0]);
-      $("#contact-form div").css({"display":"flex"});
+
+      $("#contact-form .contacts-form__success").css({ "display": "flex" });
       $("#contact-form .contacts-form__success").addClass('contacts-form__spinner');
       $.ajax({
         type: 'POST',
@@ -155,7 +156,7 @@
         processData: false,
         contentType: false,
         complete: function(result){
-          $("#contact-form div").removeClass('contacts-form__spinner').delay(5000).hide('slow');
+          $("#contact-form .contacts-form__success").removeClass('contacts-form__spinner').delay(5000).hide('slow');
         },
       });
     });
