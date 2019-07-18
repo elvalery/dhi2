@@ -40,10 +40,12 @@
 </div>
 
 <nav class="nav">
+{{--
   <div class="lang">
     <a href="#" class="lang__item active">En</a>
     <a href="#" class="lang__item">Ru</a>
   </div>
+--}}
   
   @if(Route::currentRouteName() != 'main')
   <a href="/"><img src="/img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
@@ -71,7 +73,7 @@
     <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
     <li class="nav-list__item"><a href="{{ route('contacts') }}">Contacts</a></li>
   </ul>
-  <a href="#" class="nav-enter">enter</a>
+  {{--<a href="#" class="nav-enter">enter</a>--}}
   <div class="nav-soc">
     <a href="https://www.facebook.com/Design-Hub-International-941115632665039/" target="_blank" class="nav-soc__link"><img src="/img/fb.svg" width="16" height="16" alt="DHI"></a>
     <a href="https://www.instagram.com/dhi_architecture/" target="_blank" class="nav-soc__link"><img src="/img/in.svg" width="16" height="16" alt="DHI"></a>
