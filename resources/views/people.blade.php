@@ -7,70 +7,82 @@
         <h1 class="page-ttl">People</h1>
       </div>
     </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-3">
+    <div class="row justify-content-md-around">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people1.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people1.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people2.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people2.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people3.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people3.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people4.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people4.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people5.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people5.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people6.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people6.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-md-center">
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people7.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people7.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-xs-6 col-sm-4">
         <div class="people-item">
-          <div class="people-item__img" style="background-image:url(img/people8.jpg)"></div>
+          <div class="people-item__img">
+            <img src="img/people8.jpg" alt="Яцентюк Андрей">
+          </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
