@@ -33,7 +33,7 @@
 
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
 
-<div class="hamburger hamburger--collapse d-block d-md-none">
+<div class="hamburger hamburger--collapse">
   <div class="hamburger-box">
     <div class="hamburger-inner"></div>
   </div>

@@ -8625,14 +8625,31 @@ body {
   overflow-x: hidden;
 }
 
+body::after {
+  overflow: hidden;
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+body.nav-show::after {
+  width: 100%;
+}
+
 body input,
 body textarea {
   outline: none;
 }
 
 .container-fluid {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .img-r {
@@ -8728,14 +8745,36 @@ h1 {
   color: #000;
 }
 
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  line-height: 1;
+  background-color: rgba(245, 245, 245, 0.4);
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.hamburger.is-active {
+  left: 134px;
+}
+
 .nav {
   position: fixed;
   display: table;
   width: 190px;
   height: 100vh;
+  left: -190px;
   padding: 20px;
   background-color: #F5F5F5;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
   z-index: 2;
+}
+
+.nav.show {
+  left: 0;
 }
 
 .nav__logo {
@@ -8836,9 +8875,8 @@ h1 {
 
 .content {
   position: absolute;
-  width: calc(100% - 190px);
+  width: 100%;
   min-height: 100vh;
-  margin-left: 190px;
   padding-bottom: 110px;
   overflow-x: hidden;
 }
@@ -8874,7 +8912,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-.main-slider__slide:before {
+.main-slider__slide::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -9079,7 +9117,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-.portfolio-item__ttl:after {
+.portfolio-item__ttl::after {
   content: '';
   width: 80px;
   height: 1px;
@@ -9106,8 +9144,6 @@ h1 {
 }
 
 .vacancies__img {
-  width: calc(100% + 80px);
-  margin: 0 auto 0 -40px;
   background-color: #303030;
   text-align: center;
 }
@@ -9152,6 +9188,17 @@ h1 {
   color: #5E5B5B;
 }
 
+.about__video,
+.vacancies__img {
+  width: calc(100% + 160px);
+  margin: 0 auto 0 -80px;
+}
+
+.about__content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .about__txt {
   margin-bottom: 30px;
   font-size: 17px;
@@ -9164,8 +9211,7 @@ h1 {
 
 .about__video {
   position: relative;
-  width: calc(100% + 80px);
-  margin: 0 auto 40px -40px;
+  margin-bottom: 80px;
   background: #303030;
   overflow: hidden;
 }
@@ -9286,7 +9332,7 @@ h1 {
   cursor: pointer;
 }
 
-.contacts-form__label:before {
+.contacts-form__label::before {
   content: '';
   width: 39px;
   height: 39px;
@@ -9296,7 +9342,7 @@ h1 {
   top: 0;
 }
 
-.contacts-form__label:after {
+.contacts-form__label::after {
   content: '';
   width: 15px;
   height: 15px;
@@ -9493,14 +9539,16 @@ h1 {
 }
 
 .people-item {
-  margin-bottom: 40px;
+  max-width: 400px;
+  margin: 0 auto 60px;
 }
 
 .people-item__img {
-  height: 300px;
-  background-size: cover;
-  background-position: center top;
   margin-bottom: 10px;
+}
+
+.people-item__img img {
+  width: 100%;
 }
 
 .people-item__name {
@@ -9511,7 +9559,7 @@ h1 {
   font-size: 18px;
 }
 
-.people-item__name:before {
+.people-item__name::before {
   content: '';
   width: 100px;
   height: 1px;
@@ -9646,7 +9694,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-.related-item__ttl:after {
+.related-item__ttl::after {
   content: '';
   width: 80px;
   height: 1px;
@@ -9712,16 +9760,27 @@ h1 {
 }
 
 @media (max-width: 1439.98px) {
+  .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .about__video,
+  .vacancies__img {
+    width: calc(100% + 120px);
+    margin: 0 auto 0 -60px;
+  }
+
+  .about__video {
+    margin-bottom: 60px;
+  }
+
   .service__cover {
     max-height: calc(100vh - 340px);
   }
 
   .vacancies-item__img {
     min-height: 200px;
-  }
-
-  .people-item__img {
-    height: 200px;
   }
 
   .detail-img {
@@ -9738,6 +9797,21 @@ h1 {
 }
 
 @media (max-width: 1199.98px) {
+  .container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .about__video,
+  .vacancies__img {
+    width: calc(100% + 80px);
+    margin: 0 auto 0 -40px;
+  }
+
+  .about__video {
+    margin-bottom: 40px;
+  }
+
   .service__cover {
     height: auto;
     max-height: 100%;
@@ -9749,10 +9823,6 @@ h1 {
 
   .vacancies-item__name {
     font-size: 16px;
-  }
-
-  .people-item__img {
-    height: 150px;
   }
 
   .related-item__img {
@@ -9772,53 +9842,6 @@ h1 {
   .container-fluid {
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  .hamburger {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    line-height: 1;
-    background-color: rgba(245, 245, 245, 0.4);
-    -webkit-transition: all ease .3s;
-    transition: all ease .3s;
-  }
-
-  .hamburger.is-active {
-    left: 134px;
-  }
-
-  body:after {
-    overflow: hidden;
-    content: '';
-    width: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    -webkit-transition: all ease .3s;
-    transition: all ease .3s;
-  }
-
-  body.nav-show:after {
-    width: 100%;
-  }
-
-  .nav {
-    left: -190px;
-    -webkit-transition: all ease .3s;
-    transition: all ease .3s;
-  }
-
-  .nav.show {
-    left: 0;
-  }
-
-  .content {
-    width: 100%;
-    margin-left: 0;
   }
 
   .page-ttl {
@@ -9854,14 +9877,7 @@ h1 {
   }
 
   .people-item {
-    width: 400px;
     margin: 0 auto 40px;
-  }
-
-  .people-item__img {
-    width: 400px;
-    height: 300px;
-    margin: 0 auto;
   }
 
   .detail-img {
@@ -9935,14 +9951,6 @@ h1 {
 
   .vacancies-item__img {
     min-height: 250px;
-  }
-
-  .people-item {
-    width: 100%;
-  }
-
-  .people-item__img {
-    width: 100%;
   }
 
   .detail__ttl {
