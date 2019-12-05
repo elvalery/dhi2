@@ -5,6 +5,12 @@ use Illuminate\Database\Migrations\Migration;
 
 
 class FixPortfolio extends Migration {
+  
+  public function __construct()
+  {
+    DB::getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('json', 'text');
+  }
+  
   /**
    * Run the migrations.
    *
