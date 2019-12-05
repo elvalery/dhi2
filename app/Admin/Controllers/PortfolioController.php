@@ -99,9 +99,9 @@ class PortfolioController extends Controller
     $grid = new Grid(new Portfolio);
 
     $grid->id('ID')->sortable();
-    $grid->column('order_id', trans('admin.portfolio.order-id'))->sortable();
+    $grid->column('order', trans('admin.portfolio.order-id'))->sortable();
     $grid->column('name', trans('admin.portfolio.name'))->sortable();
-    $grid->column('link', trans('admin.portfolio.link'))->sortable();
+    $grid->column('page_link', trans('admin.portfolio.link'))->sortable();
 
     $grid->paginate(20);
 
@@ -132,9 +132,9 @@ class PortfolioController extends Controller
     $obj = $this;
 
     $show->id('ID');
-    $show->order_id( trans('admin.portfolio.order-id'));
+    $show->order( trans('admin.portfolio.order-id'));
     $show->name( trans('admin.portfolio.name'));
-    $show->link( trans('admin.portfolio.link'));
+    $show->page_link( trans('admin.portfolio.link'));
     $show->categories(trans('admin.portfolio.category'))
       ->as(function ($categories) {
         return $categories->pluck('name');
@@ -186,12 +186,24 @@ class PortfolioController extends Controller
 
     $form->display('id', 'ID');
 
-    $form->number('order_id', trans('admin.portfolio.order-id'))->rules('required|integer|max:32767');
+    $form->number('order', trans('admin.portfolio.order-id'))->rules('required|integer|max:32767');
 
     $form
       ->text('name', trans('admin.portfolio.name'))
       ->rules('required|max:250');
-
+    
+    $form
+      ->text('page_link', trans('admin.portfolio.link'))
+      ->rules(function ($form) {
+        $rules = 'required|min:2|alpha_dash';
+    
+        // If it is not an edit state, add field unique verification
+        if (!$id = $form->model()->id) {
+          $rules .= '|unique:portfolios,link';
+        }
+    
+        return $rules;
+      });
 /*    $form
       ->text('link', trans('admin.portfolio.link'))
       ->rules(function ($form) {

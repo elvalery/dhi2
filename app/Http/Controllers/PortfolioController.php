@@ -7,7 +7,7 @@ use App\Models\Category;
 class PortfolioController extends Controller {
 
   public function index() {
-    $list = Portfolio::orderBy('order_id')->get();
+    $list = Portfolio::orderBy('order')->get();
     $categories = Category::orderBy('order_id')->get();
 
     return view('portfolio.index', compact('list', 'categories'));

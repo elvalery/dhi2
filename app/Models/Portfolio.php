@@ -13,7 +13,15 @@ class Portfolio extends Model {
     'updated_at',
     'deleted_at'
   ];
-
+  
+  public function resolveRouteBinding($value) {
+    return $this->where('page_link', $value)->first() ?? ($this->where('id', $value)->first() ?? abort(404));
+  }
+  
+  public function getRouteKeyName() {
+    return $this->page_link ? 'page_link' : 'id';
+  }
+  
   public function getFactsListAttribute() {
     return $this->getArrayKeyField($this->facts);
   }
