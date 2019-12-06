@@ -4,7 +4,7 @@
   <div class="container-fluid service__cover" style="background-image: url({{ asset('storage/' . $service->image) }})">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="page-ttl page-ttl_white page-ttl_big page-ttl_align_left">{{ $service->name }}</h1>
+        <h1 class="page-ttl page-ttl_white page-ttl_big">{{ $service->name }}</h1>
       </div>
     </div>
     <div class="row">

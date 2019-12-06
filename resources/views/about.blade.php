@@ -6,7 +6,17 @@
       <div class="col">
         <h1 class="page-ttl">About DHI</h1>
         <div class="about__video">
-          <iframe src="https://www.youtube.com/embed/qBokdoVr_58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="about__video-wrap">
+            <div class="about__video-helper">
+              <iframe
+                  src="https://www.youtube.com/embed/qBokdoVr_58"
+                  frameborder="0"
+                  allow="autoplay;
+               encrypted-media"
+                  allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
         <div class="about__content">
           <p class="about__txt">Design Hub International is an integrated design practice with its HQ office based in Kiev

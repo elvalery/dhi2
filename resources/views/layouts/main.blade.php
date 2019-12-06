@@ -33,7 +33,7 @@
 
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
 
-<div class="hamburger hamburger--collapse">
+<div class="hamburger hamburger--collapse d-md-none">
   <div class="hamburger-box">
     <div class="hamburger-inner"></div>
   </div>
@@ -47,25 +47,33 @@
   </div>
 --}}
   
-  @if(Route::currentRouteName() != 'main')
+{{--  @if(Route::currentRouteName() != 'main')--}}
   <a href="/"><img src="/img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
-  @endif
+{{--  @endif--}}
   
   <ul class="nav-list">
-    <li class="nav-list__item"><a href="{{ route('about') }}">About</a></li>
-    <ul class="nav-list-sublist">
-      {{--<li><a href="{{ route('about') }}">Company</a></li>--}}
-      <li><a href="{{ route('people') }}">People</a></li>
-      {{--<li><a href="#">Publications</a></li>--}}
-      <li><a href="{{ route('technologies') }}">Technologies</a></li>
-    </ul>
-    <li class="nav-list__item"><a href="{{ route('service.index') }}">Services</a></li>
+    <li class="nav-list__item">
+      <span>About</span>
+      <ul class="nav-list-sublist">
+        {{--<li><a href="{{ route('about') }}">Company</a></li>--}}
+        <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('people') }}">People</a></li>
+        {{--<li><a href="#">Publications</a></li>--}}
+        <li><a href="{{ route('technologies') }}">Technologies</a></li>
+      </ul>
+    </li>
     @if($service_menu->isNotEmpty())
-    <ul class="nav-list-sublist">
-      @foreach($service_menu as $item)
-      <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
-      @endforeach
-    </ul>
+      <li class="nav-list__item">
+        <span>Sectors</span>
+        <ul class="nav-list-sublist">
+          <li><a href="{{ route('service.index') }}">Sectors</a></li>
+          @foreach($service_menu as $item)
+            <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
+          @endforeach
+        </ul>
+      </li>
+    @else
+      <li class="nav-list__item"><a href="{{ route('service.index') }}">Sectors</a></li>
     @endif
     <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
     <li class="nav-list__item"><a href="{{ route('news.index') }}">News</a></li>

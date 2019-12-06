@@ -4,7 +4,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <h1 class="page-ttl page-ttl_align_left">{{ $news->title }}</h1>
+      <h1 class="page-ttl">{{ $news->title }}</h1>
     </div>
   </div>
   <div class="row">

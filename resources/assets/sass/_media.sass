@@ -32,6 +32,11 @@
 			&__slide
 				min-height: 500px
 
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+	.content
+		padding: 0 0 110px 190px
+
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
 	.container-fluid
@@ -73,7 +78,6 @@
 		margin: 50px 0 30px
 	.technologies
 		&__img
-			max-width: 520px
 			margin-bottom: 20px
 	.portfolio-item
 		&__ttl

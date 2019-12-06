@@ -153,14 +153,16 @@ h1
 		margin-bottom: 0
 		&__item
 			font-family: $title-s
-			font-size: 16px
 			letter-spacing: .05em
-			text-transform: uppercase
 			margin-bottom: 6px
+			font-size: 16px
+			& > span,
+			& > a
+				text-transform: uppercase
+			& > span
+				cursor: pointer
 			&:last-child
 				margin-bottom: 0
-			&:first-child
-				margin-bottom: 10px
 			a
 				color: #000
 				transition: all ease .3s
@@ -169,9 +171,10 @@ h1
 				&:hover
 					color: #4F4F4F
 		&-sublist
+			display: none
 			list-style-type: none
 			padding-left: 0
-			margin-bottom: 15px
+			margin: 4px 0 15px
 			li
 				font-family: $title-r
 				font-size: 14px
@@ -378,7 +381,7 @@ h1
 
 .vacancies
 	&__page-ttl
-		margin-bottom: 20px
+		margin-bottom: 10px
 	&__txt
 		margin-bottom: 20px
 		font-size: 20px
@@ -389,7 +392,7 @@ h1
 		text-align: center
 		img
 			width: 100%
-			max-width: 1029px
+			max-width: 600px
 	&-item
 		margin-bottom: 40px
 		&__img
@@ -432,32 +435,21 @@ h1
 		&:last-child
 			margin-bottom: 40px
 	&__video
-		position: relative
 		margin-bottom: 80px
 		background: $grey
-		overflow: hidden
-		iframe
+		&-wrap
+			max-width: 712px
+			margin: 0 auto
+		&-helper
 			position: relative
-			display: block
-			width: 1280px
-			height: 720px
-			left: 50%
-			background: $grey
-			border: 0
-			transform: translateX(-50%)
-			@media (max-width: 1490px)
-				width: 854px
-				height: 480px
-			@media (min-width: 992px) and (max-width: 1060px)
-				width: 640px
-				height: 360px
-			@media (max-width: 870px)
-				width: 640px
-				height: 360px
-			@media (max-width: 640px)
-				width: 100%
-				max-width: 426px
-				height: 240px
+			height: 0
+			padding-bottom: 56.25%
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
 
 .contacts
 	&-form
@@ -625,12 +617,14 @@ h1
 .technologies
 	&__wrap
 		margin-bottom: 40px
+	&__img,
+	&__content
+		width: 100%
+		max-width: 550px
+		margin-left: auto
+		margin-right: auto
 	&__img
-			display: block
-			width: 100%
-			max-width: 465px
-			margin-left: auto
-			margin-right: auto
+		display: block
 	&__subttl
 		font-family: $bold
 		margin-bottom: 20px

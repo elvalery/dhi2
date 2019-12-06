@@ -25,22 +25,11 @@
           <div class="contacts-form__success contacts-form__spinner">
             <span>@lang('dhi.contacts.success')</span>
           </div>
-
-          <div class="text-center my-0">
-            <div class="service-choice__button px-3 py-1">
-              Choose a service <span>&gt;</span>
-            </div>
+          <div class="my-0">
+            <input type="file" id="callback_user_file" name="file" onchange="uploadFile(this)">
+            <label for="callback_user_file" class="form_input px-3 py-1 mt-2 text-left">Upload a test assignment</label>
           </div>
-
           <div class="text-center my-0 service-choice-wrapper">
-            <div class="service-choice">
-              <input type="checkbox" name="action[]" value="1" id="callback_user_service_bim-model">
-              <label for="callback_user_service_bim-model" class="open__light">request a BIM model</label>
-            </div>
-            <div class="service-choice">
-              <input type="checkbox" name="action[]" value="4" id="callback_user_service_portfolio">
-              <label for="callback_user_service_portfolio" class="open__light">request a drawing sample</label>
-            </div>
             <div class="service-choice">
               <input type="checkbox" name="action[]" value="2" id="callback_user_service_email">
               <label for="callback_user_service_email" class="open__light">write me</label>
@@ -49,15 +38,6 @@
               <input type="checkbox" name="action[]" value="5" id="callback_user_service_call">
               <label for="callback_user_service_call" class="open__light">call me</label>
             </div>
-            <div class="service-choice">
-              <input type="checkbox" name="action[]" value="3" id="callback_user_service_quot">
-              <label for="callback_user_service_quot" class="open__light">get a quote</label>
-            </div>
-          </div>
-
-          <div class="my-0">
-            <input type="file" id="callback_user_file" name="file" onchange="uploadFile(this)">
-            <label for="callback_user_file" class="form_input px-3 py-1 mt-2 text-left">Upload a test assignment</label>
           </div>
           <div class="row input-wrap mt-0 mb-3">
             <div class="col-sm-12 col-lg-6">
