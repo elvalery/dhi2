@@ -9733,6 +9733,7 @@ h1 {
 }
 
 .news__content {
+  max-width: 600px;
   margin: 0 auto 50px;
 }
 
@@ -9742,6 +9743,21 @@ h1 {
 
 .text-center {
   text-align: center;
+}
+
+.partners {
+  margin: 20px 0 40px;
+}
+
+.partners__img {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.partners__img img {
+  width: 100%;
+  -webkit-filter: grayscale(70%);
+  filter: grayscale(70%);
 }
 
 @media (max-width: 1439.98px) {
@@ -9784,6 +9800,10 @@ h1 {
 @media (min-width: 992px) {
   .content {
     padding: 0 0 110px 190px;
+  }
+
+  .foot {
+    padding-left: 270px !important;
   }
 }
 

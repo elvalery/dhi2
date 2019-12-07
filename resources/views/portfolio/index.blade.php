@@ -55,5 +55,15 @@
       </div>
     @endforeach
 
+    <div class="partners">
+      <div class="row">
+        <div class="col-12">
+          <div class="partners__img">
+            <img src="img/stripe.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 @endsection

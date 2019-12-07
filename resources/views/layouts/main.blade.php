@@ -62,19 +62,19 @@
         <li><a href="{{ route('technologies') }}">Technologies</a></li>
       </ul>
     </li>
-    @if($service_menu->isNotEmpty())
-      <li class="nav-list__item">
-        <span>Sectors</span>
-        <ul class="nav-list-sublist">
-          <li><a href="{{ route('service.index') }}">Sectors</a></li>
-          @foreach($service_menu as $item)
-            <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
-          @endforeach
-        </ul>
-      </li>
-    @else
-      <li class="nav-list__item"><a href="{{ route('service.index') }}">Sectors</a></li>
-    @endif
+{{--    @if($service_menu->isNotEmpty())--}}
+{{--      <li class="nav-list__item">--}}
+{{--        <span>Sectors</span>--}}
+{{--        <ul class="nav-list-sublist">--}}
+{{--          <li><a href="{{ route('service.index') }}">Sectors</a></li>--}}
+{{--          @foreach($service_menu as $item)--}}
+{{--            <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>--}}
+{{--          @endforeach--}}
+{{--        </ul>--}}
+{{--      </li>--}}
+{{--    @else--}}
+{{--      <li class="nav-list__item"><a href="{{ route('service.index') }}">Sectors</a></li>--}}
+{{--    @endif--}}
     <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
     <li class="nav-list__item"><a href="{{ route('news.index') }}">News</a></li>
     <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
