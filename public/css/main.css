@@ -8762,19 +8762,31 @@ h1 {
 
 .nav {
   position: fixed;
-  display: table;
   width: 190px;
   height: 100vh;
   left: -190px;
-  padding: 20px;
+  padding: 0 20px;
   background-color: #F5F5F5;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
+  overflow-y: auto;
   z-index: 2;
 }
 
 .nav.show {
   left: 0;
+}
+
+.nav__wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding: 140px 0;
 }
 
 .nav__logo {
@@ -8786,8 +8798,6 @@ h1 {
 }
 
 .nav-list {
-  display: table-cell;
-  vertical-align: middle;
   padding-left: 22px;
   list-style-type: none;
   margin-bottom: 0;
@@ -8975,6 +8985,12 @@ h1 {
   color: #fff;
   text-align: right;
   z-index: 1;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.main-slider__ttl:hover {
+  opacity: .6;
 }
 
 .slick-arrow {
@@ -9798,6 +9814,10 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .main__logo {
+    left: calc(50% + 80px);
+  }
+
   .content {
     padding: 0 0 110px 190px;
   }

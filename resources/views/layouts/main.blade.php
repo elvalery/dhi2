@@ -40,53 +40,53 @@
 </div>
 
 <nav class="nav">
-{{--
-  <div class="lang">
-    <a href="#" class="lang__item active">En</a>
-    <a href="#" class="lang__item">Ru</a>
-  </div>
---}}
-  
-{{--  @if(Route::currentRouteName() != 'main')--}}
-  <a href="/"><img src="/img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
-{{--  @endif--}}
-  
-  <ul class="nav-list">
-    <li class="nav-list__item">
-      <span>About</span>
-      <ul class="nav-list-sublist">
-        {{--<li><a href="{{ route('about') }}">Company</a></li>--}}
-        <li><a href="{{ route('about') }}">About</a></li>
-        <li><a href="{{ route('people') }}">People</a></li>
-        {{--<li><a href="#">Publications</a></li>--}}
-        <li><a href="{{ route('technologies') }}">Technologies</a></li>
-      </ul>
-    </li>
-{{--    @if($service_menu->isNotEmpty())--}}
-{{--      <li class="nav-list__item">--}}
-{{--        <span>Sectors</span>--}}
-{{--        <ul class="nav-list-sublist">--}}
-{{--          <li><a href="{{ route('service.index') }}">Sectors</a></li>--}}
-{{--          @foreach($service_menu as $item)--}}
-{{--            <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>--}}
-{{--          @endforeach--}}
-{{--        </ul>--}}
-{{--      </li>--}}
-{{--    @else--}}
-{{--      <li class="nav-list__item"><a href="{{ route('service.index') }}">Sectors</a></li>--}}
-{{--    @endif--}}
-    <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
-    <li class="nav-list__item"><a href="{{ route('news.index') }}">News</a></li>
-    <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
-    <li class="nav-list__item"><a href="{{ route('contacts') }}">Contacts</a></li>
-  </ul>
-  {{--<a href="#" class="nav-enter">enter</a>--}}
-  <div class="nav-soc">
-    <a href="https://www.facebook.com/Design-Hub-International-941115632665039/" target="_blank" class="nav-soc__link"><img src="/img/fb.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://www.instagram.com/dhi_architecture/" target="_blank" class="nav-soc__link"><img src="/img/in.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://ua.linkedin.com/in/andrey-yatsentuk-4624aa4b" target="_blank" class="nav-soc__link"><img src="/img/li.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://www.behance.net/dhi-architecture" target="_blank" class="nav-soc__link"><img src="/img/be.svg" width="16" height="16" alt="DHI"></a>
-    <a href="https://www.youtube.com/channel/UCeDErzD8cwVhCSSLNZIKoSA?view_as=subscriber" target="_blank" class="nav-soc__link"><img src="/img/yo.svg" width="16" height="16" alt="DHI"></a>
+  <div class="nav__wrap">
+    <div class="lang">
+      <a href="#" class="lang__item active">En</a>
+      <a href="#" class="lang__item">Ru</a>
+    </div>
+
+    @if(Route::currentRouteName() != 'main')
+      <a href="/"><img src="/img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
+    @endif
+
+    <ul class="nav-list">
+      <li class="nav-list__item">
+        <span>About</span>
+        <ul class="nav-list-sublist">
+          {{--<li><a href="{{ route('about') }}">Company</a></li>--}}
+          <li><a href="{{ route('about') }}">About</a></li>
+          <li><a href="{{ route('people') }}">People</a></li>
+          {{--<li><a href="#">Publications</a></li>--}}
+          <li><a href="{{ route('technologies') }}">Technologies</a></li>
+        </ul>
+      </li>
+      @if($service_menu->isNotEmpty())
+        <li class="nav-list__item">
+          <span>Sectors</span>
+          <ul class="nav-list-sublist">
+            <li><a href="{{ route('service.index') }}">Sectors</a></li>
+            @foreach($service_menu as $item)
+              <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
+            @endforeach
+          </ul>
+        </li>
+      @else
+        <li class="nav-list__item"><a href="{{ route('service.index') }}">Sectors</a></li>
+      @endif
+      <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
+      <li class="nav-list__item"><a href="{{ route('news.index') }}">News</a></li>
+      <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
+      <li class="nav-list__item"><a href="{{ route('contacts') }}">Contacts</a></li>
+    </ul>
+    {{--<a href="#" class="nav-enter">enter</a>--}}
+    <div class="nav-soc">
+      <a href="https://www.facebook.com/Design-Hub-International-941115632665039/" target="_blank" class="nav-soc__link"><img src="/img/fb.svg" width="16" height="16" alt="DHI"></a>
+      <a href="https://www.instagram.com/dhi_architecture/" target="_blank" class="nav-soc__link"><img src="/img/in.svg" width="16" height="16" alt="DHI"></a>
+      <a href="https://ua.linkedin.com/in/andrey-yatsentuk-4624aa4b" target="_blank" class="nav-soc__link"><img src="/img/li.svg" width="16" height="16" alt="DHI"></a>
+      <a href="https://www.behance.net/dhi-architecture" target="_blank" class="nav-soc__link"><img src="/img/be.svg" width="16" height="16" alt="DHI"></a>
+      <a href="https://www.youtube.com/channel/UCeDErzD8cwVhCSSLNZIKoSA?view_as=subscriber" target="_blank" class="nav-soc__link"><img src="/img/yo.svg" width="16" height="16" alt="DHI"></a>
+    </div>
   </div>
 </nav>
 
