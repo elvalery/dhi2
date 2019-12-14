@@ -199,7 +199,7 @@ class PortfolioController extends Controller
     
         // If it is not an edit state, add field unique verification
         if (!$id = $form->model()->id) {
-          $rules .= '|unique:portfolios,link';
+          $rules .= '|unique:portfolios,page_link';
         }
     
         return $rules;
