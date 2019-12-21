@@ -1,7 +1,7 @@
 @extends('layouts.main', ['body_class' => 'homepage'])
 
 @section('content')
-  <img src="img/logo_white.svg" alt="DHI" class="main__logo">
+  <img src="/img/logo_white.svg" alt="DHI" class="main__logo">
   <div class="main-slider">
     <a href="/portfolio/parkinn" class="main-slider__slide project1">
       <span class="main-slider__bottom">

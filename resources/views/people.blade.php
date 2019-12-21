@@ -4,14 +4,14 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h1 class="page-ttl">People</h1>
+        <h1 class="page-ttl">@lang('People')</h1>
       </div>
     </div>
     <div class="row justify-content-md-around">
       <div class="col-xs-6 col-sm-4">
         <div class="people-item">
           <div class="people-item__img">
-            <img src="img/people1.jpg" alt="Яцентюк Андрей">
+            <img src="/img/people1.jpg" alt="Яцентюк Андрей">
           </div>
           <h4 class="people-item__name">Яцентюк Андрей</h4>
           <p class="people-item__txt">Партнер, директор по проектированию</p>

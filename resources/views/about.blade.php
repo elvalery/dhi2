@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h1 class="page-ttl">About DHI</h1>
+        <h1 class="page-ttl">@lang('About DHI')</h1>
         <div class="about__video">
           <div class="about__video-wrap">
             <div class="about__video-helper">
@@ -19,6 +19,12 @@
           </div>
         </div>
         <div class="about__content">
+          @if(app()->getLocale() == 'ru')
+            <p class="about__txt">Design Hub International is an integrated design practice with its HQ office based in Kiev
+              and representative office in Rotterdam, which provides architectural, engineering, building consultancy,
+              design & planning services in CIS region and beyond, offering a broad range of professional architectural
+              services for our international partners.</p>
+          @else
           <p class="about__txt">Design Hub International is an integrated design practice with its HQ office based in Kiev
             and representative office in Rotterdam, which provides architectural, engineering, building consultancy,
             design & planning services in CIS region and beyond, offering a broad range of professional architectural
@@ -50,6 +56,7 @@
             authorities in respect of the project.<br>• the testing of the design in a formal manner so that it meets the
             Client’s requirements in accordance with the contractual arrangements.<br>• promotion of an effective risk
             management culture.</p>
+          @endif
         </div>
       </div>
     </div>

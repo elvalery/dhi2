@@ -17,7 +17,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <h3 class="block-ttl">@lang('dhi.service.projects-ttl')</h3>
+        <h3 class="block-ttl">@lang('Related projects')</h3>
       </div>
     </div>
     <div class="row">
@@ -34,5 +34,5 @@
     </div>
   </div>
   @endif
-  
+
 @endsection

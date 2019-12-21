@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="vacancies__img">
-      <img src="img/career-animation.gif" alt="DHI">
+      <img src="/img/career-animation.gif" alt="DHI">
     </div>
     <div class="row">
       <div class="col">

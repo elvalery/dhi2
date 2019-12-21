@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h1 class="page-ttl">Contacts</h1>
+        <h1 class="page-ttl">@lang('Contacts')</h1>
       </div>
     </div>
     <div class="row">
@@ -27,48 +27,48 @@
           </div>
           <div class="my-0">
             <input type="file" id="callback_user_file" name="file" onchange="uploadFile(this)">
-            <label for="callback_user_file" class="form_input px-3 py-1 mt-2 text-left">Upload a test assignment</label>
+            <label for="callback_user_file" class="form_input px-3 py-1 mt-2 text-left">@lang('Upload a test assignment')</label>
           </div>
           <div class="text-center my-0 service-choice-wrapper">
             <div class="service-choice">
               <input type="checkbox" name="action[]" value="2" id="callback_user_service_email">
-              <label for="callback_user_service_email" class="open__light">write me</label>
+              <label for="callback_user_service_email" class="open__light">@lang('write me')</label>
             </div>
             <div class="service-choice">
               <input type="checkbox" name="action[]" value="5" id="callback_user_service_call">
-              <label for="callback_user_service_call" class="open__light">call me</label>
+              <label for="callback_user_service_call" class="open__light">@lang('call me')</label>
             </div>
           </div>
           <div class="row input-wrap mt-0 mb-3">
             <div class="col-sm-12 col-lg-6">
-              <label for="callback_user_phone" class="form_label mt-2 mb-0">Contact phone number<br>
+              <label for="callback_user_phone" class="form_label mt-2 mb-0">@lang('Contact phone number')<br>
                 <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __" required>
               </label>
             </div>
             <div class="col-sm-12 col-lg-6">
-              <label for="callback_user_email" class="form_label mt-2 mb-0">* E-mail<br>
-                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="Enter your e-mail" required>
+              <label for="callback_user_email" class="form_label mt-2 mb-0">* @lang('E-mail')<br>
+                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="@lang('Enter your e-mail')" required>
               </label>
             </div>
           </div>
           <div class="text-center my-2">
-            <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="Description"></textarea>
+            <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="@lang('Description')"></textarea>
           </div>
           <div class="text-right d-flex justify-content-center my-3">
-            <button type="submit" class="contacts-form__btn" name="type">Get an offer</button>
+            <button type="submit" class="contacts-form__btn" name="type">@lang('Get an offer')</button>
           </div>
         </form>
       </div>
       <div class="col-md-6">
         <div class="contacts-item">
-          <h3 class="contacts-item__ttl">Ukraine</h3>
-          <p class="contacts-item__txt">A: Kiev | 01001 | 18V Mykhailvska St. | Office 106</p>
+          <h3 class="contacts-item__ttl">@lang('Ukraine')</h3>
+          <p class="contacts-item__txt">@lang('A: Kiev | 01001 | 18V Mykhailvska St. | Office 106')</p>
           <a href="tel:+380979082678" class="contacts-item__phone">T: +380 97 908 26 78</a>
           <a href="mailto:info@dhi-architecture.com" class="contacts-item__email">E: info@dhi-architecture.com</a>
         </div>
         <div class="contacts-item">
-          <h3 class="contacts-item__ttl">Netherlands</h3>
-          <p class="contacts-item__txt">A: Rotterdam | 3014 JR | Drievriendenstraat 4b </p>
+          <h3 class="contacts-item__ttl">@lang('Netherlands')</h3>
+          <p class="contacts-item__txt">@lang('A: Rotterdam | 3014 JR | Drievriendenstraat 4b')</p>
           <a href="tel:+31616918988" class="contacts-item__phone">T: +31 616 91 89 88</a>
           <a href="mailto:info@dhi-architecture.com" class="contacts-item__email">E: info@dhi-architecture.com</a>
         </div>
@@ -89,7 +89,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcKXBKsIMkew7SppGI1p-MKSBteq60bBY"></script>
   <script type="text/javascript">
     $().button('toggle');
-    
+
     google.maps.event.addDomListener(window, 'load', init);
     function init() {
       var mapOptions = {
@@ -120,10 +120,10 @@
       $("[type=submit]", $(this).parents("form")).removeAttr("clicked");
       $(this).attr("clicked", "true");
     });
-    
+
     $('#contact-form').on('submit', function(e){
       e.preventDefault();
-  
+
       const formdata = new FormData($(this)[0]);
 
       $("#contact-form .contacts-form__success").css({ "display": "flex" });

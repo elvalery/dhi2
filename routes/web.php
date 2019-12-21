@@ -11,27 +11,25 @@
 |
 */
 
-Auth::routes();
+//Auth::routes();
 
-Route::view('/', 'welcome')->name('main');
-Route::view('/about', 'about')->name('about');
-Route::view('/technologies', 'technologies')->name('technologies');
-Route::view('/people', 'people')->name('people');
+Route::localized(function () {
+  Route::view('/', 'welcome')->name('main');
+  Route::view('/about', 'about')->name('about');
+  Route::view('/technologies', 'technologies')->name('technologies');
+  Route::view('/people', 'people')->name('people');
 
-Route::get('/portfolio', 'PortfolioController@index')->name('portfolio.index');
-Route::get('/portfolio/{portfolio}', 'PortfolioController@show')->name('portfolio.detail');
+  Route::get('/portfolio', 'PortfolioController@index')->name('portfolio.index');
+  Route::get('/portfolio/{portfolio}', 'PortfolioController@show')->name('portfolio.detail');
 
-Route::get('/service', 'ServicesController@index')->name('service.index');
-Route::get('/service/{service}', 'ServicesController@show')->name('service.detail');
+  Route::get('/service', 'ServicesController@index')->name('services.index');
+  Route::get('/service/{service}', 'ServicesController@show')->name('service.detail');
 
-Route::get('/career', 'JobController@index')->name('career');
+  Route::get('/career', 'JobController@index')->name('career');
 
-Route::get('/contacts', 'ContactsController@show')->name('contacts');
-Route::post('/contacts', 'ContactsController@store')->name('contacts.store');
+  Route::get('/contacts', 'ContactsController@show')->name('contacts');
+  Route::post('/contacts', 'ContactsController@store')->name('contacts.store');
 
-Route::get('/news', 'NewsController@index')->name('news.index');
-Route::get('/news/{news}', 'NewsController@show')->name('news.detail');
-/*
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-  //\UniSharp\LaravelFilemanager\Lfm::routes();
-});*/
+  Route::get('/news', 'NewsController@index')->name('news.index');
+  Route::get('/news/{news}', 'NewsController@show')->name('news.detail');
+});

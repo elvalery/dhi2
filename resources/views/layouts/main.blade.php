@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{  mix('css/main.css') }}">
   <meta name="theme-color" content="#000">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120201735-1"></script>
   <script>
@@ -42,8 +42,8 @@
 <nav class="nav">
   <div class="nav__wrap">
     <div class="lang">
-      <a href="#" class="lang__item active">En</a>
-      <a href="#" class="lang__item">Ru</a>
+      <a href="/" class="lang__item @if(app()->getLocale() == 'en')active @endif">En</a>
+      <a href="/ru/" class="lang__item @if(app()->getLocale() == 'ru')active @endif">Ru</a>
     </div>
 
     @if(Route::currentRouteName() != 'main')
@@ -52,32 +52,32 @@
 
     <ul class="nav-list">
       <li class="nav-list__item">
-        <span>About</span>
+        <span>@lang('About')</span>
         <ul class="nav-list-sublist">
-          {{--<li><a href="{{ route('about') }}">Company</a></li>--}}
-          <li><a href="{{ route('about') }}">About</a></li>
-          <li><a href="{{ route('people') }}">People</a></li>
-          {{--<li><a href="#">Publications</a></li>--}}
-          <li><a href="{{ route('technologies') }}">Technologies</a></li>
+          {{--<li><a href="{{ route('about') }}">@lang('Company')</a></li>--}}
+          <li><a href="{{ route('about') }}">@lang('About')</a></li>
+          <li><a href="{{ route('people') }}">@lang('People')</a></li>
+          {{--<li><a href="#">@lang('Publications')</a></li>--}}
+          <li><a href="{{ route('technologies') }}">@lang('Technologies')</a></li>
         </ul>
       </li>
       @if($service_menu->isNotEmpty())
         <li class="nav-list__item">
-          <span>Sectors</span>
+          <span>@lang('Sectors')</span>
           <ul class="nav-list-sublist">
-            <li><a href="{{ route('service.index') }}">Sectors</a></li>
-            @foreach($service_menu as $item)
-              <li><a href="{{ route('service.detail', $item) }}">{{ $item->name }}</a></li>
+            <li><a href="{{ route('services.index') }}">@lang('Sectors')</a></li>
+            @foreach($service_menu as $service)
+              <li><a href="{{ route('service.detail', ['service' => $service]) }}">{{ $service->name }}</a></li>
             @endforeach
           </ul>
         </li>
       @else
-        <li class="nav-list__item"><a href="{{ route('service.index') }}">Sectors</a></li>
+        <li class="nav-list__item"><a href="{{ route('services.index') }}">@lang('Sectors')</a></li>
       @endif
-      <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
-      <li class="nav-list__item"><a href="{{ route('news.index') }}">News</a></li>
-      <li class="nav-list__item"><a href="{{ route('career') }}">Career</a></li>
-      <li class="nav-list__item"><a href="{{ route('contacts') }}">Contacts</a></li>
+      <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">@lang('Portfolio')</a></li>
+      <li class="nav-list__item"><a href="{{ route('news.index') }}">@lang('News')</a></li>
+      <li class="nav-list__item"><a href="{{ route('career') }}">@lang('Career')</a></li>
+      <li class="nav-list__item"><a href="{{ route('contacts') }}">@lang('Contacts')</a></li>
     </ul>
     {{--<a href="#" class="nav-enter">enter</a>--}}
     <div class="nav-soc">

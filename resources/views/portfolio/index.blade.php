@@ -4,11 +4,11 @@
   <div class="container-fluid tabs" >
     <div class="row">
       <div class="col">
-        <h1 class="page-ttl">Portfolio</h1>
+        <h1 class="page-ttl">@lang('Portfolio')</h1>
       </div>
     </div>
     <ul class="tab-mnu">
-      <li class="tab-mnu__link active">All</li>
+      <li class="tab-mnu__link active">@lang('All')</li>
       @foreach($categories as $category)
         <li class="tab-mnu__link">{{ $category->name }}</li>
       @endforeach

@@ -20,10 +20,6 @@ return [
     'services-ttl' => 'INTEGRATED SERVICES',
   ],
 
-  'service' => [
-    'projects-ttl' => 'Related projects',
-  ],
-
   'job' => [
     'title' => 'Careers',
     'description' => 'We are always on the lookout for talented architects, constructing architects and students',

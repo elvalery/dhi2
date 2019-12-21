@@ -2,16 +2,15 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Service;
 use App\Http\Controllers\Controller;
+use App\Models\Service;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class ServiceController extends Controller
-{
+class ServiceController extends Controller {
   use HasResourceActions;
 
   /**
@@ -20,8 +19,7 @@ class ServiceController extends Controller
    * @param Content $content
    * @return Content
    */
-  public function index(Content $content)
-  {
+  public function index(Content $content) {
     return $content
       ->header(trans('admin.service.index.header'))
       ->description(trans('admin.service.index.description'))
@@ -31,12 +29,11 @@ class ServiceController extends Controller
   /**
    * Show interface.
    *
-   * @param mixed   $id
+   * @param mixed $id
    * @param Content $content
    * @return Content
    */
-  public function show($id, Content $content)
-  {
+  public function show($id, Content $content) {
     return $content
       ->header(trans('admin.service.show.header'))
       ->description(trans('admin.service.show.description'))
@@ -46,12 +43,11 @@ class ServiceController extends Controller
   /**
    * Edit interface.
    *
-   * @param mixed   $id
+   * @param mixed $id
    * @param Content $content
    * @return Content
    */
-  public function edit($id, Content $content)
-  {
+  public function edit($id, Content $content) {
     return $content
       ->header(trans('admin.service.edit.header'))
       ->description(trans('admin.service.edit.description'))
@@ -64,8 +60,7 @@ class ServiceController extends Controller
    * @param Content $content
    * @return Content
    */
-  public function create(Content $content)
-  {
+  public function create(Content $content) {
     return $content
       ->header(trans('admin.service.create.header'))
       ->description(trans('admin.service.create.description'))
@@ -77,8 +72,7 @@ class ServiceController extends Controller
    *
    * @return Grid
    */
-  protected function grid()
-  {
+  protected function grid() {
     $grid = new Grid(new Service);
 
     $grid->id('ID')->sortable();
@@ -88,7 +82,7 @@ class ServiceController extends Controller
 
     $grid->paginate(20);
 
-    $grid->filter(function($filter){
+    $grid->filter(function ($filter) {
 
       // Remove the default id filter
       $filter->disableIdFilter();
@@ -104,22 +98,26 @@ class ServiceController extends Controller
   /**
    * Make a show builder.
    *
-   * @param mixed   $id
+   * @param mixed $id
    * @return Show
    */
-  protected function detail($id)
-  {
+  protected function detail($id) {
     $show = new Show(Service::findOrFail($id));
 
     $show->id('ID');
     $show->order_id();
-    $show->name( trans('admin.service.name'));
+    $show->name(trans('admin.service.name'));
+    $show->name_ru(trans('admin.service.name') . '-ru');
     $show->link(trans('admin.service.link'));
     $show->description(trans('admin.service.description'));
+    $show->description_ru(trans('admin.service.description' . '-ru'));
     $show->portfolio()->as(function ($portfolio) {
-      return $portfolio->map(function ($item) { return $item->name;})->implode(', ');
+      return $portfolio->map(function ($item) {
+        return $item->name;
+      })->implode(', ');
     });
     $show->details(trans('admin.service.details'));
+    $show->details_ru(trans('admin.service.details') . '-ru');
     $show->cover(trans('admin.service.cover'))->image();
     $show->image(trans('admin.service.image'))->image();
 
@@ -131,8 +129,7 @@ class ServiceController extends Controller
    *
    * @return Form
    */
-  protected function form()
-  {
+  protected function form() {
     $form = new Form(new Service);
 
     $form->display('id', 'ID');
@@ -142,6 +139,10 @@ class ServiceController extends Controller
     $form
       ->text('name', trans('admin.service.name'))
       ->rules('required|max:250');
+
+    $form
+      ->text('name_ru', trans('admin.service.name') . '-ru')
+      ->rules('max:250');
 
     $form
       ->text('link', trans('admin.service.link'))
@@ -159,7 +160,10 @@ class ServiceController extends Controller
     $form->multipleSelect('portfolio')->options(\App\Models\Portfolio::all()->pluck('name', 'id'));
 
     $form->textarea('description', trans('admin.service.description'))->rules('required');
+    $form->textarea('description_ru', trans('admin.service.description') . '-ru');
+
     $form->ckeditor('details', trans('admin.service.details'));
+    $form->ckeditor('details_ru', trans('admin.service.details') . '-ru');
 
     $form
       ->image('cover', trans('admin.service.cover'))

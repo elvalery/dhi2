@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h1 class="page-ttl">@lang('dhi.services.title')</h1>
+        <h1 class="page-ttl">@lang('Services')</h1>
       </div>
     </div>
     @if($list->isNotEmpty())
