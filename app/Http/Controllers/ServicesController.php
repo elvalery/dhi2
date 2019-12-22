@@ -10,7 +10,7 @@ class ServicesController extends Controller  {
   public function index() {
     $list = Service::orderBy('order_id')->get();
 
-    return view('service', compact('list'));
+    return view('service.index', compact('list'));
   }
 
   public function show(Service $service) {

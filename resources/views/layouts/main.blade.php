@@ -63,14 +63,14 @@
         <li class="nav-list__item">
           <span>@lang('Sectors')</span>
           <ul class="nav-list-sublist">
-            <li><a href="{{ route('services.index') }}">@lang('Sectors')</a></li>
+            <li><a href="{{ route('service.index') }}">@lang('Sectors')</a></li>
             @foreach($service_menu as $service)
               <li><a href="{{ route('service.detail', ['service' => $service]) }}">{{ $service->name }}</a></li>
             @endforeach
           </ul>
         </li>
       @else
-        <li class="nav-list__item"><a href="{{ route('services.index') }}">@lang('Sectors')</a></li>
+        <li class="nav-list__item"><a href="{{ route('service.index') }}">@lang('Sectors')</a></li>
       @endif
       <li class="nav-list__item"><a href="{{ route('portfolio.index') }}">@lang('Portfolio')</a></li>
       <li class="nav-list__item"><a href="{{ route('news.index') }}">@lang('News')</a></li>

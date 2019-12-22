@@ -22,7 +22,7 @@ Route::localized(function () {
   Route::get('/portfolio', 'PortfolioController@index')->name('portfolio.index');
   Route::get('/portfolio/{portfolio}', 'PortfolioController@show')->name('portfolio.detail');
 
-  Route::get('/service', 'ServicesController@index')->name('services.index');
+  Route::get('/service', 'ServicesController@index')->name('service.index');
   Route::get('/service/{service}', 'ServicesController@show')->name('service.detail');
 
   Route::get('/career', 'JobController@index')->name('career');
