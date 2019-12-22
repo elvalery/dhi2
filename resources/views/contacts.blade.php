@@ -23,7 +23,7 @@
         <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">
           {{ csrf_field() }}
           <div class="contacts-form__success contacts-form__spinner">
-            <span>@lang('dhi.contacts.success')</span>
+            <span>@lang('Thank you! Your message has been sent')</span>
           </div>
           <div class="my-0">
             <input type="file" id="callback_user_file" name="file" onchange="uploadFile(this)">

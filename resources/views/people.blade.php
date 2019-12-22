@@ -8,6 +8,7 @@
       </div>
     </div>
     <div class="row justify-content-md-around">
+      @if(app()->getLocale() == 'ru')
       <div class="col-xs-6 col-sm-4">
         <div class="people-item">
           <div class="people-item__img">
@@ -18,6 +19,18 @@
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
+      @else
+        <div class="col-xs-6 col-sm-4">
+          <div class="people-item">
+            <div class="people-item__img">
+              <img src="/img/people1.jpg" alt="Andrey Yatsentuk">
+            </div>
+            <h4 class="people-item__name">Andrey Yatsentuk</h4>
+            <p class="people-item__txt">Founder, Chief Architect</p>
+            <p class="people-item__txt">Master of Architecture, NSAU</p>
+          </div>
+        </div>
+      @endif
 {{--      <div class="col-xs-6 col-sm-4">--}}
 {{--        <div class="people-item">--}}
 {{--          <div class="people-item__img">--}}

@@ -20,17 +20,6 @@ return [
     'services-ttl' => 'INTEGRATED SERVICES',
   ],
 
-  'job' => [
-    'title' => 'Careers',
-    'description' => 'We are always on the lookout for talented architects, constructing architects and students',
-    'subtitle' => 'Jobs listings',
-    'pdf' => 'download pdf'
-  ],
-
-  'contacts' => [
-    'success' => 'Thank you! Your message has been sent'
-  ],
-
   'news' => [
     'title' => 'News',
     'description' => ''
