@@ -15,4 +15,6 @@ Route::group([
   $router->resource('content/job', JobController::class, ['as' => 'admin.job']);
   $router->resource('content/contacts', ContactsController::class, ['as' => 'admin.contacts']);
   $router->resource('content/news', NewsController::class, ['as' => 'admin.news']);
+  $router->resource('content/category', CategoryController::class, ['as' => 'admin.category']);
+
 });

@@ -11,4 +11,6 @@ class News extends Model {
     'updated_at',
     'deleted_at'
   ];
+
+  protected $localized_strings = ['ru' => ['title', 'description', 'content']];
 }

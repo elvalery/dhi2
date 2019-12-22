@@ -2,16 +2,15 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Job;
 use App\Http\Controllers\Controller;
+use App\Models\Job;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class JobController extends Controller
-{
+class JobController extends Controller {
   use HasResourceActions;
 
   /**
@@ -20,8 +19,7 @@ class JobController extends Controller
    * @param Content $content
    * @return Content
    */
-  public function index(Content $content)
-  {
+  public function index(Content $content) {
     return $content
       ->header(__('admin.job.index.header'))
       ->description(__('admin.job.index.description'))
@@ -31,12 +29,11 @@ class JobController extends Controller
   /**
    * Show interface.
    *
-   * @param mixed   $id
+   * @param mixed $id
    * @param Content $content
    * @return Content
    */
-  public function show($id, Content $content)
-  {
+  public function show($id, Content $content) {
     return $content
       ->header(__('admin.job.show.header'))
       ->description(__('admin.job.show.description'))
@@ -46,12 +43,11 @@ class JobController extends Controller
   /**
    * Edit interface.
    *
-   * @param mixed   $id
+   * @param mixed $id
    * @param Content $content
    * @return Content
    */
-  public function edit($id, Content $content)
-  {
+  public function edit($id, Content $content) {
     return $content
       ->header(__('admin.job.edit.header'))
       ->description(__('admin.job.edit.description'))
@@ -64,8 +60,7 @@ class JobController extends Controller
    * @param Content $content
    * @return Content
    */
-  public function create(Content $content)
-  {
+  public function create(Content $content) {
     return $content
       ->header(__('admin.job.create.header'))
       ->description(__('admin.job.create.description'))
@@ -77,8 +72,7 @@ class JobController extends Controller
    *
    * @return Grid
    */
-  protected function grid()
-  {
+  protected function grid() {
     $grid = new Grid(new Job);
 
     $grid->id('ID')->sortable();
@@ -88,7 +82,7 @@ class JobController extends Controller
     $grid->created_at(__('admin.created_at'));
     $grid->updated_at(__('admin.updated_at'));
 
-    $grid->filter(function($filter){
+    $grid->filter(function ($filter) {
 
       // Remove the default id filter
       $filter->disableIdFilter();
@@ -103,19 +97,20 @@ class JobController extends Controller
   /**
    * Make a show builder.
    *
-   * @param mixed   $id
+   * @param mixed $id
    * @return Show
    */
-  protected function detail($id)
-  {
+  protected function detail($id) {
     $show = new Show(Job::findOrFail($id));
 
     $show->id('ID');
     $show->order_id(__('admin.job.order-id'));
     $show->name(__('admin.job.name'));
+    $show->name_ru(__('admin.job.name') . '-ru');
     $show->cover(__('admin.job.cover'))->image();
     $show->pdf(__('admin.job.pdf'))->file();
     $show->details(__('admin.job.details'));
+    $show->details_ru(__('admin.job.details') . '-ru');
     $show->created_at(__('admin.created_at'));
     $show->updated_at(__('admin.updated_at'));
 
@@ -127,20 +122,23 @@ class JobController extends Controller
    *
    * @return Form
    */
-  protected function form()
-  {
+  protected function form() {
     $form = new Form(new Job);
 
     $form->number('order_id', trans('admin.job.order-id'))->rules('required|integer|max:32767');
 
     $form->text('name', __('admin.job.name'))->rules('required');
+    $form->text('name_ru', __('admin.job.name') . '-ru');
+
     $form->image('cover', __('admin.job.cover'))
       ->rules('required')
       ->uniqueName();
     $form->file('pdf', __('admin.job.pdf'))
       ->uniqueName()
       ->removable();;
+
     $form->textarea('details', __('admin.job.details'))->rules('required');
+    $form->textarea('details_ru', __('admin.job.details') . '-ru');
 
     return $form;
   }

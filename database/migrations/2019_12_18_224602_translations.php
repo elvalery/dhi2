@@ -16,7 +16,7 @@ class Translations extends Migration {
       $table->text('details_ru');
     });
 
-    Schema::table('portfolio', function (Blueprint $table) {
+    Schema::table('portfolios', function (Blueprint $table) {
       $table->string('name_ru');
       $table->longText('facts_ru');
       $table->longText('brief_ru');
@@ -35,7 +35,7 @@ class Translations extends Migration {
       $table->dropColumn(['name_ru',  'description_ru', 'details_ru']);
     });
 
-    Schema::table('portfolio', function (Blueprint $table) {
+    Schema::table('portfolios', function (Blueprint $table) {
       $table->dropColumn(['name_ru', 'facts_ru', 'brief_ru', 'results_ru', 'details_ru']);
     });
   }

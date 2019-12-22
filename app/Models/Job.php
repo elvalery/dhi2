@@ -5,5 +5,5 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model {
-
+  protected $localized_strings = ['ru' => ['name', 'details']];
 }

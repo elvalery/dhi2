@@ -13,6 +13,8 @@ class Category extends Model {
    */
   protected $fillable = ['name', 'slug'];
 
+  protected $localized_strings = ['ru' => ['name']];
+
   public function portfolios() {
     return $this->belongsToMany(
       Portfolio::class, 'portfolio_category');
