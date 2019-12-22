@@ -54,10 +54,8 @@
       <li class="nav-list__item">
         <span>@lang('About')</span>
         <ul class="nav-list-sublist">
-          {{--<li><a href="{{ route('about') }}">@lang('Company')</a></li>--}}
           <li><a href="{{ route('about') }}">@lang('About')</a></li>
           <li><a href="{{ route('people') }}">@lang('People')</a></li>
-          {{--<li><a href="#">@lang('Publications')</a></li>--}}
           <li><a href="{{ route('technologies') }}">@lang('Technologies')</a></li>
         </ul>
       </li>

@@ -49,7 +49,7 @@
           </div>
 
           @empty
-            <div class="col-md-12 pb-4">@lang('dhi.portfolio.empty-category')</div>
+            <div class="col-md-12 pb-4">@lang('No projects have been added yet')</div>
           @endforelse
         </div>
       </div>

@@ -9,17 +9,6 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-{{--        <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">--}}
-{{--          {{ csrf_field() }}--}}
-{{--          <div class="contacts-form__success contacts-form__spinner">--}}
-{{--            <span>@lang('dhi.contacts.success')</span>--}}
-{{--          </div>--}}
-{{--          <input class="contacts-form__input" type="text" name="name" placeholder="Name" required>--}}
-{{--          <input class="contacts-form__input" type="text" name="contacts" placeholder="Email / Phone" required>--}}
-{{--          <button class="contacts-form__btn" type="submit" name="type" value="email">Write me</button>--}}
-{{--          <button class="contacts-form__btn" type="submit" name="type" value="phone">Call me</button>--}}
-{{--        </form>--}}
-
         <form action="{{ route('contacts.store') }}" method="POST" class="contacts-form" id="contact-form">
           {{ csrf_field() }}
           <div class="contacts-form__success contacts-form__spinner">
