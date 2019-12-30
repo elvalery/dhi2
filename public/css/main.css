@@ -8762,9 +8762,9 @@ h1 {
 
 .nav {
   position: fixed;
-  width: 190px;
+  width: 215px;
   height: 100vh;
-  left: -190px;
+  left: -215px;
   padding: 0 20px;
   background-color: #F5F5F5;
   -webkit-transition: all ease .3s;
@@ -8798,7 +8798,7 @@ h1 {
 }
 
 .nav-list {
-  padding-left: 22px;
+  padding-left: 0;
   list-style-type: none;
   margin-bottom: 0;
 }
@@ -9819,7 +9819,7 @@ h1 {
   }
 
   .content {
-    padding: 0 0 110px 190px;
+    padding: 0 0 110px 215px;
   }
 
   .foot {
