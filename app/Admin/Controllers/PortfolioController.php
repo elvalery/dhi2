@@ -213,18 +213,6 @@ class PortfolioController extends Controller {
 
         return $rules;
       });
-    /*    $form
-          ->text('link', trans('admin.portfolio.link'))
-          ->rules(function ($form) {
-            $rules = 'required|min:2|alpha_dash';
-
-            // If it is not an edit state, add field unique verification
-            if (!$id = $form->model()->id) {
-              $rules .= '|unique:portfolios,link';
-            }
-
-            return $rules;
-          });*/
 
     $form
       ->date('completion_date', trans('admin.portfolio.completion_date'))
@@ -261,7 +249,7 @@ class PortfolioController extends Controller {
       ->uniqueName();
 
     $form->hasMany('photos', function (Form\NestedForm $form) {
-      $form->number('order_id');
+      $form->number('order_id')->required();
       $form->image('link')
         ->uniqueName()
         ->removable();
