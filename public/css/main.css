@@ -8686,6 +8686,10 @@ button:focus {
   outline: none;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .p0 {
   padding-left: 0;
   padding-right: 0;

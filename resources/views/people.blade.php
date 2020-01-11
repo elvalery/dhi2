@@ -14,8 +14,8 @@
           <div class="people-item__img">
             <img src="/img/people1.jpg" alt="Яцентюк Андрей">
           </div>
-          <h4 class="people-item__name">Яцентюк Андрей</h4>
-          <p class="people-item__txt">Партнер, директор по проектированию</p>
+          <h4 class="people-item__name">Андрей Яцентюк</h4>
+          <p class="people-item__txt">Основатель, Главный Архитектор</p>
           <p class="people-item__txt">Магистр архитектуры, НСАУ</p>
         </div>
       </div>
