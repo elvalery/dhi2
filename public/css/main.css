@@ -9224,6 +9224,10 @@ h1 {
   margin: 0 auto;
 }
 
+.about__content strong {
+  color: #000;
+}
+
 .about__txt {
   margin-bottom: 30px;
   font-size: 17px;

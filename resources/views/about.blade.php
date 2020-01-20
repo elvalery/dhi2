@@ -39,7 +39,7 @@
               через десятилетия. Используя многогранный подход к планированию и дизайну – placemaking approach – мы
               стремимся создавать комфортную городскую среду, благодаря которой интересы бизнеса и конечного потребителя
               не конкурируют между собой, а дополняют и усиливают друг друга.</p>
-            <h3 class="mb-3 text-center text-uppercase">
+            <h3 class="mb-3 text-center">
               <strong>
                 Основные преимущества работы с Design Hub International:
               </strong>
@@ -77,7 +77,7 @@
               decades. Using a multifaceted approach to planning and design – a placemaking approach – we strive to
               create a comfortable urban environment, thanks to which the interests of business and the end consumer do
               not compete with each other, but complement and strengthen one another.</p>
-            <h3 class="mb-3 text-center text-uppercase">
+            <h3 class="mb-3 text-center">
               <strong>
                 Key benefits of working with Design Hub International:
               </strong>
