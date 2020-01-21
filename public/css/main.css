@@ -8761,15 +8761,15 @@ h1 {
 }
 
 .hamburger.is-active {
-  left: 134px;
+  left: 165px;
 }
 
 .nav {
   position: fixed;
   width: 215px;
   height: 100vh;
-  left: -215px;
-  padding: 0 20px;
+  left: 0;
+  padding: 0 18px;
   background-color: #F5F5F5;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
@@ -8790,7 +8790,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  padding: 140px 0;
+  padding: 115px 0;
 }
 
 .nav__logo {
@@ -8988,6 +8988,7 @@ h1 {
   font-size: 25px;
   color: #fff;
   text-align: right;
+  text-transform: uppercase;
   z-index: 1;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -9077,6 +9078,9 @@ h1 {
 }
 
 .tab-mnu__link {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   margin: 0 10px 15px 10px;
   letter-spacing: .03em;
   text-align: center;
@@ -9119,7 +9123,7 @@ h1 {
 
 .portfolio-item {
   display: block;
-  max-width: 515px;
+  max-width: 352px;
   margin: 0 auto 40px;
 }
 
@@ -9219,13 +9223,14 @@ h1 {
   margin: 0 auto 0 -80px;
 }
 
+.about__video-wrap,
 .about__content {
-  max-width: 1280px;
+  max-width: 712px;
   margin: 0 auto;
 }
 
 .about__content strong {
-  color: #000;
+  color: #000000;
 }
 
 .about__txt {
@@ -9241,11 +9246,6 @@ h1 {
 .about__video {
   margin-bottom: 80px;
   background: #303030;
-}
-
-.about__video-wrap {
-  max-width: 712px;
-  margin: 0 auto;
 }
 
 .about__video-helper {
@@ -9602,7 +9602,6 @@ h1 {
 }
 
 .detail__other {
-  font-size: 18px;
   letter-spacing: .02em;
   margin-bottom: 20px;
   padding-left: 10px;
@@ -9649,7 +9648,6 @@ h1 {
 .detail__facts-ttl {
   text-transform: uppercase;
   font-size: 16px;
-  font-weight: bold;
   padding-top: 12px;
 }
 
@@ -9770,7 +9768,7 @@ h1 {
 }
 
 .partners {
-  margin: 20px 0 40px;
+  margin: 40px 0;
 }
 
 .partners__img {
@@ -9782,6 +9780,26 @@ h1 {
   width: 100%;
   -webkit-filter: grayscale(70%);
   filter: grayscale(70%);
+}
+
+@media (max-width: 1399px) {
+  .lang {
+    top: 10px;
+  }
+
+  .nav__logo {
+    top: 50px;
+  }
+
+  .nav__wrap {
+    padding: 85px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav {
+    left: -215px;
+  }
 }
 
 @media (max-width: 1439.98px) {
@@ -9943,6 +9961,10 @@ h1 {
     bottom: 50px;
   }
 
+  .service__cover {
+    background-image: none !important;
+  }
+
   .foot {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -9951,8 +9973,8 @@ h1 {
 
 @media (max-width: 575.98px) {
   .container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .about__video,

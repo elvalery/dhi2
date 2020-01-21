@@ -8,14 +8,14 @@ $(function() {
 
 		$('input.phone-mask').mask('+99 (999) 999 99 99');
 
-		setNavClass();
+		// setNavClass();
 		initClickHandler();
 	});
 
 	$(window).resize(function() {
 		windowWidth = $(window).width();
 
-		setNavClass();
+		// setNavClass();
 		initClickHandler();
 
 		if (windowWidth <= menuBreakpoint) {
@@ -51,11 +51,11 @@ $(function() {
 		$(this).siblings('.nav-list-sublist').slideDown();
 	});
 
-	function setNavClass() {
-		if ($('.nav').length) {
-			windowWidth > menuBreakpoint ? $('.nav').addClass('show') : $('.nav').removeClass('show');
-		}
-	}
+	// function setNavClass() {
+	// 	if ($('.nav').length) {
+	// 		windowWidth > menuBreakpoint ? $('.nav').addClass('show') : $('.nav').removeClass('show');
+	// 	}
+	// }
 
 	function initClickHandler() {
 		windowWidth <= menuBreakpoint ?
@@ -109,7 +109,7 @@ $(function() {
 		.closest('.tabs').find('.tab-content').removeClass('active').eq($(this).index()).addClass('active');
 	});
 
-	$(".service-choice__button").on('click', function(){
+	$('.service-choice__button').on('click', function(){
 		$(".service-choice-wrapper").slideToggle('medium', function() {
 			if ($(this).is(':visible'))
 				$(this).css('display','flex');

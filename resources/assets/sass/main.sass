@@ -128,14 +128,14 @@ h1
 	background-color: rgba(#F5F5F5, .4)
 	transition: all ease .3s
 	&.is-active
-		left: 134px
+		left: 165px
 
 .nav
 	position: fixed
 	width: 215px
 	height: 100vh
-	left: -215px
-	padding: 0 20px
+	left: 0
+	padding: 0 18px
 	background-color: #F5F5F5
 	transition: all ease .3s
 	overflow-y: auto
@@ -147,7 +147,7 @@ h1
 		display: flex
 		align-items: center
 		min-height: 100vh
-		padding: 140px 0
+		padding: 115px 0
 	&__logo
 		max-width: 108px
 		position: absolute
@@ -278,6 +278,7 @@ h1
 			font-size: 25px
 			color: #fff
 			text-align: right
+			text-transform: uppercase
 			z-index: 1
 			transition: all .3s ease
 			&:hover
@@ -340,6 +341,7 @@ h1
 	margin-bottom: 25px
 	padding-left: 0
 	&__link
+		flex-grow: 1
 		margin: 0 10px 15px 10px
 		letter-spacing: .03em
 		text-align: center
@@ -362,7 +364,7 @@ h1
 .portfolio
 	&-item
 		display: block
-		max-width: 515px
+		max-width: 352px
 		margin: 0 auto 40px
 		&__img
 			margin-bottom: 10px
@@ -435,11 +437,13 @@ h1
 	margin: 0 auto 0 -80px
 
 .about
+	&__video-wrap,
 	&__content
-		max-width: 1280px
+		max-width: 712px
 		margin: 0 auto
+	&__content
 		strong
-			color: #000
+			color: #000000
 	&__txt
 		margin-bottom: 30px
 		font-size: 17px
@@ -449,9 +453,6 @@ h1
 	&__video
 		margin-bottom: 80px
 		background: $grey
-		&-wrap
-			max-width: 712px
-			margin: 0 auto
 		&-helper
 			position: relative
 			height: 0
@@ -701,7 +702,6 @@ h1
 		&.last
 			margin-bottom: 20px
 	&__other
-		font-size: 18px
 		letter-spacing: .02em
 		margin-bottom: 20px
 		padding-left: 10px
@@ -733,7 +733,6 @@ h1
 		&-ttl
 			text-transform: uppercase
 			font-size: 16px
-			font-weight: bold
 			padding-top: 12px
 		&-txt
 			font-size: 20px
@@ -820,7 +819,7 @@ h1
 	text-align: center
 
 .partners
-	margin: 20px 0 40px
+	margin: 40px 0
 	&__img
 		max-width: 1080px
 		margin: 0 auto

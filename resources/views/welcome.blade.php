@@ -5,32 +5,32 @@
   <div class="main-slider">
     <a href="/portfolio/parkinn" class="main-slider__slide project1">
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">ParkINN</h3>
+        <h3 class="main-slider__ttl">PARK INN BY RADISSON</h3>
       </span>
     </a>
     <a href="/portfolio/greenfinity" class="main-slider__slide project2">
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">Greenfinity Park</h3>
+        <h3 class="main-slider__ttl">GREENFINITY BUSINESS PARK</h3>
       </span>
     </a>
     <a href="/portfolio/retroville" class="main-slider__slide project3">
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">Retroville</h3>
+        <h3 class="main-slider__ttl">RETROVILLE SHOPPING CENTRE</h3>
       </span>
     </a>
     <a href="/portfolio/olx" class="main-slider__slide project4">
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">«OLX» office interior</h3>
+        <h3 class="main-slider__ttl">OLX OFFICE INTERIOR DESIGN</h3>
       </span>
     </a>
     <a href="/portfolio/skymall" class="main-slider__slide project5">
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">“Sky Mall” shopping mall 2nd phase</h3>
+        <h3 class="main-slider__ttl">SKYMALL 2ND PHASESHOPPING CENTRE</h3>
       </span>
     </a>
     <a href="/portfolio/gagarin-plateau" class="main-slider__slide project6">
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">Residential complex on Gagarin Plateau</h3>
+        <h3 class="main-slider__ttl">ODESSA RESIDENTIAL COMPLEX</h3>
       </span>
     </a>
   </div>

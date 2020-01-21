@@ -1,5 +1,19 @@
 @import "vars"
 
+// large and smaller devices (1399 and down)
+@media (max-width: 1399px)
+	.lang
+		top: 10px
+	.nav__logo
+		top: 50px
+	.nav__wrap
+		padding: 85px 0
+
+// Medium and smaller devices (991px and down)
+@media (max-width: 991px)
+	.nav
+		left: -215px
+
 //Extra large: ≥1440px
 +media-breakpoint-down(xl)
 
@@ -122,6 +136,8 @@
 			line-height: 1.2
 		.slick-dots
 			bottom: 50px
+	.service__cover
+		background-image: none !important
 	.foot
 		padding-top: 10px
 		padding-bottom: 10px
@@ -129,8 +145,8 @@
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
 	.container-fluid
-		padding-left: 15px
-		padding-right: 15px
+		padding-left: 10px
+		padding-right: 10px
 	.about__video,
 	.vacancies__img
 		width: calc(100% + 30px)
