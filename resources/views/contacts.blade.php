@@ -20,23 +20,23 @@
           </div>
           <div class="text-center my-0 service-choice-wrapper">
             <div class="service-choice">
-              <input type="checkbox" name="action[]" value="2" id="callback_user_service_email">
+              <input type="checkbox" name="action[]" value="2" id="callback_user_service_email" data-require-field="callback_user_email">
               <label for="callback_user_service_email" class="open__light">@lang('write me')</label>
             </div>
             <div class="service-choice">
-              <input type="checkbox" name="action[]" value="5" id="callback_user_service_call">
+              <input type="checkbox" name="action[]" value="5" id="callback_user_service_call" data-require-field="callback_user_phone">
               <label for="callback_user_service_call" class="open__light">@lang('call me')</label>
             </div>
           </div>
           <div class="row input-wrap mt-0 mb-3">
             <div class="col-sm-12 col-lg-6">
-              <label for="callback_user_phone" class="form_label mt-2 mb-0">* @lang('Contact phone number')<br>
-                <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __" required>
+              <label for="callback_user_phone" class="form_label mt-2 mb-0"><i style="display: none">*</i> @lang('Contact phone number')<br>
+                <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __">
               </label>
             </div>
             <div class="col-sm-12 col-lg-6">
-              <label for="callback_user_email" class="form_label mt-2 mb-0">* @lang('E-mail')<br>
-                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="@lang('Enter your e-mail')" required>
+              <label for="callback_user_email" class="form_label mt-2 mb-0"><i style="display: none">*</i> @lang('E-mail')<br>
+                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="@lang('Enter your e-mail')">
               </label>
             </div>
           </div>
@@ -108,6 +108,12 @@
     $("#contact-form [type=submit]").click(function() {
       $("[type=submit]", $(this).parents("form")).removeAttr("clicked");
       $(this).attr("clicked", "true");
+    });
+
+    $('#callback_user_service_email, #callback_user_service_call').on('change', function() {
+      var fld = $('#' + $(this).data('require-field'));
+      fld.prop('required', this.checked);
+      $(fld.parent('label').find('i')[0]).toggle(this.checked);
     });
 
     $('#contact-form').on('submit', function(e){
