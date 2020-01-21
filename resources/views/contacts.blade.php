@@ -113,7 +113,7 @@
     $('#contact-form').on('submit', function(e){
       e.preventDefault();
 
-      const formdata = new FormData($(this)[0]);
+      var formdata = new FormData($(this)[0]);
 
       $("#contact-form .contacts-form__success").css({ "display": "flex" });
       $("#contact-form .contacts-form__success").addClass('contacts-form__spinner');
