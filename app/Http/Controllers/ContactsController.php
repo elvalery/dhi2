@@ -16,20 +16,27 @@ class ContactsController extends Controller {
 
   public function store(StoreContacts $request) {
     $contact = Contact::create($request->validated());
-  
+
     if ($request->hasFile('file') && $request->file('file')->isValid()) {
       $path = $request->file->store('form', 'public');
       $contact->file = url('storage/'. $path);
       $contact->path = storage_path($path);
     }
-  
+
     if ($request->has("action")) {
       foreach ($request->get('action') as $action) {
         $contact->actions()->attach(Action::find($action));
       }
     }
-    
-    Mail::to(config('mail.to'))->send(new ContactRequest($contact));
+
+    $mail_to = config('mail.to');
+    if (!is_array($mail_to)) {
+      $mail_to = [$mail_to];
+    }
+
+    foreach ($mail_to as $address) {
+      Mail::to($address)->send(new ContactRequest($contact));
+    }
 
     return response()->json($contact);
   }

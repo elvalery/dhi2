@@ -8,7 +8,7 @@ class CKEditor extends Field
 {
 
   public static $js = [
-    '//cdn.ckeditor.com/4.10.1/standard-all/ckeditor.js',
+    '//cdn.ckeditor.com/4.6.2/standard-all/ckeditor.js',
  ];
 
   protected $view = 'admin.ckeditor';

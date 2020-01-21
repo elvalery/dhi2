@@ -30,7 +30,7 @@
           </div>
           <div class="row input-wrap mt-0 mb-3">
             <div class="col-sm-12 col-lg-6">
-              <label for="callback_user_phone" class="form_label mt-2 mb-0">@lang('Contact phone number')<br>
+              <label for="callback_user_phone" class="form_label mt-2 mb-0">* @lang('Contact phone number')<br>
                 <input type="phone" id="callback_user_phone" class="contacts-form__input phone-mask" name="phone" placeholder="+__ (___) ___ __ __" required>
               </label>
             </div>
