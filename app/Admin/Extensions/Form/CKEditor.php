@@ -16,7 +16,7 @@ class CKEditor extends Field
   public function render()
   {
     //$this->script = "$('textarea.{$this->getElementClassString()}').ckeditor();";
-    $this->script = "CKEDITOR.replace('{$this->column}', options);";
+    $this->script = "CKEDITOR.replace('{$this->column}', {extraPlugins: 'justify'});";
 
 
     return parent::render();
