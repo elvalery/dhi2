@@ -110,10 +110,23 @@ $(function() {
 	});
 
 	$('.service-choice__button').on('click', function(){
-		$(".service-choice-wrapper").slideToggle('medium', function() {
+		$('.service-choice-wrapper').slideToggle('medium', function() {
 			if ($(this).is(':visible'))
 				$(this).css('display','flex');
 		});
 	});
 
+	window.setLocale = function(locale) {
+		var location = window.location;
+
+		if (locale !== 'ru') {
+			var arr = location.pathname.split('/');
+
+			arr.splice(0, 2);
+
+			window.location = location.origin + '/' + arr.join('/');
+		} else {
+			window.location = location.origin + '/ru' + location.pathname;
+		}
+	}
 });

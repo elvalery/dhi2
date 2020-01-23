@@ -42,27 +42,53 @@
 <nav class="nav">
   <div class="nav__wrap">
     <div class="lang">
-      <a href="/" class="lang__item @if(app()->getLocale() == 'en')active @endif">En</a>
-      <a href="/ru/" class="lang__item @if(app()->getLocale() == 'ru')active @endif">Ru</a>
+      <a
+          href="javascript:void(0);"
+          class="lang__item @if(app()->getLocale() == 'en')active @endif"
+          onclick="
+            @if(app()->getLocale() != 'en')
+              setLocale('en');
+            @else
+              return false;
+            @endif
+            "
+      >En</a>
+      <a
+          href="javascript:void(0);"
+          class="lang__item @if(app()->getLocale() == 'ru')active @endif"
+          onclick="
+            @if(app()->getLocale() != 'ru')
+              setLocale('ru');
+            @else
+              return false;
+            @endif
+            "
+      >Ru</a>
     </div>
 
-    @if(Route::currentRouteName() != 'main')
+    @if(Route::currentRouteName() != 'en.main' && Route::currentRouteName() != 'ru.main')
       <a href="/"><img src="/img/logo.svg" alt="DHI" class="nav__logo img-r"></a>
     @endif
 
     <ul class="nav-list">
-      <li class="nav-list__item">
+      <li class="nav-list__item @if(checkActiveRoute('about', Route::currentRouteName())))on @endif">
         <span>@lang('About')</span>
-        <ul class="nav-list-sublist">
+        <ul
+            class="nav-list-sublist"
+            @if(checkActiveRoute('about', Route::currentRouteName()))style="display: block" @endif
+        >
           <li><a href="{{ route('about') }}">@lang('About')</a></li>
           {{--<li><a href="{{ route('people') }}">@lang('People')</a></li>--}}
           <li><a href="{{ route('technologies') }}">@lang('Technologies')</a></li>
         </ul>
       </li>
       @if($service_menu->isNotEmpty())
-        <li class="nav-list__item">
+        <li class="nav-list__item @if(checkActiveRoute('service', Route::currentRouteName()))on @endif">
           <span>@lang('Sectors')</span>
-          <ul class="nav-list-sublist">
+          <ul
+              class="nav-list-sublist"
+              @if(checkActiveRoute('service', Route::currentRouteName()))style="display: block" @endif
+          >
             <li><a href="{{ route('service.index') }}">@lang('Sectors')</a></li>
             @foreach($service_menu as $service)
               <li><a href="{{ route('service.detail', ['service' => $service]) }}">{{ $service->name }}</a></li>
