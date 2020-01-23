@@ -25,9 +25,9 @@ class StoreContacts extends FormRequest {
   public function rules() {
     return [
       'phone' => 'sometimes|nullable',
-      'email' => 'required|email',
+      'email' => 'sometimes|nullable|email',
       'description' => 'sometimes|nullable|string',
-      'action[]' => [
+      'action.*' => [
         'sometimes',
         'nullable',
         Rule::in(Action::all('id')),
