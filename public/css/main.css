@@ -9237,6 +9237,7 @@ h1 {
   margin-bottom: 30px;
   font-size: 17px;
   color: #333333;
+  text-align: justify;
 }
 
 .about__txt:last-child {
