@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Portfolio;
 
 class Category extends Model {
+  use LocalizeTrait;
   /**
    * The attributes that are mass assignable.
    *
