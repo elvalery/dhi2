@@ -27,10 +27,10 @@ class StoreContacts extends FormRequest {
       'phone' => 'sometimes|nullable',
       'email' => 'sometimes|nullable|email',
       'description' => 'sometimes|nullable|string',
-      'action.*' => [
+      'action' => [
         'sometimes',
         'nullable',
-        Rule::in(Action::all('id')),
+        'array'
       ],
       'file' => 'sometimes|nullable|max:20480'
     ];
