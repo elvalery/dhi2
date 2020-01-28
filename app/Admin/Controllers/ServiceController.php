@@ -159,8 +159,8 @@ class ServiceController extends Controller {
 
     $form->multipleSelect('portfolio')->options(\App\Models\Portfolio::all()->pluck('name', 'id'));
 
-    $form->textarea('description', trans('admin.service.description'))->rules('required');
-    $form->textarea('description_ru', trans('admin.service.description') . '-ru');
+    $form->textarea('description', trans('admin.service.description'))->rules('required|max:250');
+    $form->textarea('description_ru', trans('admin.service.description') . '-ru')->rules('max:250');
 
     $form->ckeditor('details', trans('admin.service.details'));
     $form->ckeditor('details_ru', trans('admin.service.details') . '-ru');
