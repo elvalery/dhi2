@@ -9605,7 +9605,6 @@ h1 {
 .detail__other {
   letter-spacing: .02em;
   margin-bottom: 20px;
-  padding-left: 10px;
 }
 
 .detail__other:last-child {
@@ -9657,18 +9656,8 @@ h1 {
 }
 
 .detail__lst {
+  padding-left: 0;
   list-style: none;
-  padding-left: 20px;
-}
-
-.detail__lst li {
-  position: relative;
-}
-
-.detail__lst li:before {
-  content: '// ';
-  left: -0.9em;
-  position: absolute;
 }
 
 .related__ttl {
