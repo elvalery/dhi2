@@ -34,6 +34,6 @@ class ContactRequest extends Mailable
    */
   public function build()
   {
-    return $this->view('emails.contact-request');
+    return $this->subject( $this->contact->id . ' - New contact request')->view('emails.contact-request');
   }
 }
