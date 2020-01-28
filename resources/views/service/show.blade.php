@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-11 col-lg-9 service__txt">
+      <div class="col-md-10 col-lg-8 offset-lg-2 offset-md-1 service__txt">
         {!! $service->details !!}
       </div>
     </div>
