@@ -1,6 +1,7 @@
 $(function() {
-	var windowWidth, menuBreakpoint;
+	var windowWidth, menuBreakpoint, portfolioMixitup;
 
+	portfolioMixitup = {};
 	menuBreakpoint = 991;
 
 	$(document).ready(function() {
@@ -10,6 +11,18 @@ $(function() {
 
 		// setNavClass();
 		initClickHandler();
+
+		$('[data-portfolio-mixitup]').each(function(i) {
+			var className = 'portfolio-mixitup-' + i;
+
+			$(this).addClass(className);
+
+			portfolioMixitup[className] = mixitup('.' + className, {
+				animation: {
+					duration: 400
+				}
+			});
+		})
 	});
 
 	$(window).resize(function() {
@@ -35,6 +48,12 @@ $(function() {
 		if (windowWidth <= menuBreakpoint) {
 			$('.hamburger').removeClass('is-active');
 		}
+	});
+
+	$('.tab-mnu__link').on('click', function() {
+		Object.keys(portfolioMixitup).forEach(function(item) {
+			portfolioMixitup[item].show();
+		})
 	});
 
 	$('.nav-list__item > span').on('click', function() {

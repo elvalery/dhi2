@@ -10,6 +10,7 @@ window.Popper = require('popper.js').default;
 
 try {
     window.$ = window.jQuery = require('jquery');
+    window.mixitup = require('mixitup');
 
     require('bootstrap');
 } catch (e) {}
@@ -60,6 +61,7 @@ $.ajaxSetup({
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+// require('./../libs/mixitup/mixitup.min.js');
 require('./../libs/fancybox/dist/jquery.fancybox.min');
 require('./../libs/required_fields/jquery.maskedinput.min');
 require('./../libs/required_fields/required_fields');

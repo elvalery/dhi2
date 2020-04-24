@@ -14,7 +14,7 @@
       @endforeach
     </ul>
 
-    <div class="tab-content active">
+    <div class="tab-content tab-content_default active">
       <div class="row">
       @foreach($list as $portfolio)
         @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
@@ -35,10 +35,19 @@
     @foreach($categories as $category)
       <div class="tab-content">
         <div class="row">
+          <div class="col-md-12">
+            <div class="portfolio__submenu">
+              <div class="item" data-filter="all">All</div>
+              <div class="item" data-filter=".test-1">Houses</div>
+              <div class="item" data-filter=".test-2">Airports</div>
+            </div>
+          </div>
+        </div>
+        <div class="row" data-portfolio-mixitup>
           @forelse($category->portfolios as $portfolio)
             @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
 
-          <div class="col-md-4">
+          <div class="col-md-4 mix {{ $loop->iteration % 2 == 0 ? 'test-1' : 'test-2' }}">
             <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
               <div class="portfolio-item__img">
                 <img src="{{ asset('storage/' . $portfolio->cover) }}" alt="">

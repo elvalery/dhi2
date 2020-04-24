@@ -338,7 +338,7 @@ h1
 	flex-wrap: wrap
 	justify-content: space-around
 	list-style-type: none
-	margin-bottom: 25px
+	margin-bottom: 0
 	padding-left: 0
 	&__link
 		flex-grow: 1
@@ -354,6 +354,8 @@ h1
 	animation: fadeEffect 1s
 	&.active
 		display: block
+	&_default
+		margin-top: 35px
 
 @keyframes fadeEffect
     from
@@ -362,6 +364,18 @@ h1
     	opacity: 1
 
 .portfolio
+	&__submenu
+		display: flex
+		justify-content: center
+		margin-bottom: 20px
+		.item
+			margin: 5px 16px
+			padding: 0 8px
+			font-size: 15px
+			cursor: pointer
+			&.mixitup-control-active
+				font-weight: 700
+				border-bottom: 1px solid #828282
 	&-item
 		display: block
 		max-width: 352px
