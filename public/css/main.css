@@ -9078,10 +9078,8 @@ h1 {
 }
 
 .tab-mnu__link {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin: 0 10px 15px 10px;
+  margin: 0 5px 15px 5px;
+  padding: 0 5px;
   letter-spacing: .03em;
   text-align: center;
   cursor: pointer;
@@ -9089,6 +9087,7 @@ h1 {
 
 .tab-mnu__link.active {
   font-family: "OpenSans-SemiBold", sans-serif;
+  border-bottom: 1px solid #fbce0b;
 }
 
 .tab-content {
@@ -9143,8 +9142,7 @@ h1 {
 }
 
 .portfolio__submenu .item.mixitup-control-active {
-  font-weight: 700;
-  border-bottom: 1px solid #828282;
+  font-family: "OpenSans-Bold", sans-serif;
 }
 
 .portfolio-item {

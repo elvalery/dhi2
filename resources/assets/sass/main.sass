@@ -341,13 +341,14 @@ h1
 	margin-bottom: 0
 	padding-left: 0
 	&__link
-		flex-grow: 1
-		margin: 0 10px 15px 10px
+		margin: 0 5px 15px 5px
+		padding: 0 5px
 		letter-spacing: .03em
 		text-align: center
 		cursor: pointer
 		&.active
 			font-family: $semi
+			border-bottom: 1px solid #fbce0b
 
 .tab-content
 	display: none
@@ -374,8 +375,7 @@ h1
 			font-size: 15px
 			cursor: pointer
 			&.mixitup-control-active
-				font-weight: 700
-				border-bottom: 1px solid #828282
+				font-family: $bold
 	&-item
 		display: block
 		max-width: 352px
