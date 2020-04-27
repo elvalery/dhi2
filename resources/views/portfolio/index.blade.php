@@ -16,10 +16,19 @@
 
     <div class="tab-content tab-content_default active">
       <div class="row">
+        <div class="col-md-12">
+          <div class="portfolio__submenu">
+            <div class="item" data-filter="all">All</div>
+            @foreach($services as $service)
+              <div class="item" data-filter=".service-{{ $service->id }}">{{ $service->name }}</div>
+            @endforeach
+          </div>
+        </div>
+      </div>
+      <div class="row" data-portfolio-mixitup>
       @foreach($list as $portfolio)
         @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
-
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4 mix @foreach($portfolio->service as $service) service-{{ $service->id }} @endforeach"">
           <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
             <div class="portfolio-item__img">
               <img src="{{ asset('storage/' . $portfolio->cover) }}" alt="">
@@ -38,8 +47,9 @@
           <div class="col-md-12">
             <div class="portfolio__submenu">
               <div class="item" data-filter="all">All</div>
-              <div class="item" data-filter=".test-1">Houses</div>
-              <div class="item" data-filter=".test-2">Airports</div>
+              @foreach($services as $service)
+                <div class="item" data-filter=".service-{{ $service->id }}">{{ $service->name }}</div>
+              @endforeach
             </div>
           </div>
         </div>
@@ -47,7 +57,7 @@
           @forelse($category->portfolios as $portfolio)
             @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
 
-          <div class="col-md-4 mix {{ $loop->iteration % 2 == 0 ? 'test-1' : 'test-2' }}">
+          <div class="col-md-4 mix @foreach($portfolio->service as $service) service-{{ $service->id }} @endforeach">
             <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
               <div class="portfolio-item__img">
                 <img src="{{ asset('storage/' . $portfolio->cover) }}" alt="">

@@ -10,8 +10,9 @@ class PortfolioController extends Controller {
   public function index() {
     $list = Portfolio::orderBy('order')->get();
     $categories = Category::orderBy('order_id')->get();
+    $services = \App\Models\Service::orderBy('order_id')->get();
 
-    return view('portfolio.index', compact('list', 'categories'));
+    return view('portfolio.index', compact('list', 'categories', 'services'));
   }
 
   public function show(Portfolio $portfolio) {
