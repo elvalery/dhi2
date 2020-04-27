@@ -46,7 +46,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="portfolio__submenu">
-              <div class="item" data-filter="all">All</div>
+              <div class="item" data-filter="all">@lang('All')</div>
               @foreach($services as $service)
                 @if($service->portfolioByCategory($category)->count())<div class="item" data-filter=".service-{{ $service->id }}">{{ $service->name }}</div>@endif
               @endforeach
