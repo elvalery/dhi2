@@ -18,4 +18,10 @@ class Service extends Model {
   public function portfolio() {
     return $this->belongsToMany(Portfolio::class);
   }
+
+  public function portfolioByCategory(Category $category) {
+    return $this->belongsToMany(Portfolio::class)->whereHas('categories', function ($q) use ($category) {
+      $q->where('id', $category->id);
+    });
+  }
 }

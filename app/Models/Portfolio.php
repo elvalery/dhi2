@@ -4,6 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Route;
+use \Illuminate\Database\Eloquent\Builder;
 
 class Portfolio extends Model {
   use SoftDeletes, ArrayFieldTrait, LocalizeTrait;
