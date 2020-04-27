@@ -15,13 +15,6 @@
     </ul>
 
     <div class="tab-content tab-content_default active">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="portfolio__submenu">
-            <div class="item" data-filter="all">@lang('All')</div>
-          </div>
-        </div>
-      </div>
       <div class="row" data-portfolio-mixitup>
       @foreach($list as $portfolio)
         @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
