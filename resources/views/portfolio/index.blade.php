@@ -19,16 +19,13 @@
         <div class="col-md-12">
           <div class="portfolio__submenu">
             <div class="item" data-filter="all">@lang('All')</div>
-            @foreach($services as $service)
-              @if($service->portfolio->count())<div class="item" data-filter=".service-{{ $service->id }}">{{ $service->name }}</div>@endif
-            @endforeach
           </div>
         </div>
       </div>
       <div class="row" data-portfolio-mixitup>
       @foreach($list as $portfolio)
         @if(($loop->iteration % 3 + 1) == 0)</div><div class="row">@endif
-        <div class="col-sm-6 col-md-4 mix @foreach($portfolio->service as $service) service-{{ $service->id }} @endforeach"">
+        <div class="col-sm-6 col-md-4 mix">
           <a href="{{ route('portfolio.detail', $portfolio) }}" class="portfolio-item">
             <div class="portfolio-item__img">
               <img src="{{ asset('storage/' . $portfolio->cover) }}" alt="">
