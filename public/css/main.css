@@ -9128,6 +9128,8 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -9135,7 +9137,7 @@ h1 {
 }
 
 .portfolio__submenu .item {
-  margin: 5px 16px;
+  margin: 2px 16px;
   padding: 0 8px;
   font-size: 15px;
   cursor: pointer;
@@ -9143,6 +9145,7 @@ h1 {
 
 .portfolio__submenu .item.mixitup-control-active {
   font-family: "OpenSans-Bold", sans-serif;
+  border-bottom: 1px solid #828282;
 }
 
 .portfolio-item {
@@ -9973,6 +9976,15 @@ h1 {
 
   .main-slider .slick-dots {
     bottom: 50px;
+  }
+
+  .portfolio__submenu {
+    margin-bottom: 15px;
+  }
+
+  .portfolio__submenu .item {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .service__cover {
