@@ -52,13 +52,13 @@
         <div class="contacts-item">
           <h3 class="contacts-item__ttl">@lang('Ukraine')</h3>
           <p class="contacts-item__txt">@lang('A: Kiev | 01001 | 18V Mykhailvska St. | Office 106')</p>
-          <a href="tel:+380979082678" class="contacts-item__phone">T: +380 97 908 26 78</a>
+          <a href="tel:+380443794895" class="contacts-item__phone">T: +380 (44) 379 48 95</a>
           <a href="mailto:info@dhi-architecture.com" class="contacts-item__email">E: info@dhi-architecture.com</a>
         </div>
         <div class="contacts-item">
           <h3 class="contacts-item__ttl">@lang('Netherlands')</h3>
           <p class="contacts-item__txt">@lang('A: Rotterdam | 3014 JR | Drievriendenstraat 4b')</p>
-          <a href="tel:+31616918988" class="contacts-item__phone">T: +31 616 91 89 88</a>
+          <a href="tel:+31621100209" class="contacts-item__phone">T: +31 6 21 10 02 09</a>
           <a href="mailto:info@dhi-architecture.com" class="contacts-item__email">E: info@dhi-architecture.com</a>
         </div>
       </div>
