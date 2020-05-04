@@ -75,7 +75,7 @@
       }
   </script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcKXBKsIMkew7SppGI1p-MKSBteq60bBY"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnY3boTk0BmPrE8oYZILVh9I8BRnPpwks"></script>
   <script type="text/javascript">
     $().button('toggle');
 
