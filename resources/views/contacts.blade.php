@@ -44,7 +44,7 @@
             <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="@lang('Description')"></textarea>
           </div>
           <div class="text-right d-flex justify-content-center my-3">
-            <button type="submit" class="contacts-form__btn" name="type">@lang('Get an offer')</button>
+            <button type="submit" class="contacts-form__btn" name="type">@lang('Submit')</button>
           </div>
         </form>
       </div>
