@@ -35,13 +35,13 @@
               </label>
             </div>
             <div class="col-sm-12 col-lg-6">
-              <label for="callback_user_email" class="form_label mt-2 mb-0"><i style="display: none">*</i> @lang('E-mail')<br>
-                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="@lang('Enter your e-mail')">
+              <label for="callback_user_email" class="form_label mt-2 mb-0"><i>*</i> @lang('E-mail')<br>
+                <input type="email" name="email" id="callback_user_email" class="contacts-form__input" placeholder="@lang('Enter your e-mail')" required>
               </label>
             </div>
           </div>
           <div class="text-center my-2">
-            <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="@lang('Description')"></textarea>
+            <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="@lang('Description')" required></textarea>
           </div>
           <div class="text-right d-flex justify-content-center my-3">
             <button type="submit" class="contacts-form__btn" name="type">@lang('Submit')</button>
@@ -137,7 +137,7 @@
       $(this).attr("clicked", "true");
     });
 
-    $('#callback_user_service_email, #callback_user_service_call').on('change', function() {
+    $('#callback_user_service_call').on('change', function() {
       var fld = $('#' + $(this).data('require-field'));
       fld.prop('required', this.checked);
       $(fld.parent('label').find('i')[0]).toggle(this.checked);
