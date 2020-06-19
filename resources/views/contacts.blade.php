@@ -51,7 +51,7 @@
       <div class="col-md-6">
         <div class="contacts-item">
           <h3 class="contacts-item__ttl">@lang('Ukraine')</h3>
-          <p class="contacts-item__txt">@lang('A: Kiev | 01001 | 18V Mykhailvska St. | Office 106')</p>
+          <p class="contacts-item__txt">@lang('A: Kyiv | 01001 | 18V Mykhailivska St. | Office 106')</p>
           <a href="tel:+380443794895" class="contacts-item__phone">T: +380 (44) 379 48 95</a>
           <a href="mailto:info@dhi-architecture.com" class="contacts-item__email">E: info@dhi-architecture.com</a>
         </div>
