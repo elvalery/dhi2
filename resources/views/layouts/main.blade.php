@@ -21,14 +21,14 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120201735-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170665348-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-120201735-1');
-  </script>
 
+    gtag('config', 'UA-170665348-1');
+  </script>
 </head>
 
 <body class="{{ !empty($body_class) ? $body_class : '' }}">
