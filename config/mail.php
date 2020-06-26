@@ -60,7 +60,7 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-  'to' => [env('MAIL_TO'), 'info@dhi-architecture.com', 'mariya@woohoo.marketing'],
+  'to' => [env('MAIL_TO'), 'info@dhi-architecture.com', 'mariya@woohoo.marketing', 'y.andrey@gmail.com'],
 
     /*
     |--------------------------------------------------------------------------
