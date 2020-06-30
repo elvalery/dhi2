@@ -9019,17 +9019,9 @@ h1 {
   background-image: url(/images/arr_next.svg?6f3bd31ccdd47b27d09d1147d120c444);
 }
 
-.slick-arrow.slick-next:hover {
-  background-image: url(/images/arr_next_hover.svg?3aa99fba2ac412bc3058fc231ba7c213);
-}
-
 .slick-arrow.slick-prev {
   left: 0;
   background-image: url(/images/arr_prev.svg?34f136c1d9dcc0a852bc38f370ba4f5e);
-}
-
-.slick-arrow.slick-prev:hover {
-  background-image: url(/images/arr_prev_hover.svg?e8f92d82433acdd4bf2b9aeccfeefb4b);
 }
 
 .slick-dots {
