@@ -158,6 +158,8 @@
         processData: false,
         contentType: false,
         complete: function(result){
+          gtag('event', 'submit', { 'event_category': 'contact_form' });
+
           $("#contact-form .contacts-form__success").removeClass('contacts-form__spinner').delay(5000).hide('slow');
         },
       });
