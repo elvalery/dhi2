@@ -7,7 +7,7 @@ use App\Models\News;
 
 class NewsController extends Controller {
   public function index() {
-    $list = News::orderBy('date')->get();
+    $list = News::orderBy('date', 'desc')->get();
 
     return view('news.index', compact('list'));
   }
