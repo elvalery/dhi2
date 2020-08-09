@@ -78,6 +78,7 @@ class NewsController extends Controller {
     $grid->column('date', trans('admin.news.date'))->display(function ($date) {
       return ($date) ? (new \DateTime($date))->format('d F Y') : 'none';
     })->sortable();
+    $grid->column('page_link', trans('admin.portfolio.link'))->sortable();
     $grid->column('title', trans('admin.news.title'))->sortable();
     $grid->column('description', trans('admin.news.description'));
 
@@ -101,7 +102,8 @@ class NewsController extends Controller {
     $show->date(trans('admin.news.date'))->as(function ($date) {
       return $date->format('d F Y');
     });
-
+    $show->page_link(trans('admin.portfolio.link'));
+    
     $show->title(trans('admin.news.title'));
     $show->title_ru(trans('admin.news.title') . '-ru');
 
@@ -132,8 +134,20 @@ class NewsController extends Controller {
     $form
       ->text('title_ru', trans('admin.news.title') . '-ru')
       ->rules('max:250');
-
-
+  
+    $form
+      ->text('page_link', trans('admin.portfolio.link'))
+      ->rules(function ($form) {
+        $rules = 'required|min:2|max:100|alpha_dash';
+      
+        // If it is not an edit state, add field unique verification
+        if (!$id = $form->model()->id) {
+          $rules .= '|unique:portfolios,page_link';
+        }
+      
+        return $rules;
+      });
+    
     $form
       ->date('date', trans('admin.news.date'))
       ->rules('required');

@@ -204,7 +204,7 @@ class PortfolioController extends Controller {
     $form
       ->text('page_link', trans('admin.portfolio.link'))
       ->rules(function ($form) {
-        $rules = 'required|min:2|alpha_dash';
+        $rules = 'required|min:2|max:100|alpha_dash';
 
         // If it is not an edit state, add field unique verification
         if (!$id = $form->model()->id) {
@@ -248,7 +248,7 @@ class PortfolioController extends Controller {
       ->rules('required')
       ->uniqueName();
 
-    $form->hasMany('photos', function (Form\NestedForm $form) {
+    $form->hasMany('photos', '', function (Form\NestedForm $form) {
       $form->number('order_id')->required();
       $form->image('link')
         ->uniqueName()
