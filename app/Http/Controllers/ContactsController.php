@@ -18,7 +18,8 @@ class ContactsController extends Controller {
     $contact = Contact::create($request->validated());
 
     if ($request->hasFile('file') && $request->file('file')->isValid()) {
-      $path = $request->file->store('form', 'public');
+      $name = $request->file('file')->getClientOriginalName();
+      $path = $request->file('file')->storeAs('form/' . Str::random(30), Str::random(5). '_' . $name, 'public');
       $contact->file = url('storage/'. $path);
       $contact->path = storage_path($path);
     }
