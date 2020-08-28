@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Action;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactRequest;
+use Illuminate\Support\Str;
 
 class ContactsController extends Controller {
 
