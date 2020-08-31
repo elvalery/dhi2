@@ -30,7 +30,6 @@ class ContactsController extends Controller {
       $path = $request->file('file')->storeAs($dir, $filename, 'public');
       $contact->file = url('storage/'. $path);
       $contact->path = storage_path($path);
-      $contact->save();
     }
 
     if ($request->has("action")) {
@@ -47,7 +46,9 @@ class ContactsController extends Controller {
     foreach ($mail_to as $address) {
       Mail::to($address)->send(new ContactRequest($contact));
     }
-
+  
+    $contact->save();
+    
     return response()->json($contact);
   }
 }
