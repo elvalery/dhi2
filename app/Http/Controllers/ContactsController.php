@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Action;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ContactsController extends Controller {
@@ -20,9 +21,16 @@ class ContactsController extends Controller {
 
     if ($request->hasFile('file') && $request->file('file')->isValid()) {
       $name = $request->file('file')->getClientOriginalName();
-      $path = $request->file('file')->storeAs('form/' . Str::random(30), Str::random(5). '_' . $name, 'public');
+      $ext = pathinfo($name, PATHINFO_EXTENSION);
+      $dir = 'form/' . date('Y-m-d');
+      do {
+        $filename = $contact->id . '_' . Str::random(5) . '.' . $ext ;
+      } while (Storage::disk('public')->exists($dir . '/' . $filename));
+      
+      $path = $request->file('file')->storeAs($dir, $filename, 'public');
       $contact->file = url('storage/'. $path);
       $contact->path = storage_path($path);
+      $contact->save();
     }
 
     if ($request->has("action")) {
