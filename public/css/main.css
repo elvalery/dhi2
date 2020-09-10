@@ -8794,11 +8794,11 @@ h1 {
 }
 
 .nav__logo {
-  max-width: 108px;
+  max-width: 144px;
   position: absolute;
   top: 70px;
   left: 50%;
-  margin-left: -54px;
+  margin-left: -72px;
 }
 
 .nav-list {
