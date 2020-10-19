@@ -45,6 +45,8 @@
           </div>
           <div class="text-right d-flex justify-content-center my-3">
             <div id="captcha_element"></div>
+          </div>
+          <div class="text-right d-flex justify-content-center my-3">
             <button type="submit" class="contacts-form__btn" name="type">@lang('Submit')</button>
           </div>
         </form>
