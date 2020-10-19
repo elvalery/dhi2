@@ -13,10 +13,12 @@
         "codezero/laravel-localized-routes": "^2.0",
         "encore/laravel-admin": "^1.5",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^7.2",
         "laravel-admin-ext/media-manager": "^1.0",
         "laravel/framework": "5.*",
         "laravel/tinker": "^1.0",
-        "unisharp/laravel-filemanager": "^1.9"
+        "unisharp/laravel-filemanager": "^1.9",
+      "ext-curl": "*"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

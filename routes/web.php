@@ -32,4 +32,6 @@ Route::localized(function () {
 
   Route::get('/news', 'NewsController@index')->name('news.index');
   Route::get('/news/{news}', 'NewsController@show')->name('news.detail');
+  
+  Route::post('/captcha', 'NewsController@captcha')->name('check-captcha');
 });

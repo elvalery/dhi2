@@ -44,6 +44,7 @@
             <textarea name="description" class="form_textarea px-3 py-1" rows="8" cols="80" placeholder="@lang('Description')" required></textarea>
           </div>
           <div class="text-right d-flex justify-content-center my-3">
+            <div id="captcha_element"></div>
             <button type="submit" class="contacts-form__btn" name="type">@lang('Submit')</button>
           </div>
         </form>
@@ -69,15 +70,25 @@
 @endsection
 
 @section('js')
+  
   <script>
       function uploadFile(target) {
           $(target).siblings('label').html(target.files[0].name);
       }
   </script>
-
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async defer>
+  </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnY3boTk0BmPrE8oYZILVh9I8BRnPpwks"></script>
   <script type="text/javascript">
     $().button('toggle');
+
+    var onloadCallback = function() {
+      grecaptcha.render('captcha_element', {
+        'sitekey' : '6LcRPNkZAAAAAJksj4YAbPPdBkudG76qn_7zGkGz',
+        'callback' : verifyCallback,
+      });
+    };
 
     var center = {
         lat: 51.1838815,
@@ -142,11 +153,32 @@
       fld.prop('required', this.checked);
       $(fld.parent('label').find('i')[0]).toggle(this.checked);
     });
-
+    var captcha = false;
+    var verifyCallback = function(response) {
+      captcha = response
+    };
+    
+    function checkCaptcha () {
+      let retVal = false;
+      $.ajax({
+        type: 'POST',
+        async:false,
+        url: '{{ route('check-captcha') }}',
+        data: {response: captcha},
+        cache: false,
+        dataType: 'json',
+        success: function(result){
+          if (result && result.success === true) retVal = true;
+        },
+      });
+      return retVal;
+    }
+    
     $('#contact-form').on('submit', function(e){
       e.preventDefault();
-
-      var formdata = new FormData($(this)[0]);
+      if (!checkCaptcha()) return;
+      
+      const formdata = new FormData($(this)[0]);
 
       $("#contact-form .contacts-form__success").css({ "display": "flex" });
       $("#contact-form .contacts-form__success").addClass('contacts-form__spinner');
