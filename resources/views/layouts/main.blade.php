@@ -138,7 +138,7 @@
     <div class="row">
       <div class="col">
         <img src="/img/logo-white.png" alt="DHI" class="foot__logo img-r">
-        <p class="foot__txt">© Copyright 2019 dhi-architecture.com - All Rights Reserved</p>
+        <p class="foot__txt">© Copyright {{ now()->year }} dhi-architecture.com - All Rights Reserved</p>
       </div>
     </div>
   </div>
