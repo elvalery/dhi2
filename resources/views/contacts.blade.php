@@ -136,12 +136,12 @@
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(50.453428, 30.5223159),
         map: map,
-        icon: 'img/placeholder.svg'
+        icon: 'https://dhi-architecture.com/img/placeholder.svg'
       });
       var marker1 = new google.maps.Marker({
         position: new google.maps.LatLng(51.9216331, 4.4664101),
         map: map,
-        icon: 'img/placeholder.svg'
+        icon: 'https://dhi-architecture.com/img/placeholder.svg'
       });
     }
 
