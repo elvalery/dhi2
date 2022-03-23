@@ -171,7 +171,23 @@
 	.vacancies__img
 		width: calc(100% + 30px)
 		margin-left: -15px
+	.main__logo
+		top: 30px
+		max-width: 140px
+		margin-left: -70px
 	.main-slider
+		&__slide
+			&--t2
+				padding-bottom: 160px
+				.main-slider
+					&__bottom
+						&::before,
+						&::after
+							height: 30px
+						&::before
+							top: -60px
+						&::after
+							top: -30px
 		&__ttl
 			font-size: 18px
 			right: inherit

@@ -8919,6 +8919,7 @@ h1 {
 
 .main-slider {
   height: 100vh;
+  background-color: #000;
 }
 
 .main-slider__slide {
@@ -8965,6 +8966,71 @@ h1 {
   background-image: url(/images/project6.jpg?684d7148db222a92b0aae698160437b7);
 }
 
+.main-slider__slide--t2 {
+  padding-bottom: 205px;
+}
+
+.main-slider__slide--t2 .main-slider__image-wrap {
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-slider__slide--t2 .main-slider__bottom::before,
+.main-slider__slide--t2 .main-slider__bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 45px;
+}
+
+.main-slider__slide--t2 .main-slider__bottom::before {
+  top: -90px;
+  background-color: #015bbb;
+}
+
+.main-slider__slide--t2 .main-slider__bottom::after {
+  top: -45px;
+  background-color: #fed502;
+}
+
+.main-slider__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.main-slider__video-helper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.main-slider__video-helper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.main-slider__video-helper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .main-slider__bottom {
   position: absolute;
   display: -webkit-box;
@@ -8980,7 +9046,7 @@ h1 {
   height: 115px;
   bottom: 0;
   padding-top: 15px;
-  background-color: rgba(48, 48, 48, 0.7);
+  background-color: #000;
 }
 
 .main-slider__ttl {
@@ -10025,6 +10091,29 @@ h1 {
   .vacancies__img {
     width: calc(100% + 30px);
     margin-left: -15px;
+  }
+
+  .main__logo {
+    top: 30px;
+    max-width: 140px;
+    margin-left: -70px;
+  }
+
+  .main-slider__slide--t2 {
+    padding-bottom: 160px;
+  }
+
+  .main-slider__slide--t2 .main-slider__bottom::before,
+  .main-slider__slide--t2 .main-slider__bottom::after {
+    height: 30px;
+  }
+
+  .main-slider__slide--t2 .main-slider__bottom::before {
+    top: -60px;
+  }
+
+  .main-slider__slide--t2 .main-slider__bottom::after {
+    top: -30px;
   }
 
   .main-slider__ttl {
