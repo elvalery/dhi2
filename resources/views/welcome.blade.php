@@ -15,7 +15,7 @@
         </div>
       </div>
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
+        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
       </span>
     </div>
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
+        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
       </span>
     </div>
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
@@ -39,7 +39,7 @@
           style="background-image: url('/img/project-d1/2.jpg');"
       >
         <span class="main-slider__bottom">
-          <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
+          <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
         </span>
       </div>
     </div>
@@ -49,7 +49,7 @@
           style="background-image: url('/img/project-d1/1.jpg');"
       >
         <span class="main-slider__bottom">
-          <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
+          <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
         </span>
       </div>
     </div>
