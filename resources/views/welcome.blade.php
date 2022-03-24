@@ -4,26 +4,6 @@
   <img src="/img/logo-white.png" alt="DHI" class="main__logo">
   <div class="main-slider">
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
-      <div
-          class="main-slider__image-wrap"
-          style="background-image: url('/img/project-d1/1.jpg');"
-      >
-        <span class="main-slider__bottom">
-          <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
-        </span>
-      </div>
-    </div>
-    <div class="main-slider__slide main-slider__slide--t2 project-d1">
-      <div
-          class="main-slider__image-wrap"
-          style="background-image: url('/img/project-d1/2.jpg');"
-      >
-        <span class="main-slider__bottom">
-          <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
-        </span>
-      </div>
-    </div>
-    <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div class="main-slider__video">
         <div class="main-slider__video-helper">
           <video autoplay muted loop>
@@ -52,6 +32,26 @@
       <span class="main-slider__bottom">
         <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
       </span>
+    </div>
+    <div class="main-slider__slide main-slider__slide--t2 project-d1">
+      <div
+          class="main-slider__image-wrap"
+          style="background-image: url('/img/project-d1/2.jpg');"
+      >
+        <span class="main-slider__bottom">
+          <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
+        </span>
+      </div>
+    </div>
+    <div class="main-slider__slide main-slider__slide--t2 project-d1">
+      <div
+          class="main-slider__image-wrap"
+          style="background-image: url('/img/project-d1/1.jpg');"
+      >
+        <span class="main-slider__bottom">
+          <h3 class="main-slider__ttl">@lang('We will rebuild soon')!</h3>
+        </span>
+      </div>
     </div>
 {{--    <div class="main-slider__slide project-d1__video">--}}
 {{--      <span class="main-slider__bottom">--}}
