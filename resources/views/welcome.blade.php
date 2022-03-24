@@ -2,6 +2,12 @@
 
 @section('content')
   <img src="/img/logo-white.png" alt="DHI" class="main__logo">
+  <div class="main__text">
+    @lang('That was Retroville shopping centre we were working on for four years.') <br>
+    @lang('Seeing our brainchild been demolished like that because of the bombing is truly heartbreaking.') <br>
+    @lang('We will stand, we will win! And  we will rebuild everything what has been ruined due to that invasion.') <br>
+    @lang('Glory to Ukraine!')
+  </div>
   <div class="main-slider">
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div class="main-slider__video">
@@ -38,20 +44,20 @@
           class="main-slider__image-wrap"
           style="background-image: url('/img/project-d1/2.jpg');"
       >
-        <span class="main-slider__bottom">
-          <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
-        </span>
       </div>
+      <span class="main-slider__bottom">
+        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
+      </span>
     </div>
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div
           class="main-slider__image-wrap"
           style="background-image: url('/img/project-d1/1.jpg');"
       >
-        <span class="main-slider__bottom">
-          <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
-        </span>
       </div>
+      <span class="main-slider__bottom">
+        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
+      </span>
     </div>
 {{--    <div class="main-slider__slide project-d1__video">--}}
 {{--      <span class="main-slider__bottom">--}}
