@@ -107,7 +107,8 @@ $(function() {
 		slidesToScroll: 1,
 		dots: true,
 		fade: true,
-		autoplay: false
+		autoplay: true,
+		autoplaySpeed: 10000,
 	});
 
 	$('.detail-slider').slick({
