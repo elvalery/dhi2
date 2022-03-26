@@ -40,6 +40,7 @@ body
 		top: 0
 		left: 0
 		transition: all ease .3s
+		z-index: 3
 	&.nav-show
 		&::after
 			width: 100%
@@ -139,7 +140,7 @@ h1
 	background-color: #F5F5F5
 	transition: all ease .3s
 	overflow-y: auto
-	z-index: 2
+	z-index: 4
 	&.show
 		left: 0
 	&__wrap
@@ -235,7 +236,7 @@ h1
 		z-index: 1
 	&__text
 		position: absolute
-		top: calc(50% - 45px)
+		top: 50%
 		left: 50%
 		width: calc(100% - 120px)
 		max-width: 650px
@@ -278,7 +279,7 @@ h1
 			&.project6
 				background-image: url(../img/project6.jpg)
 			&--t2
-				padding-bottom: 205px
+				padding-bottom: 158px
 				.main-slider
 					&__image-wrap
 						position: relative
@@ -337,7 +338,7 @@ h1
 			align-items: flex-start
 			justify-content: center
 			width: 100%
-			height: 115px
+			height: 68px
 			bottom: 0
 			padding-top: 15px
 			//background-color: rgba(48,48,48,.7)

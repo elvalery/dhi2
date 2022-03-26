@@ -12,7 +12,7 @@
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div class="main-slider__video">
         <div class="main-slider__video-helper">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline>
             <source src="/video/project-d1/1.mp4" type="video/mp4">
             <source src="/video/project-d1/1.webm" type="video/webm">
             <source src="/video/project-d1/1.ogg" type="video/ogg">
@@ -20,14 +20,12 @@
           </video>
         </div>
       </div>
-      <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
-      </span>
+      <span class="main-slider__bottom"></span>
     </div>
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div class="main-slider__video">
         <div class="main-slider__video-helper">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline>
             <source src="/video/project-d1/2.mp4" type="video/mp4">
             <source src="/video/project-d1/2.webm" type="video/webm">
             <source src="/video/project-d1/2.ogg" type="video/ogg">
@@ -35,9 +33,7 @@
           </video>
         </div>
       </div>
-      <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
-      </span>
+      <span class="main-slider__bottom"></span>
     </div>
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div
@@ -45,9 +41,7 @@
           style="background-image: url('/img/project-d1/2.jpg');"
       >
       </div>
-      <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
-      </span>
+      <span class="main-slider__bottom"></span>
     </div>
     <div class="main-slider__slide main-slider__slide--t2 project-d1">
       <div
@@ -55,9 +49,7 @@
           style="background-image: url('/img/project-d1/1.jpg');"
       >
       </div>
-      <span class="main-slider__bottom">
-        <h3 class="main-slider__ttl">@lang('Ukrainian team will rebuild soon')!</h3>
-      </span>
+      <span class="main-slider__bottom"></span>
     </div>
 {{--    <div class="main-slider__slide project-d1__video">--}}
 {{--      <span class="main-slider__bottom">--}}
